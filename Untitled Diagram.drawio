@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-24T07:54:55.394Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36" etag="WBQbzSmwdmGVUDFgznv-" version="17.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-24T07:56:31.802Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36" etag="5An938B8YXa02Syw5T43" version="17.2.1" type="github">
   <diagram id="9IIWtFAtbRXTGUE0Piq1" name="Page-1">
     <mxGraphModel dx="1268" dy="2827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -91,8 +91,8 @@
         <mxCell id="lS8v6T5pcr990PlDDqWm-29" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="365" y="-2063" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="lS8v6T5pcr990PlDDqWm-30" value="&lt;b&gt;Register online&lt;br&gt;banking&lt;br&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="143" y="-1865" width="100" height="30" as="geometry" />
+        <mxCell id="lS8v6T5pcr990PlDDqWm-30" value="&lt;b&gt;Login to the&lt;br&gt;system&lt;br&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="153" y="-1865" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lS8v6T5pcr990PlDDqWm-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.763;exitY=-0.021;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="lS8v6T5pcr990PlDDqWm-4" target="lS8v6T5pcr990PlDDqWm-13">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -100,8 +100,8 @@
             <mxPoint x="130.00000000000273" y="-2045" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lS8v6T5pcr990PlDDqWm-32" value="EXT:P: If user already&lt;br&gt;&amp;nbsp;Registered" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="128" y="-1835" width="130" height="30" as="geometry" />
+        <mxCell id="lS8v6T5pcr990PlDDqWm-32" value="EXT:P: If any error" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="138" y="-1830" width="110" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
