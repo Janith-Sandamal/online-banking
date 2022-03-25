@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-25T14:11:14.494Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36" etag="LjKA0s2zhgzaMg2kvroN" version="17.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-25T14:12:44.323Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36" etag="DgP1A-46YZoKVHIuOMYB" version="17.2.3" type="github">
   <diagram id="9IIWtFAtbRXTGUE0Piq1" name="Page-1">
     <mxGraphModel dx="6445" dy="10120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -909,8 +909,8 @@
         <mxCell id="vR6V6gfXWME6m7JU-O5k-7" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-3818" y="-7860" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="vR6V6gfXWME6m7JU-O5k-8" value="&lt;b&gt;Supervising tellers&lt;br&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;strokeWidth=1;" parent="1" vertex="1">
-          <mxGeometry x="-3807" y="-7835" width="120" height="20" as="geometry" />
+        <mxCell id="vR6V6gfXWME6m7JU-O5k-8" value="&lt;b&gt;Managing&amp;nbsp; loans&lt;br&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-3802" y="-7835" width="110" height="20" as="geometry" />
         </mxCell>
         <mxCell id="vR6V6gfXWME6m7JU-O5k-9" value="&lt;b&gt;Check ATM cash&amp;nbsp;&lt;br&gt;amount&lt;br&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;strokeWidth=1;" parent="1" vertex="1">
           <mxGeometry x="-3799" y="-7770" width="110" height="30" as="geometry" />
