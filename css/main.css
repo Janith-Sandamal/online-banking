@@ -1,3 +1,25 @@
+/* CSS For Header */
+.header {
+	background-color: #24262b;
+	padding: 20px;
+	text-align: center;
+}
+
+.container-header {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.header-nav {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+}
+
+
+
 
 /* CSS for Footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -81,7 +103,7 @@ ul{
 	background-color: #ffffff;
 }
 
-/*responsive*/
+/* Footer-Responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
