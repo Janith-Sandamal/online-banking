@@ -12,7 +12,7 @@
 /* Login Form CSS */
 .loginbox{
     width: 320px;
-    height: 420px;
+    height: 640px;
     background: #000;
     color: #fff;
     top: 50%;
@@ -21,7 +21,7 @@
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-    border-radius: 5%;
+    border-radius: 1%;
     opacity: 0.8;
 }
 
@@ -58,7 +58,7 @@ h1{
 }
 
 /* Form Input Types CSS */
-.loginbox input[type="text"], input[type="password"]
+.loginbox input[type="text"], input[type="Email"], input[type="password"]
 {
     border: none;
     border-bottom: 1px solid #fff;
