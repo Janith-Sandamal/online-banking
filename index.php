@@ -24,9 +24,9 @@
         <div class="container">
                 <nav class="nav"> 
                    <ul>
-                      <li><a href="#"><img src="" alt="Logo"></a></li>
+                      <li><a href="#"><img  src="" alt="Logo"></a></li>
                       <li><a href="#" class="active">Home</a></li>
-                      <li><a href="#">Peronal Banking</a></li>
+                      <li><a href="./Php/personal banking.php">Peronal Banking</a></li>
                       <li><a href="#">services</a></li>
                       <li><a href="#">Asia Bank Digital</a></li>
                       <li><a href="#">About us</a></li>
