@@ -1,8 +1,65 @@
 
-#digital #login .form{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-position:center;
-    background: url(../Images/digitalbanking.png);
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#slideimg{
+    width: 100%;
+    height: 100vh;
+    animation: zoom 3s linear infinite;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    position: absolute;
+    top: 0;
+}
+
+.content{
+    width: 60%;
+    margin:160px 0px 0px 300px;
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 60px;
+    
+}
+
+button{
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    /* border-radius: 20px; */
+    /* font-weight: bold; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.5s ;
+}
+
+/* Hover Effect for Button */
+button:hover{
+    background: transparent;
+    border : 2px solid rgba(255, 255, 255, 0.441);
+    color: #fff;
+    
+
+
+}
+
+
