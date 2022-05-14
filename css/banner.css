@@ -1,0 +1,83 @@
+/* Import google fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#slideimg{
+    width: 100%;
+    height: 100vh;
+    animation: zoom 3s linear infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+
+}
+
+.content{
+    width: 60%;
+    margin:160px auto 0;
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 60px;
+    
+}
+
+button{
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    /* border-radius: 20px; */
+    /* font-weight: bold; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.5s ;
+}
+
+/* Hover Effect for Button */
+button:hover{
+    background: transparent;
+    border : 2px solid rgba(255, 255, 255, 0.441);
+    color: #fff;
+    
+
+
+}
+

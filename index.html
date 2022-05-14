@@ -13,12 +13,16 @@
     <!-- Link Main CSS file -->
     <link rel="stylesheet" href="./css/main.css">
 
+    <!-- CSS For Carousel -->
+    <link rel="stylesheet" href="./css/banner.css">
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
 
     <title>Welcome to Aisa Bank!</title>
 </head>
-<body>
+<body  onload="slider()">
     <!-- Header Section of web page -->
     <header class="header">
         <div class="container">
@@ -26,11 +30,11 @@
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
                       <li><a href="#" class="active">Home</a></li>
-                      <li><a href="./Php/personal banking.php">Peronal Banking</a></li>
+                      <li><a href="#">Peronal Banking</a></li>
                       <li><a href="#">services</a></li>
                       <li><a href="#">Asia Bank Digital</a></li>
-                      <li><a href="#">About us</a></li>
-                      <li><a href="#">contact</a></li>
+                      <li><a href="./Html/about us.html">About Us</a></li>
+                      <li><a href="./Html/contact us.html">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -46,9 +50,33 @@
                 </nav>
             </div>
         </div>
-        <script src="./js/main.js"></script>
      </header>
+
+    <!-- Body Section -->
+
+<div class="banner">
+    <div class="slider">
+        <img src="./Images/banner1.png" alt="banner" id="slideimg">
+
+    </div>
+    <div class="overlay">
+        <div class="content">
+            <h1>Welcome to Asia Bank!</h1>
+            <p>We are the best bank in the world Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatibus dignissimos sapiente numquam distinctio obcaecati unde repellat sed laboriosam eum, laborum cumque illo, deleniti aspernatur a. Voluptates, odit? Exercitationem, labore.
+            Iste, optio. Sed saepe, enim praesentium voluptate cum explicabo facilis doloribus quae deserunt labore magni autem molestiae ducimus perspiciatis nulla nihil sit blanditiis dicta, delectus rerum. Animi similique dolores modi.</p>
+            <div>
+                <button type="button">Read More</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="./js/banner.js">
+
+</script>
+
 <!-- Body Section -->
+
     <img src="https://www.nyongesasande.com/wp-content/uploads/2021/11/bank-photo.jpg" alt="">
 <!-- Footer Section of web page -->
 <footer class="footer">

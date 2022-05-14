@@ -39,7 +39,7 @@ a{
 
 .header .logo,
 .header .nav{
-	padding:0 15px;
+	padding:0px;
 }
 .header .logo a{
 	font-size: 30px;
@@ -248,3 +248,4 @@ ul{
 	text-align: center;
 	color: aliceblue;
 }
+
