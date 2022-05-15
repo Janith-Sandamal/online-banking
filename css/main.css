@@ -16,8 +16,21 @@
 	
 }
 
-.how-can-we-help{
-	width: 100%;
-	height: 25%;
-	background-color: #7D80DA;
+/* Help Bar CSS */
+
+#how-we-can-help{
+	background-color: #04040b30;
+	height: 180px;
+	width: auto;
+	padding: 10px 10px;
+	margin: 0 auto;
+}
+
+.row h2{
+	font-size: 2.5rem;
+	color: var(--color-1);
+	
+	
+	
+	
 }

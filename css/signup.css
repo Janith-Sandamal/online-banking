@@ -131,11 +131,23 @@ h1{
     top: 0;
 }
 
-.content{
+.content {
     width: 60%;
     margin:20px 0px 50px 300px;
-    text-align: right;
+    text-align: center;
     color: #fff;
+    width: 720px;
+    height: 640px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 45%;
+    position: absolute;
+    transform: translate(-40%,-55%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 1%;
+    opacity: 0.6;
 }
 
 .content h1{
