@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+
  /*  Banner  */
 
 .banner {
@@ -67,8 +68,158 @@ button:hover{
 
 }
 
-
-
-
-
   /*  Banner  */
+
+
+/* Key Values Cards  */
+section.services-cards{
+    width: 100%;
+    height: 540px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    /* background: rgba(114, 6, 6, 0.678); */
+}
+
+.services-cards .heading{
+    text-align: center;
+    font-size : 35px;
+    padding:20px 0px;
+    color: rgba(0, 0, 0, 0.679);
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.box-container .box{
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(85, 30, 223, 0.433);
+    text-align: center;
+}
+
+.box-container .box:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    /* transform: translateY(-5px);
+    transition: all 0.5s; */
+}
+
+
+/* Style for Cards box icons */
+.box-container .box .icon{
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+/* Style For Cards Titles */
+.box-container .box .title{
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.511);
+}
+
+/* Style for Cards Description */
+.box-container .box .description p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.511);
+    padding:10px
+}
+
+.btn-1 a{
+    transform: translateY(-10px);
+}
+
+
+/* Box Conatiner B */
+.box-container .box a{
+    color: blue;
+    text-decoration: none;
+    display: block;
+}
+
+button.cards{
+    background: rgba(19, 17, 17, 0.537);
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin:10px 0px 0px 0px;
+    border-radius: 10px;
+    /* font-weight: bold; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.5s ;
+    margin-top: 10%;
+}
+
+/* Hover Effect for Button */
+button.cards:hover{
+    background: transparent;
+    border : 2px solid rgba(255, 255, 255, 0.167);
+    color: #fff;
+    
+
+
+}
+
+/* Key Values Cards  */
+
+/* Services Cards  */
+
+.main{   
+    margin: 2%;
+}
+
+.card{
+        width: 20%;
+        display: inline-block;
+        box-shadow: 2px 2px 20px black;
+        border-radius: 5px; 
+        margin: 2%;
+}
+
+.image img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    }
+
+.title{
+    text-align: center;
+    padding: 10px;
+    }
+
+h1{
+    font-size: 20px;
+    }
+
+.des{
+    padding: 3px;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:10px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+/* Services Cards  */
