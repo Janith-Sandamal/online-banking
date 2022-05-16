@@ -171,55 +171,93 @@ button.cards:hover{
 
 /* Services Cards  */
 
-.main{   
-    margin: 2%;
+/*---  POST ---*/
+
+/* body{
+    margin: 0px;
+    padding: 0px;
+	width: 100%;
+	height: 350px;
+	background-color: #2d32bb4c;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.blog-post{
+    background-color: #2d32bb4c;
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 5rem 2rem 5rem;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #ffffffc1; */
+    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5); */
+	
 }
 
-.card{
-        width: 20%;
-        display: inline-block;
-        box-shadow: 2px 2px 20px black;
-        border-radius: 5px; 
-        margin: 2%;
+.blog-post img{
+	flex: 1;
+	padding: 2rem 0rem 2rem 0rem;
+	width: 50%;
+	height: 50%;
+	border-radius: 0.3rem;
+	object-fit: cover;
+	transform: translate(-50px);
 }
 
-.image img{
-    width: 100%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    }
+/* .blog-post-img>img{
+	width: 50%;
+	height: 50%;
+	border-radius: 0.3rem;
+	object-fit: cover;
+	transform: translate(-50px);
+	
+	
+} */
 
-.title{
-    text-align: center;
-    padding: 10px;
-    }
-
-h1{
-    font-size: 20px;
-    }
-
-.des{
-    padding: 3px;
-    text-align: center;
-    padding-top: 10px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+.blog-post-info{
+	flex:1;
+	padding: 0rem;
 }
 
-button{
-    margin-top: 40px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding:10px;
+.blog-post-title{
+	color:#444445;
+	text-transform: uppercase;
 }
 
-button:hover{
-    background-color: black;
-    color: white;
-    transition: .5s;
-    cursor: pointer;
+.blog-post-read-more a{
+	cursor: pointer;
+	font-style: normal;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	background-color: aliceblue;
+	border:1px solid #444445;
+	color: #444445;
+	box-shadow: 0 0.05em 0.1em 0 rgba(0,0,0,0.25);
 }
 
-/* Services Cards  */
+
+.blog-post-read-more a:hover{
+	background-color: #444445;
+	color: aliceblue;
+	border:1px solid aliceblue;
+	transition: 0.5s;
+	text-decoration: none;
+}
+/*---  POST ---*/
+
+/* Services - Want More Info  */
+.more-info{
+    /* height: auto;
+    width: 520px; */
+    background-color: #2d32bb4c;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem 2rem 5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffc1; 
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5); 
+    
+}
+
+/* Services - Want More Info  */
