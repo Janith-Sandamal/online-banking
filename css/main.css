@@ -6,7 +6,7 @@
 :root{
     --color-1:#24262b;/*Header and footer main Color*/
 	--color-2:#444445;/*Header and footer secondary Color*/
-	--color-3:#7D80DA;
+	--color-3:#7D80DA;/*Header and footer tertiary Color*/
 }
 
 .content h2{
@@ -123,17 +123,25 @@
 
 #how-we-can-help{
 	background-color: #04040b30;
-	height: 180px;
+	height: 220px;
 	width: auto;
-	padding: 10px 10px;
-	margin: 0 auto;
+	padding: 5px;
+	margin: 5px; ;
+	align-items: center;
 }
 
 .row h2{
 	font-size: 2.5rem;
 	color: var(--color-1);
+	align-content: center;
 }
 
-
+.row{
+	display: absolute;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+}
 
 

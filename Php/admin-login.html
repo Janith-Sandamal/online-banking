@@ -10,19 +10,20 @@
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
     
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-
-    <!-- About Us CSS file -->
-    <link rel="stylesheet" href="../css/Contact Us.css">
-
     <!-- Header CSS file -->
     <link rel="stylesheet" href="../css/header.css">
 
     <!-- Footer CSS file -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Contact Us!</title>
+    <!-- Admin login CSS file -->
+    <link rel="stylesheet" href="../css/admin-login.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+
+    <title>Login Here!</title>
 </head>
 <body>
     <!-- Header Section of web page -->
@@ -32,11 +33,11 @@
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
                       <li><a href="../index.html" target="_self">Home</a></li>
-                      <li><a href="personal banking.html" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="#" class="active">Contact Us</a></li>
+                      <li><a href="#">Peronal Banking</a></li>
+                      <li><a href="#">services</a></li>
+                      <li><a href="../Php/Digital banking.html" target="_self" class="active">Asia Bank Digital</a></li>
+                      <li><a href="../Html/about us.html" target="_self">About Us</a></li>
+                      <li><a href="../Html/contact us.html" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -53,129 +54,55 @@
             </div>
         </div>
      </header>
+
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="../Images/contact us.jpg" alt="banner" id="slideimg">
+            <img src="../Images/Settings.png" alt="banner" id="slideimg">
     
         </div>
         <div class="overlay">
+            <section id="login">
+                <div class="loginbox">
+                    <img src="../Images/admin.png" class="avatar">
+                    <h1>Login Here!</h1>
+                    <form action="../php/login.php" method="post">
+                        <p>Admin-Username</p>
+                        <input type="text" name="username" placeholder="Enter Username">
+                        <p>Admin-Password</p>
+                        <input type="password" name="password" placeholder="Enter Password"><br>
+                        <input type="submit" name="submit" value="Login"><br>
+                        <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->
+                        <a href="password reset.html" target="_self">Admin account reset</a>
+                    </form>
+                </div>
+            </section>
             <div class="content">
-                <h1>We are always ready to assist you.</h1>
-                <p>
+                <!-- <h1>Connect With Online Banking!</h1> -->
+                <!-- <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.
-                </p>
-                <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Contact!</a></button>
-                    <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
-                </div>
+                </p> -->
+                <!-- <div>
+                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
+                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
+                </div> -->
 
     
             </div>
         </div>
     </div>
+    <!-- <script src="../js/banner.js">
+    
+    </script> -->
 </section>
 
-        <!-- Contact Details Section -->
-<div class="contact-cards">
-    <div class="card-1">
-        <h2>Head Office</h2>
-        <br>
-        <pre><p>Asia Bank of Ceylon PLC,
-Asia House,
-No 21,Sri Razik Fareed Mawatha,
-P.O.Box 720 Colombo 07,
-Sri Lanka.</p></pre> 
-            <br>
-            <span>
-                <p>+94114569872</p>
-                <p>+94114569872</p>
-                <p>+94114569872</p>
-            </span>
-            <br>
-            <div class="email">
-                <!-- Send Email -->
-                <a href="mailto:info@asiabank.lk">info@asiabank.lk</a>
-            </div>
-    </div>
-    <div class="card-2">
-        <h2>24xh Service</h2>
-        <br>
-        <p>Feel free to voice</p>
-        <br>
-        <p>+94114569872</p>
-        <br>
-        <a href="https://skype.com/asiabank">Voice Support Center</a>
-    </div>
-</div>
-        <!-- Contact Details Section -->
-
-        <!-- Contact Form -->
-<div class="contact-form">
-    <div class="form-header">
-        <h2>Inform Us</h2>
-    </div>
-    <div class="form-description">
-        <p>If you need help or want contact us,Complte the Online enquiry form below</p>
-    </div>
-    <div class="form-body">
-        <form action="../Php/contact us.php" method="post">
-            <table>
-                <tr>
-                    
-                    <td><select name="" id="" placeholder="Select">
-                        <option value="Credit Cards" >Credit Cards</option>
-                        <option value="Saving Accounts">Saving Accounts</option>
-                        <option value="Digital Banking">Digital Banking</option>
-                        <option value="Home Loans">Home Loans</option>
-                        <option value="Education Loans">Education Loans</option>
-                        <option value="Personal Loans">Personal Loans</option>
-                        <option value="Complains">Complains</option>
-                        <option value="Others">Others</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="email" name="email" id="email" placeholder="Enter your Email " required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="number" id="number" placeholder="Enter your Phone Number" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" name="submit" value="Submit">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</div>
-        <!-- Contact Form -->
-    
-
 <!-- Body Section -->
+
+
 <!-- Footer Section of web page -->
 <footer class="footer">
         <div class="container">
@@ -185,7 +112,7 @@ Sri Lanka.</p></pre>
                     <ul>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Bank Loans</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Properties for Sale</a></li>
                         <li><a href="#">Credit Card Application</a></li>
                         <li><a href="#">New Customer Registrations</a></li>
                         <li><a href="#">New Card Application Status</a></li>

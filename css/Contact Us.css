@@ -64,11 +64,101 @@ button:hover{
     background: transparent;
     border : 2px solid rgba(255, 255, 255, 0.167);
     color: #fff;
-    
-
-
 }
 
+/* Contact Details Section */
+.contact-cards{
+    width: 100%;
+    height: 400px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+}
 
+.card-1 {
+    width: auto;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 5px 5px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.675);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+   
+}
 
+.card-2{
+    width: 250px;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px 15px 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
 
+/* Contact Details Section */
+
+/* Complaint Form */
+
+.contact-form{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.form-header{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    
+}
+
+.form-description{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.form-body  td{
+    padding: 10px;
+}
+
+.form-body input[type="text"],input[type="email"],select{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Complaint Form */
