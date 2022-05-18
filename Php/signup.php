@@ -1,3 +1,53 @@
+<?php
+require '../lib/db.php';
+
+if(isset($_POST['submit'])){
+    $nic = $_POST['NIC'];
+    $email = $_POST['Email'];
+    $username = $_POST['Username'];
+    $password = $_POST['Password'];
+    $cPassword = $_POST['cPassword'];
+
+    $errors = array();
+
+    if(!isset($nic) || strlen($nic) > 12){
+        $errors[] = "There is a problem with NIC!";
+    }
+    if(!isset($email) || strlen($email) > 255){
+        $errors[] = "There is a problem with email!";
+    }
+    if(!isset($username) || strlen($username) > 255){
+        $errors[] = "There is a problem with username!";
+    }
+    if(!isset($password) || strlen($password) > 255){
+        $errors[] = "There is a problem with password!";
+    }
+    if(!isset($cPassword) || strlen($cPassword) > 255){
+        $errors[] = "There is a problem with comfairm password!";
+    }
+    if($password != $cPassword){
+        $errors[] = "Passwords are not match";
+    }
+
+    $hashedPassword = sha1($password);
+
+    if(empty($errors)){
+        $query = "SELECT nic FROM customers WHERE nic='{$nic}' LIMIT 1";
+        $result = mysqli_query($connection, $query);
+        if(mysqli_num_rows($result) < 1){
+            $errors[] = "You are not eligible for Online Banking Please visits near Branch";
+        }else{
+            $query = "INSERT INTO temp_users (nic, user_name, password) VALUES ('{$nic}', '{$username}', '{$hashedPassword}');";
+            $result = mysqli_query($connection, $query);
+        }
+    }
+
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,25 +104,6 @@
             </div>
         </div>
      </header>
-
-<!-- Body Section -->
-<!-- <section id="login">
-    <div class="loginbox">
-        <img src="../Images/login-avatar.png" class="avatar">
-        <h1>Login Here!</h1>
-        <form action="../php/login.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password"><br>
-            <input type="submit" name="submit" value="Login"><br>
-            <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br>
-            <a href="../Html/account-reset.html" target="_self">Having trouble Login In?</a>
-
-            
-        </form>
-    </div>
-</section> -->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
@@ -84,7 +115,7 @@
                 <div class="loginbox">
                     <img src="../Images/login-avatar.png" class="avatar">
                     <h1>Signup Here!</h1>
-                    <form action="../php/login.php" method="post">
+                    <form action="./signup.php" method="POST">
                         <p>NIC</p>
                         <input type="text" name="NIC" placeholder="Enter NIC Number">
                         <p>Email</p>
@@ -94,7 +125,7 @@
                         <p>Password</p>
                         <input type="password" name="Password" placeholder="Enter Password"><br>
                         <p>Password</p>
-                        <input type="password" name="Password" placeholder="Re-enter Password"><br>
+                        <input type="password" name="cPassword" placeholder="Re-enter Password"><br>
                         <input type="submit" name="submit" value="Signup"><br>
                         <a href="Login.html" target="_self">Already Have a Account?</a>
                     </form>
@@ -103,18 +134,20 @@
             <div class="content">
                 <!-- <h1>Connect With Online Banking!</h1> -->
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
+                    <?php
+                    if(!empty($errors)){
+                        echo "<h2>Errors</h2>"
+                        . "<ul>";
+                        foreach($errors as $error){
+                            echo '<li>' . $error . '</li>';
+                        }
+                        echo "</ul>";
+                        
+                    }
+                    
+                    ?>
                 </p>
-                <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.Php">Login!</a></button>
-                    <button type="button" class="btn-2"><a href="../Php/signup.Php">Join Now!</a></button>
-                </div>
+                
 
     
             </div>
