@@ -10,25 +10,25 @@ if(isset($_POST['submit'])){
 
     $errors = array();
 
-    if(!isset($_POST['NIC']) || strlen($_POST['NIC']) > 12){
+    if(!isset($_POST['NIC']) || strlen(trim($_POST['NIC'])) < 1){
         $errors[] = "There is a problem with NIC!";
     }
-    if(!isset($_POST['Email']) || strlen($_POST['Email']) > 255){
-        $errors[] = "There is a problem with email!";
-    }
-    if(!isset($_POST['Username']) || strlen($_POST['Username']) > 255){
+    if (!isset($_POST['Email']) || strlen(trim($_POST['Email'])) < 1) {
+        $errors[] = "email is Missing/Invalid!";
+      }
+    if(!isset($_POST['Username']) || strlen(trim($_POST['Username'])) < 1){
         $errors[] = "There is a problem with username!";
     }
-    if(!isset($_POST['Password']) || strlen($_POST['Password']) > 255 ){
+    if(!isset($_POST['Password']) || strlen(trim($_POST['Password'])) < 1 ){
         $errors[] = "There is a problem with password!";
     }
-    if(!isset($_POST['cPassword']) || strlen($_POST['cPassword']) > 255 ){
+    if(!isset($_POST['cPassword']) || strlen(trim($_POST['cPassword'])) < 1 ){
         $errors[] = "There is a problem with comfairm password!";
     }
-    if($_POST['Password'] != $_POST['cPassword']){
+    if(trim($_POST['Password']) != trim($_POST['cPassword'])){
         $errors[] = "Passwords are not match";
     }
-    if(strlen($_POST['Password']) < 8 || strlen($_POST['cPassword']) < 8){
+    if(strlen(trim($_POST['Password'])) < 8 || strlen(trim($_POST['cPassword'])) < 8){
         $errors[] = "Please enter at least 8 characters";
     }
 
@@ -133,7 +133,7 @@ if(isset($_POST['submit'])){
                         <p>Password</p>
                         <input type="password" name="cPassword" placeholder="Re-enter Password"><br>
                         <input type="submit" name="submit" value="Signup"><br>
-                        <a href="Login.html" target="_self">Already Have a Account?</a>
+                        <a href="./Login.php" target="_self">Already Have a Account?</a>
                     </form>
                 </div>
             </section>

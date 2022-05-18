@@ -7,15 +7,15 @@ if (isset($_POST['submit'])) {
 
     $errors = array();
 
-    if (!isset($username) || strlen($username) > 255) {
+    if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
         $errors[] = "Username is invalid";
     }
-    if (!isset($password) || (strlen($password) > 255 && strlen($password) < 8)) {
+    if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
         $errors[] = "Password is invalid";
     }
 
-    $hasedPassword = sha1($password);
     if (empty($errors)) {
+        $hasedPassword = sha1($password);
         $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
         $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) == 1) {
