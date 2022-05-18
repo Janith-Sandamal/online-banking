@@ -252,3 +252,58 @@ a{
 
 
   /* Personal Banking Services  */
+
+  /* Complaint Form */
+
+.contact-form{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.form-header{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    
+}
+
+.form-description{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.form-body  td{
+    padding: 10px;
+}
+
+.form-body input[type="text"],input[type="email"],select{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Complaint Form */

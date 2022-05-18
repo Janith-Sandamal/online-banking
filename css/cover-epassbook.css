@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+ /*  Banner  */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#slideimg{
+    width: 100%;
+    height: 100vh;
+    animation: zoom 3s linear infinite;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    position: absolute;
+    top: 0;
+}
+
+.content {
+    width: 60%;
+    margin:50px 0px 0px 30px;
+    text-align: left;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 60px;
+    
+}
+
+.content p{
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 10px;
+
+}
+
+button{
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin:10px 0px 0px 0px;
+    border-radius: 10px;
+    /* font-weight: bold; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.5s ;
+    margin-top: 10%;
+}
+
+/* Hover Effect for Button */
+button:hover{
+    background: transparent;
+    border : 2px solid rgba(255, 255, 255, 0.167);
+    color: #fff;
+    
+
+
+}
+
+  /*  Banner  */

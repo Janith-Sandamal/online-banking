@@ -94,7 +94,6 @@
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
-                <button class="cards"><a href="#">Read More</a></button>
         </div>
         <div class="box">
             <div class="icon">
@@ -104,7 +103,6 @@
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br> 
-                <button class="cards"><a href="#">Read More</a></button>
         </div>
         <div class="box">
             <div class="icon">
@@ -114,7 +112,6 @@
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br>
-                <button class="cards"><a href="#">Read More</a></button>
         </div>
         <div class="box">
             <div class="icon">
@@ -124,7 +121,6 @@
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
-                <button class="cards"><a href="#">Read More</a></button>
         </div>
     </div>
 </section>
@@ -173,7 +169,7 @@
                 pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="#">Read More</a>
+            <a href="cover-epassbook.html">Read More</a>
         </div>
     </div>
 </div>
@@ -226,56 +222,66 @@
 <!-- POST -->
 
 <!-- More Info -->
-
-<div class="more-info">
-    <div class="heading">If You Want More Info?</div>
-    <div class="description"><p>Please feel Free to use our Enquariy Form.</p></div>
-    <div class="form">
-        <form action="">
+ <!-- Contact Form -->
+ <div class="contact-form">
+    <div class="form-header">
+        <h2>Inform Us</h2>
+    </div>
+    <div class="form-description">
+        <p>If you need help or want contact us,Complte the Online enquiry form below</p>
+    </div>
+    <div class="form-body">
+        <form action="../Php/contact us.php" method="post">
             <table>
                 <tr>
+                    
+                    <td><select name="" id="" placeholder="Select">
+                        <option value="Credit Cards" >Credit Cards</option>
+                        <option value="Saving Accounts">Saving Accounts</option>
+                        <option value="Digital Banking">Digital Banking</option>
+                        <option value="Home Loans">Home Loans</option>
+                        <option value="Education Loans">Education Loans</option>
+                        <option value="Personal Loans">Personal Loans</option>
+                        <option value="Complains">Complains</option>
+                        <option value="Others">Others</option>
+                    </select></td>
+                </tr>
+                <tr>
                     <td>
-                        <select name="select" id="select">
-                            <option value="" selected>Like to learn more about</option>
-                            <option value="">Web Development</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Hosting</option>
-                            <option value="">Web Maintenance</option>
-                            <option value="">Web Security</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                        </select>
+                        <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" required>
                     </td>
                 </tr>
                 <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Frist-Name*"></td>
+                    <td>
+                        <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
+                    </td>
                 </tr>
                 <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Last-Name*"></td>
+                    <td>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email " required>
+                    </td>
                 </tr>
                 <tr>
-                    
-                    <td><input type="email" name="email" placeholder="Email*"></td>
+                    <td>
+                        <input type="text" name="number" id="number" placeholder="Enter your Phone Number" required>
+                    </td>
                 </tr>
                 <tr>
-                    
-                    <td><input type="text" name="phone" placeholder="Phone*"></td>
+                    <td>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords." required></textarea>
+                    </td>
                 </tr>
                 <tr>
-                    
-                    <td><textarea name="message" id="" cols="45" rows="10" placeholder="Let us know if there are any special notes.*"></textarea></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="submit" value="Submit"></td>
+                    <td>
+                        <input type="submit" name="submit" value="Submit">
+                    </td>
                 </tr>
             </table>
+            
         </form>
     </div>
 </div>
+        <!-- Contact Form -->
 
 <!-- More Info -->
 
