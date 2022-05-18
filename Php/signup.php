@@ -10,28 +10,34 @@ if(isset($_POST['submit'])){
 
     $errors = array();
 
-    if(!isset($_POST['NIC']) || strlen($nic) > 12){
+    if(!isset($_POST['NIC']) || strlen($_POST['NIC']) > 12){
         $errors[] = "There is a problem with NIC!";
     }
-    if(!isset($email) || strlen($email) > 255){
+    if(!isset($_POST['Email']) || strlen($_POST['Email']) > 255){
         $errors[] = "There is a problem with email!";
     }
-    if(!isset($username) || strlen($username) > 255){
+    if(!isset($_POST['Username']) || strlen($_POST['Username']) > 255){
         $errors[] = "There is a problem with username!";
     }
-    if(!isset($password) || strlen($password) > 255){
+    if(!isset($_POST['Password']) || strlen($_POST['Password']) > 255 ){
         $errors[] = "There is a problem with password!";
     }
-    if(!isset($cPassword) || strlen($cPassword) > 255){
+    if(!isset($_POST['cPassword']) || strlen($_POST['cPassword']) > 255 ){
         $errors[] = "There is a problem with comfairm password!";
     }
-    if($password != $cPassword){
+    if($_POST['Password'] != $_POST['cPassword']){
         $errors[] = "Passwords are not match";
     }
+    if(strlen($_POST['Password']) < 8 || strlen($_POST['cPassword']) < 8){
+        $errors[] = "Please enter at least 8 characters";
+    }
 
-    $hashedPassword = sha1($password);
+
+    
 
     if(empty($errors)){
+        $hashedPassword = sha1($password);
+
         $query = "SELECT nic FROM customers WHERE nic='{$nic}' LIMIT 1";
         $result = mysqli_query($connection, $query);
         if(mysqli_num_rows($result) < 1){
