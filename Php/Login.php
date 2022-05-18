@@ -1,5 +1,37 @@
+<?php
+require '../lib/db.php';
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $errors = array();
+
+    if (!isset($username) || strlen($username) > 255) {
+        $errors[] = "Username is invalid";
+    }
+    if (!isset($password) || (strlen($password) > 255 && strlen($password) < 8)) {
+        $errors[] = "Password is invalid";
+    }
+
+    $hasedPassword = sha1($password);
+    if (empty($errors)) {
+        $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
+        $result = mysqli_query($connection, $query);
+        if (mysqli_num_rows($result) == 1) {
+            header('Location: ../index.php');
+        } else {
+            $errors[] = "Something went wrong!";
+        }
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +41,7 @@
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
-    
+
     <!-- Header CSS file -->
     <link rel="stylesheet" href="../css/header.css">
 
@@ -21,42 +53,43 @@
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
+
 
     <title>Login Here!</title>
 </head>
+
 <body>
     <!-- Header Section of web page -->
     <header class="header">
         <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self">Home</a></li>
-                      <li><a href="#">Peronal Banking</a></li>
-                      <li><a href="#">services</a></li>
-                      <li><a href="../Php/Digital banking.Php" target="_self" class="active">Asia Bank Digital</a></li>
-                      <li><a href="../Html/about us.Php" target="_self">About Us</a></li>
-                      <li><a href="../Html/contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
-            </div>
-        </div>
-     </header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><img src="" alt="Logo"></a></li>
+                    <li><a href="../index.Php" target="_self">Home</a></li>
+                    <li><a href="#">Peronal Banking</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="../Php/Digital banking.Php" target="_self" class="active">Asia Bank Digital</a></li>
+                    <li><a href="../Html/about us.Php" target="_self">About Us</a></li>
+                    <li><a href="../Html/contact us.Php" target="_self">Contact Us</a></li>
+                    <span class="search">
+                        <li>
+                            <form action="" method="">
+                                <input type="text" name="search" placeholder="Search">
+                                <input type="submit" name="submit" value="Search">
 
-<!-- Body Section -->
-<!-- <section id="login">
+                            </form>
+                        </li>
+                    </span>
+                    <li><a href="#"><img src="" alt="login"></a></li>
+
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <!-- <section id="login">
     <div class="loginbox">
         <img src="../Images/login-avatar.png" class="avatar">
         <h1>Login Here!</h1>
@@ -73,55 +106,66 @@
         </form>
     </div>
 </section> -->
-<section class="home-banner">
-    <div class="banner">
-        <div class="slider">
-            <img src="../Images/digitalbanking.jpg" alt="banner" id="slideimg">
-    
-        </div>
-        <div class="overlay">
-            <section id="login">
-                <div class="loginbox">
-                    <img src="../Images/login-avatar.png" class="avatar">
-                    <h1>Login Here!</h1>
-                    <form action="../php/login.php" method="post">
-                        <p>Username</p>
-                        <input type="text" name="username" placeholder="Enter Username">
-                        <p>Password</p>
-                        <input type="password" name="password" placeholder="Enter Password"><br>
-                        <input type="submit" name="submit" value="Login"><br>
-                        <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->
-                        <a href="password reset.Php" target="_self">Having trouble Login In?</a>
-                    </form>
-                </div>
-            </section>
-            <div class="content">
-                <!-- <h1>Connect With Online Banking!</h1> -->
-                <!-- <p>
+    <section class="home-banner">
+        <div class="banner">
+            <div class="slider">
+                <img src="../Images/digitalbanking.jpg" alt="banner" id="slideimg">
+
+            </div>
+            <div class="overlay">
+                <section id="login">
+                    <div class="loginbox">
+                        <img src="../Images/login-avatar.png" class="avatar">
+                        <h1>Login Here!</h1>
+                        <form action="./Login.php" method="POST">
+                            <p>Username</p>
+                            <input type="text" name="username" placeholder="Enter Username">
+                            <p>Password</p>
+                            <input type="password" name="password" placeholder="Enter Password"><br>
+                            <?php
+                            if (!empty($errors)) {
+
+                                echo "<p><ul>";
+                                foreach ($errors as $error) {
+                                    echo '<li>' . $error . '</li>';
+                                }
+                                echo "</ul></p>";
+                            }
+
+                            ?>
+                            <input type="submit" name="submit" value="Login"><br>
+                            <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->
+                            <a href="./signup.php" target="_self">I don't have an account?</a>
+                        </form>
+                    </div>
+                </section>
+                <div class="content">
+                    <!-- <h1>Connect With Online Banking!</h1> -->
+                    <!-- <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.
                 </p> -->
-                <!-- <div>
+                    <!-- <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
                     <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
                 </div> -->
 
-    
+
+                </div>
             </div>
         </div>
-    </div>
-    <!-- <script src="../js/banner.js">
+        <!-- <script src="../js/banner.js">
     
     </script> -->
-</section>
+    </section>
 
-<!-- Body Section -->
+    <!-- Body Section -->
 
 
-<!-- Footer Section of web page -->
-<footer class="footer">
+    <!-- Footer Section of web page -->
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
@@ -142,7 +186,7 @@
                         <li><a href="#">Current Accounts</a></li>
                         <li><a href="#">Cards</a></li>
                         <li><a href="#">Savings Accounts</a></li>
-                        <li><a href="#">Loans</a></li>    
+                        <li><a href="#">Loans</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -166,15 +210,16 @@
                 </div>
             </div>
         </div>
-</footer>
-            <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
-                        
-                        <br>
-                        <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
-                        <p>Design & Developed by <strong><a href="#"> BinaryPage Solutions</a></strong></p>
-            </div>
+    </footer>
+    <div class="sub-footer">
+        <p>Asia Bank of Ceylon PLC</p>
+        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+
+        <br>
+        <p>Legal Notice | Accessibility | Security Measure</p>
+        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+        <p>Design & Developed by <strong><a href="#"> BinaryPage Solutions</a></strong></p>
+    </div>
 </body>
+
 </html>

@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 
     $errors = array();
 
-    if(!isset($nic) || strlen($nic) > 12){
+    if(!isset($_POST['NIC']) || strlen($nic) > 12){
         $errors[] = "There is a problem with NIC!";
     }
     if(!isset($email) || strlen($email) > 255){
