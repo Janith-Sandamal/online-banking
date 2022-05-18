@@ -123,6 +123,9 @@ if (isset($_POST['submit'])) {
                             <p>Password</p>
                             <input type="password" name="password" placeholder="Enter Password"><br>
                             <?php
+                            if (isset($_GET['success']) && $_GET['success'] == true) {
+                                echo "<p style='color:lightgreen'>You successfully registered in the system. Please Login...</p><br>";
+                            }
                             if (!empty($errors)) {
 
                                 echo "<p><ul>";
