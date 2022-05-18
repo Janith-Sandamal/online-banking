@@ -124,7 +124,7 @@
 #how-we-can-help{
 	background-color: #04040b30;
 	height: 220px;
-	width: auto;
+	width: 100%;
 	padding: 5px;
 	margin: 5px; ;
 	align-items: center;
@@ -133,7 +133,7 @@
 .row h2{
 	font-size: 2.5rem;
 	color: var(--color-1);
-	align-content: center;
+	align-items: center;
 }
 
 .row{
