@@ -13,8 +13,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- cover-cards CSS file -->
-    <link rel="stylesheet" href="../css/cover-cards.css">
+    <!-- cover-deposit CSS file -->
+    <link rel="stylesheet" href="../css/cover-deposit.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self" >Home</a></li>
+                      <li><a href="../index.Php" target="_self" >Home</a></li>
                       <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -62,7 +62,7 @@
         </div>
         <div class="overlay">
             <div class="content">
-                <h1>Cards.</h1>
+                <h1>Deposits.</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -70,7 +70,7 @@
                     Quisquam, quidem.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
+                    <button type="button" class="btn-1" ><a href="../Php/Login.Php">Explore !</a></button>
                     <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
                 </div>
 
@@ -81,14 +81,14 @@
 </section>
 
 
-<!-- Debit Cards -->
+<!-- Fixed Deposit -->
 <div class="blog-post">
     <div class="blog-post-img">
         <img src="../Images/img.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Debit Cards</h2>
+            <h2>Fixed Deposit</h2>
         </div>
         <div class="blog-post-date">
             <span>Friday</span>
@@ -100,14 +100,14 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- Debit Cards -->
+<!-- Fixed Deposit -->
 
-<!-- Details Debit Cards -->
+<!-- Details About Fixed Deposit -->
 <div class="digital-banking-info">
     <div class="container">
         <div class="features">
@@ -147,17 +147,17 @@
         </div>
     </div>
 </div>
-<!-- Details About Debit Cards -->
+<!-- Details About Fixed Deposit -->
 
 
-<!-- Credit Cards -->
+<!-- Q Plus Investment -->
 <div class="blog-post">
     <div class="blog-post-img">
         <img src="../Images/img.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Credit Cards</h2>
+            <h2>Q Plus Investment</h2>
         </div>
         <div class="blog-post-date">
             <span>Friday</span>
@@ -169,14 +169,14 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- Credit Cards -->
+<!-- Q Plus Investment -->
 
-<!-- Details About Credit Cards -->
+<!-- Details About Q Plus Investment -->
 <div class="digital-banking-info">
     <div class="container">
         <div class="features">
@@ -216,7 +216,7 @@
         </div>
     </div>
 </div>
-<!-- Details About Credit Cards -->
+<!-- Details About Q Plus Investment -->
 
 
 
@@ -230,7 +230,7 @@
             <p>If you need help or want contact us,Complte the Online enquiry form below</p>
         </div>
         <div class="form-body">
-            <form action="../Php/contact us.php" method="post">
+            <form action="" method="post">
                 <table>
                     <tr>
                         

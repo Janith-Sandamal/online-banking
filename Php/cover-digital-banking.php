@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self" >Home</a></li>
-                      <li><a href="personal banking.html" target="_self" >Peronal Banking</a></li>
+                      <li><a href="../index.Php" target="_self" >Home</a></li>
+                      <li><a href="personal banking.Php" target="_self" >Peronal Banking</a></li>
                       <li><a href="#" class="active">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -121,7 +121,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
         </div>
         <div class="apply">
-            <button><a href="application-form.html"> Apply Online</a></button>
+            <button><a href="application-form.Php"> Apply Online</a></button>
             <button>Download Application</button>
         </div>
         
@@ -139,7 +139,7 @@
         <p>If you need help or want contact us,Complte the Online enquiry form below</p>
     </div>
     <div class="form-body">
-        <form action="../Php/contact us.php" method="post">
+        <form action="" method="post">
             <table>
                 <tr>
                     

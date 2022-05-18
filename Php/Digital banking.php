@@ -16,28 +16,28 @@
     <!-- Footer CSS file -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <!-- Admin login CSS file -->
-    <link rel="stylesheet" href="../css/admin-login.css">
+    <!-- Digital banking CSS file -->
+    <link rel="stylesheet" href="../css/Digital banking.css">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     
 
-    <title>Login Here!</title>
+    <title>Connect with Online!</title>
 </head>
-<body>
+<body  onload="slider()">
     <!-- Header Section of web page -->
     <header class="header">
         <div class="container">
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self">Home</a></li>
-                      <li><a href="#">Peronal Banking</a></li>
-                      <li><a href="#">services</a></li>
-                      <li><a href="../Php/Digital banking.html" target="_self" class="active">Asia Bank Digital</a></li>
-                      <li><a href="../Html/about us.html" target="_self">About Us</a></li>
-                      <li><a href="../Html/contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="../index.Php" target="_self">Home</a></li>
+                      <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="#"  class="active">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -56,50 +56,32 @@
      </header>
 
 <!-- Body Section -->
+
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="../Images/Settings.png" alt="banner" id="slideimg">
+            <img src="../Images/digitalbanking.jpg" alt="banner" id="slideimg">
     
         </div>
         <div class="overlay">
-            <section id="login">
-                <div class="loginbox">
-                    <img src="../Images/admin.png" class="avatar">
-                    <h1>Login Here!</h1>
-                    <form action="../php/login.php" method="post">
-                        <p>Admin-Username</p>
-                        <input type="text" name="username" placeholder="Enter Username">
-                        <p>Admin-Password</p>
-                        <input type="password" name="password" placeholder="Enter Password"><br>
-                        <input type="submit" name="submit" value="Login"><br>
-                        <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->
-                        <a href="password reset.html" target="_self">Admin account reset</a>
-                    </form>
-                </div>
-            </section>
             <div class="content">
-                <!-- <h1>Connect With Online Banking!</h1> -->
-                <!-- <p>
+                <h1>Connect With Online Banking!</h1>
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.
-                </p> -->
-                <!-- <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
-                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
-                </div> -->
+                </p>
+                <div>
+                    <button type="button" class="btn-1" ><a href="../Php/Login.Php">Login!</a></button>
+                    <button type="button" class="btn-2"><a href="../Php/signup.Php">Join Now!</a></button>
+                </div>
 
     
             </div>
         </div>
     </div>
-    <!-- <script src="../js/banner.js">
-    
-    </script> -->
 </section>
-
 <!-- Body Section -->
 
 

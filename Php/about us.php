@@ -13,16 +13,16 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- Password reset CSS file -->
-    <link rel="stylesheet" href="../css/password reset.css">
+    <!-- About Us CSS file -->
+    <link rel="stylesheet" href="../css/About us.css">
 
-    <!-- Header CSS file -->
+    <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
 
-    <!-- Footer CSS file -->
+    <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Account Reset!</title>
+    <title>Welcome to Aisa Bank!</title>
 </head>
 <body>
     <!-- Header Section of web page -->
@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self">Home</a></li>
-                      <li><a href="personal banking.html" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="../index.php" target="_self" >Home</a></li>
+                      <li><a href="personal banking.php" target="_self">Peronal Banking</a></li>
+                      <li><a href="services.php" target="_self">services</a></li>
+                      <li><a href="Digital banking.php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="#" class="active">About Us</a></li>
+                      <li><a href="contact us.php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -52,56 +52,12 @@
                 </nav>
             </div>
         </div>
+        <script src="../js/main.js"></script>
      </header>
 <!-- Body Section -->
-<section class="home-banner">
-    <div class="banner">
-        <div class="slider">
-            <img src="../Images/digitalbanking.jpg" alt="Signup" id="slideimg">
-    
-        </div>
-        <div class="overlay">
-            <section id="login">
-                <div class="loginbox">
-                    <img src="../Images/login-avatar.png" class="avatar">
-                    <h1>Signup Here!</h1>
-                    <form action="../php/login.php" method="post">
-                        <p>NIC</p>
-                        <input type="text" name="NIC" placeholder="Enter NIC Number">
-                        <p>Email</p>
-                        <input type="Email" name="Email" placeholder="Enter Email"><br>
-                        <p>Username</p>
-                        <input type="text" name="Username" placeholder="Enter Username"><br>
-                        <p>Password</p>
-                        <input type="password" name="Password" placeholder="Enter Password"><br>
-                        <p>Password</p>
-                        <input type="password" name="Password" placeholder="Re-enter Password"><br>
-                        <input type="submit" name="submit" value="Signup"><br>
-                        <a href="Login.html" target="_self">Already Have a Account?</a>
-                    </form>
-                </div>
-            </section>
-            <div class="content">
-                <!-- <h1>Connect With Online Banking!</h1> -->
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
-                </p>
-                <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
-                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
-                </div>
 
-    
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Body Section -->
+
 <!-- Footer Section of web page -->
 <footer class="footer">
         <div class="container">

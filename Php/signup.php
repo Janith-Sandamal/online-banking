@@ -32,12 +32,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self">Home</a></li>
+                      <li><a href="../index.Php" target="_self">Home</a></li>
                       <li><a href="#">Peronal Banking</a></li>
                       <li><a href="#">services</a></li>
-                      <li><a href="../Php/Digital banking.html" target="_self" class="active">Asia Bank Digital</a></li>
-                      <li><a href="../Html/about us.html" target="_self">About Us</a></li>
-                      <li><a href="../Html/contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="Digital banking.Php" target="_self" class="active">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -112,8 +112,8 @@
                     Quisquam, quidem.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
-                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
+                    <button type="button" class="btn-1" ><a href="../Php/Login.Php">Login!</a></button>
+                    <button type="button" class="btn-2"><a href="../Php/signup.Php">Join Now!</a></button>
                 </div>
 
     

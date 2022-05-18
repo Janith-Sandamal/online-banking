@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self" >Home</a></li>
+                      <li><a href="../index.Php" target="_self" >Home</a></li>
                       <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -70,7 +70,7 @@
                     Quisquam, quidem.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
+                    <button type="button" class="btn-1" ><a href="Login.Php">Explore !</a></button>
                 </div>
 
     
@@ -99,7 +99,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
@@ -168,7 +168,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
@@ -227,7 +227,7 @@
             <p>If you need help or want contact us,Complte the Online enquiry form below</p>
         </div>
         <div class="form-body">
-            <form action="../Php/contact us.php" method="post">
+            <form action="" method="post">
                 <table>
                     <tr>
                         

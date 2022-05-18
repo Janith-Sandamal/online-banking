@@ -10,20 +10,19 @@
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
     
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <!-- Password reset CSS file -->
+    <link rel="stylesheet" href="../css/password reset.css">
+
     <!-- Header CSS file -->
     <link rel="stylesheet" href="../css/header.css">
 
     <!-- Footer CSS file -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <!-- Digital banking CSS file -->
-    <link rel="stylesheet" href="../css/login.css">
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
-
-    <title>Login Here!</title>
+    <title>Account Reset!</title>
 </head>
 <body>
     <!-- Header Section of web page -->
@@ -32,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self">Home</a></li>
-                      <li><a href="#">Peronal Banking</a></li>
-                      <li><a href="#">services</a></li>
-                      <li><a href="../Php/Digital banking.html" target="_self" class="active">Asia Bank Digital</a></li>
-                      <li><a href="../Html/about us.html" target="_self">About Us</a></li>
-                      <li><a href="../Html/contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="../index.Php" target="_self">Home</a></li>
+                      <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -54,72 +53,55 @@
             </div>
         </div>
      </header>
-
 <!-- Body Section -->
-<!-- <section id="login">
-    <div class="loginbox">
-        <img src="../Images/login-avatar.png" class="avatar">
-        <h1>Login Here!</h1>
-        <form action="../php/login.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password"><br>
-            <input type="submit" name="submit" value="Login"><br>
-            <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br>
-            <a href="../Html/account-reset.html" target="_self">Having trouble Login In?</a>
-
-            
-        </form>
-    </div>
-</section> -->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="../Images/digitalbanking.jpg" alt="banner" id="slideimg">
+            <img src="../Images/digitalbanking.jpg" alt="Signup" id="slideimg">
     
         </div>
         <div class="overlay">
             <section id="login">
                 <div class="loginbox">
                     <img src="../Images/login-avatar.png" class="avatar">
-                    <h1>Login Here!</h1>
+                    <h1>Signup Here!</h1>
                     <form action="../php/login.php" method="post">
+                        <p>NIC</p>
+                        <input type="text" name="NIC" placeholder="Enter NIC Number">
+                        <p>Email</p>
+                        <input type="Email" name="Email" placeholder="Enter Email"><br>
                         <p>Username</p>
-                        <input type="text" name="username" placeholder="Enter Username">
+                        <input type="text" name="Username" placeholder="Enter Username"><br>
                         <p>Password</p>
-                        <input type="password" name="password" placeholder="Enter Password"><br>
-                        <input type="submit" name="submit" value="Login"><br>
-                        <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->
-                        <a href="password reset.html" target="_self">Having trouble Login In?</a>
+                        <input type="password" name="Password" placeholder="Enter Password"><br>
+                        <p>Password</p>
+                        <input type="password" name="Password" placeholder="Re-enter Password"><br>
+                        <input type="submit" name="submit" value="Signup"><br>
+                        <a href="Login.Php" target="_self">Already Have a Account?</a>
                     </form>
                 </div>
             </section>
             <div class="content">
                 <!-- <h1>Connect With Online Banking!</h1> -->
-                <!-- <p>
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.
-                </p> -->
-                <!-- <div>
+                </p>
+                <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
                     <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
-                </div> -->
+                </div>
 
     
             </div>
         </div>
     </div>
-    <!-- <script src="../js/banner.js">
-    
-    </script> -->
 </section>
-
-<!-- Body Section -->
-
-
 <!-- Footer Section of web page -->
 <footer class="footer">
         <div class="container">
@@ -129,7 +111,7 @@
                     <ul>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Bank Loans</a></li>
-                        <li><a href="#">Properties for Sale</a></li>
+                        <li><a href="#">Downloads</a></li>
                         <li><a href="#">Credit Card Application</a></li>
                         <li><a href="#">New Customer Registrations</a></li>
                         <li><a href="#">New Card Application Status</a></li>

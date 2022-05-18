@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
     <!-- Services CSS file -->
-    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/cover-digital-banking.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self" >Home</a></li>
-                      <li><a href="personal banking.html" target="_self" >Peronal Banking</a></li>
+                      <li><a href="../index.Php" target="_self" >Home</a></li>
+                      <li><a href="personal banking.Php" target="_self" >Peronal Banking</a></li>
                       <li><a href="#" class="active">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="overlay">
                         <div class="content">
-                            <h1>Services.</h1>
+                            <h1>e-Passbook.</h1>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -82,148 +82,56 @@
             </section>
             <!-- Banner -->
 
-            <!-- Services Cards -->
-<section class="services-cards">
-    <h1 class="heading" id="Key-Values">Key Values</h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="icon">
-                <img src="../Images/support.png" alt="icon">
-            </div>
-            <h3 class="title">Careers</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
+    <!-- Details About Digital Banking -->
+<div class="digital-banking-info">
+    <div class="container">
+        <div class="features">
+            <h2>features</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
         </div>
-        <div class="box">
-            <div class="icon">
-                <img src="../Images/support.png" alt="icon">
-            </div>
-            <h3 class="title">Careers</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br> 
+        <div class="available-facility">
+            <h2>available-facility</h2>
+            <ul>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+                <li>facility</li>
+            </ul>
         </div>
-        <div class="box">
-            <div class="icon">
-                <img src="../Images/support.png" alt="icon">
-            </div>
-            <h3 class="title">Careers</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br>
+        <div class="Benifits">
+            <h2>Benifits</h2>
         </div>
-        <div class="box">
-            <div class="icon">
-                <img src="../Images/support.png" alt="icon">
-            </div>
-            <h3 class="title">Careers</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
+        <div class="how-to-register">
+            <h2>How to Register</h2>
+            <ol>
+                <li>Step</li>
+                <li>Step</li>
+                <li>Step</li>
+                <li>Step</li>
+                <li>Step</li>
+            </ol>
         </div>
-    </div>
-</section>
-    
-            <!-- Services Cards -->
+        <div class="terms-condition">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
+        </div>
+        <div class="apply">
+            <button><a href="application-form.Php"> Apply Online</a></button>
+            <button>Download Application</button>
+        </div>
         
-<!-- POST -->
-
-<div class="blog-post">
-    <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
-    </div>
-    <div class="blog-post-info">
-        <div class="blog-post-title">
-            <h2>Digital Banking</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
-        <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
-        </div>
-        <div class="blog-post-read-more">
-            <a href="cover-digital-banking.html">Read More</a>
-        </div>
     </div>
 </div>
+    
+    <!-- Details About Digital Banking -->
 
-
-<div class="blog-post">
-    <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
-    </div>
-    <div class="blog-post-info">
-        <div class="blog-post-title">
-            <h2>E-Passbook</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
-        <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
-        </div>
-        <div class="blog-post-read-more">
-            <a href="cover-epassbook.html">Read More</a>
-        </div>
-    </div>
-</div>
-
-
-<div class="blog-post">
-    <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
-    </div>
-    <div class="blog-post-info">
-        <div class="blog-post-title">
-            <h2>Whatsapp Banking</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
-        <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
-        </div>
-        <div class="blog-post-read-more">
-            <a href="#">Read More</a>
-        </div>
-    </div> 
-</div>
-
-<div class="blog-post">
-    <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
-    </div>
-    <div class="blog-post-info">
-        <div class="blog-post-title">
-            <h2>Mobile Banking</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
-        <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
-        </div>
-        <div class="blog-post-read-more">
-            <a href="#">Read More</a>
-        </div>
-    </div>
-</div>
-
-<!-- POST -->
-
-<!-- More Info -->
- <!-- Contact Form -->
- <div class="contact-form">
+       <!-- Contact Form -->
+<div class="contact-form">
     <div class="form-header">
         <h2>Inform Us</h2>
     </div>
@@ -231,7 +139,7 @@
         <p>If you need help or want contact us,Complte the Online enquiry form below</p>
     </div>
     <div class="form-body">
-        <form action="../Php/contact us.php" method="post">
+        <form action="" method="post">
             <table>
                 <tr>
                     
@@ -282,6 +190,59 @@
     </div>
 </div>
         <!-- Contact Form -->
+
+
+<!-- More Info -->
+
+<!-- <div class="more-info">
+    <div class="heading">If You Want More Info?</div>
+    <div class="description"><p>Please feel Free to use our Enquariy Form.</p></div>
+    <div class="form">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <select name="select" id="select">
+                            <option value="" selected>Like to learn more about</option>
+                            <option value="">Web Development</option>
+                            <option value="">Web Design</option>
+                            <option value="">Web Hosting</option>
+                            <option value="">Web Maintenance</option>
+                            <option value="">Web Security</option>
+                            <option value="">Web Design</option>
+                            <option value="">Web Design</option>
+                            <option value="">Web Design</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="text" name="name" placeholder="Frist-Name*"></td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="text" name="name" placeholder="Last-Name*"></td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="email" name="email" placeholder="Email*"></td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="text" name="phone" placeholder="Phone*"></td>
+                </tr>
+                <tr>
+                    
+                    <td><textarea name="message" id="" cols="45" rows="10" placeholder="Let us know if there are any special notes.*"></textarea></td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div> -->
 
 <!-- More Info -->
 

@@ -13,8 +13,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- cover-deposit CSS file -->
-    <link rel="stylesheet" href="../css/cover-deposit.css">
+    <!-- Personal banking CSS file -->
+    <link rel="stylesheet" href="../css/cover-saving-accounts.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -31,12 +31,12 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self" >Home</a></li>
+                      <li><a href="../index.Php" target="_self" >Home</a></li>
                       <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
-                      <li><a href="contact us.html" target="_self">Contact Us</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
@@ -62,7 +62,7 @@
         </div>
         <div class="overlay">
             <div class="content">
-                <h1>Deposits.</h1>
+                <h1>Saving Accounts.</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -81,14 +81,15 @@
 </section>
 
 
-<!-- Fixed Deposit -->
+
+<!-- Reguler Saving Account -->
 <div class="blog-post">
     <div class="blog-post-img">
         <img src="../Images/img.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Fixed Deposit</h2>
+            <h2>Reguler Saving Account</h2>
         </div>
         <div class="blog-post-date">
             <span>Friday</span>
@@ -100,14 +101,14 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- Fixed Deposit -->
+<!-- Reguler Saving Account -->
 
-<!-- Details About Fixed Deposit -->
+<!-- Details About Reguler Account -->
 <div class="digital-banking-info">
     <div class="container">
         <div class="features">
@@ -147,17 +148,17 @@
         </div>
     </div>
 </div>
-<!-- Details About Fixed Deposit -->
+<!-- Details About Reguler Account -->
 
 
-<!-- Q Plus Investment -->
+<!-- Power Plus Account -->
 <div class="blog-post">
     <div class="blog-post-img">
         <img src="../Images/img.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Q Plus Investment</h2>
+            <h2>Power Plus Account</h2>
         </div>
         <div class="blog-post-date">
             <span>Friday</span>
@@ -169,14 +170,14 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.html">Apply Now</a>
+            <a href="application-form.Php">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- Q Plus Investment -->
+<!-- Power Plus Account -->
 
-<!-- Details About Q Plus Investment -->
+<!-- Details About Power Plus Account -->
 <div class="digital-banking-info">
     <div class="container">
         <div class="features">
@@ -216,8 +217,7 @@
         </div>
     </div>
 </div>
-<!-- Details About Q Plus Investment -->
-
+<!-- Details About Power Plus Account -->
 
 
 
@@ -230,7 +230,7 @@
             <p>If you need help or want contact us,Complte the Online enquiry form below</p>
         </div>
         <div class="form-body">
-            <form action="../Php/contact us.php" method="post">
+            <form action="" method="post">
                 <table>
                     <tr>
                         

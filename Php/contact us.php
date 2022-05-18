@@ -31,11 +31,11 @@
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.html" target="_self">Home</a></li>
-                      <li><a href="personal banking.html" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.html" target="_self">services</a></li>
-                      <li><a href="Digital banking.html" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.html" target="_self">About Us</a></li>
+                      <li><a href="../index.Php" target="_self">Home</a></li>
+                      <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
+                      <li><a href="services.Php" target="_self">services</a></li>
+                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php" target="_self">About Us</a></li>
                       <li><a href="#" class="active">Contact Us</a></li>
                       <span class="search">
                           <li>
