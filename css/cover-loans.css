@@ -1,0 +1,195 @@
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#slideimg{
+    width: 100%;
+    height: 100vh;
+    animation: zoom 3s linear infinite;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    position: absolute;
+    top: 0;
+}
+
+.content{
+    width: 60%;
+    margin:50px 0px 0px 30px;
+    text-align: left;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 60px;
+    
+}
+
+.content p{
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+
+button{
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin:0px 0px 0px 0px;
+    border-radius: 10px;
+    /* font-weight: bold; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.5s ;
+    margin-top: 5%;
+}
+
+/* Banner */
+
+
+/*---  POST ---*/
+
+/* body{
+    margin: 0px;
+    padding: 0px;
+	width: 100%;
+	height: 350px;
+	background-color: #2d32bb4c;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.blog-post{
+    background-color: #2d32bb4c;
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 5rem 2rem 5rem;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #ffffffc1; */
+    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5); */
+	
+}
+
+.blog-post img{
+	flex: 1;
+	padding: 2rem 0rem 2rem 0rem;
+	width: 50%;
+	height: 50%;
+	border-radius: 0.3rem;
+	object-fit: cover;
+	transform: translate(-50px);
+}
+
+/* .blog-post-img>img{
+	width: 50%;
+	height: 50%;
+	border-radius: 0.3rem;
+	object-fit: cover;
+	transform: translate(-50px);
+	
+	
+} */
+
+.blog-post-info{
+	flex:1;
+	padding: 0rem;
+}
+
+.blog-post-title{
+	color:#444445;
+	text-transform: uppercase;
+}
+
+.blog-post-read-more a{
+	cursor: pointer;
+	font-style: normal;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	background-color: aliceblue;
+	border:1px solid #444445;
+	color: #444445;
+	box-shadow: 0 0.05em 0.1em 0 rgba(0,0,0,0.25);
+}
+
+
+.blog-post-read-more a:hover{
+	background-color: #444445;
+	color: aliceblue;
+	border:1px solid aliceblue;
+	transition: 0.5s;
+	text-decoration: none;
+}
+/*---  POST ---*/
+
+
+ /* Complaint Form */
+
+ .contact-form{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.form-header{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    
+}
+
+.form-description{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.form-body  td{
+    padding: 10px;
+}
+
+.form-body input[type="text"],input[type="email"],select{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Complaint Form */
