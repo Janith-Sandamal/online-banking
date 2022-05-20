@@ -1,5 +1,7 @@
 <?php
 require '../lib/db.php';
+
+
 ?> 
 
 <!DOCTYPE html>
@@ -72,6 +74,7 @@ require '../lib/db.php';
                                         <option value="" selected>-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
+                                        <option value="credit card">Credit Card</option>
                                     </select>
                                 </td>
                                 <td>

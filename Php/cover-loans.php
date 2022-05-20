@@ -99,7 +99,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php">Apply Now</a>
+            <a href="application-form.Php?reason=houseloan">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
@@ -168,7 +168,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php">Apply Now</a>
+            <a href="application-form.Php?reason=educationloan">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>

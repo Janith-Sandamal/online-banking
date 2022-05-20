@@ -34,16 +34,19 @@ h3 {
     text-align: center;
 }
 
-
-
-
+.btn:hover {
+    color: #999;
+    background: white;
+    padding: 3px 8px;
+    border: 2px solid #999;
+}
 
 .title {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 15px 10px;
-    border-bottom: 2px solid rgb(62, 55, 55);
+    border-bottom: 2px solid #999;
 }
 
 table {
@@ -52,7 +55,7 @@ table {
 
 th,
 td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -152,7 +155,6 @@ td {
 .container .header .nav .user img {
     width: 40px;
     height: 40px;
-    cursor: pointer;
 }
 
 .container .header .nav .user .img-case {
@@ -215,10 +217,9 @@ td {
 
 .container .content .content-2 .new-students {
     flex: 2;
-    background: white;
+    background: none;
     min-height: 50vh;
     margin: 0 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
 }
@@ -246,7 +247,7 @@ td {
         height: 40px;
     }
     .side-menu  li:hover {
-        background: 999;
+        background: #999;
         padding: 8px 38px;
         border: 2px solid white;
     }
