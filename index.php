@@ -38,7 +38,7 @@
                       <li><a href="#" class="active">Home</a></li>
                       <li><a href="Php/personal banking.Php" target="_self">Peronal Banking</a></li>
                       <li><a href="Php/services.Php" target="_self">services</a></li>
-                      <li><a href="Php/Digital banking.Php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="Php/Digital banking.Php" target="_blank">Asia Bank Digital</a></li>
                       <li><a href="Php/about us.Php" target="_self">About Us</a></li>
                       <li><a href="Php/contact us.Php" target="_self">Contact Us</a></li>
                       <span class="search">
