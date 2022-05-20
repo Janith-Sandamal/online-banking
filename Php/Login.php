@@ -1,5 +1,7 @@
 <?php
 require '../lib/db.php';
+session_start();
+
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -19,7 +21,12 @@ if (isset($_POST['submit'])) {
         $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
         $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) == 1) {
-            header('Location: ../index.php');
+            $user = mysqli_fetch_assoc($result);
+
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['user_name'];
+            $_SESSION['nic'] = $user['nic'];
+            header('Location: ../Dashboards/user.php');
         } else {
             $errors[] = "Something went wrong!";
         }

@@ -1,9 +1,11 @@
 <?php
 require '../lib/db.php';
-?> 
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,13 +18,14 @@ require '../lib/db.php';
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
-    
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
+
 
     <title>User Dashboard</title>
 </head>
+
 <body>
     <div class="side-menu">
         <div class="brand-name">
@@ -45,10 +48,10 @@ require '../lib/db.php';
                     <button type="submit"><img src="search.png" alt=""></button>
                 </div> -->
                 <div class="user">
-                    <a href="#" class="btn">Pilana Gamage Eranga Janith Sandamal</a>
+                    <a href="#" class="btn"><?php echo "Hello, " .  $_SESSION['username']; ?></a>
                     <!-- <img src="notifications.png" alt=""> -->
                     <div class="img-case">
-                        <img src="user.png" alt="">
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['username'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
@@ -62,19 +65,23 @@ require '../lib/db.php';
                         <table>
                             <tr>
                                 <td>
-                                <select name="" id="">
-                                <option value="">400254189</option>
-                                <option value="">700545699</option>
-                                </select>
+                                    <select name="" id="">
+                                        <option value="">400254189</option>
+                                        <option value="">700545699</option>
+                                    </select>
                                 </td>
-                                
+
                             </tr>
                             <tr>
-                                <td><h3>Available Account Balance</h3></td>
-                                
+                                <td>
+                                    <h3>Available Account Balance</h3>
+                                </td>
+
                             </tr>
                             <tr>
-                            <td><h3 class="btn">RS 15600.00</h3></td>
+                                <td>
+                                    <h3 class="btn">RS 15600.00</h3>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -82,31 +89,21 @@ require '../lib/db.php';
 
                 <div class="card">
                     <div class="box">
-                    <table>
+                        <table>
                             <tr>
-                                <td><h2>Debit Card</h2></td>
+                                <td>
+                                    <h2>Debit Card</h2>
+                                </td>
                             </tr>
                             <tr>
-                                <td><h3>Card Number</h3></td>
+                                <td>
+                                    <h3>Card Number</h3>
+                                </td>
                             </tr>
                             <tr>
-                                <td><h4 class="btn">756215645</h4></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                    <table>
-                            <tr>
-                                <td><h2>Loans</h2></td>
-                            </tr>
-                            <tr>
-                                <td><h3>Loan Number</h3></td>
-                            </tr>
-                            <tr>
-                                <td><h4 class="btn">756215645</h4></td>
+                                <td>
+                                    <h4 class="btn">756215645</h4>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -114,19 +111,45 @@ require '../lib/db.php';
 
                 <div class="card">
                     <div class="box">
-                    <table>
+                        <table>
                             <tr>
-                                <td><h2>Loan Amount</h2></td>
+                                <td>
+                                    <h2>Loans</h2>
+                                </td>
                             </tr>
-                            
                             <tr>
-                                <td><h4 class="btn">756215645</h4></td>
+                                <td>
+                                    <h3>Loan Number</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="btn">756215645</h4>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2>Loan Amount</h2>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4 class="btn">756215645</h4>
+                                </td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-2">
                 <div class="recent-payments">
                     <div class="title">
@@ -205,32 +228,32 @@ require '../lib/db.php';
                         <tr>
                             <th>Card Number</th>
                             <td class="btn">800456210</td>
-                            
+
                         </tr>
                         <tr>
                             <th>Expire Date</th>
                             <td>9/25/2026</td>
-                            
+
                         </tr>
                         <tr>
                             <th>Status</th>
                             <td>Active</td>
-                            
+
                         </tr>
                         <tr>
                             <th>Available Balance</th>
                             <td>Rs 356784.00</td>
-                            
+
                         </tr>
                         <tr>
                             <th>Current Balance</th>
                             <td>Rs 210456.00</td>
-                            
+
                         </tr>
                         <tr>
                             <th>Payment Due Date</th>
                             <td>5/29/2022</td>
-                            
+
                         </tr>
 
                     </table>
@@ -239,4 +262,5 @@ require '../lib/db.php';
         </div>
     </div>
 </body>
+
 </html>
