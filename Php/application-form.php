@@ -59,7 +59,7 @@
 
 <div class="application-form">
     <div class="form-header">
-        <h1>Apply for a loan</h1>
+        <h1>Application Form</h1>
     </div>
 </div>
 
@@ -69,11 +69,26 @@
                 <h2>Fill This Form</h2>
             </div>
             <div class="form-description">
-                <p>If you need help or want contact us,Complte the Online enquiry form below</p>
+                <p>Fill this</p>
             </div>
             <div class="form-body">
                 <form action="../Php/contact us.php" method="post">
                     <table >
+                        <tr>
+                            <td>
+                                <label for="reason">Reason*</label>
+                                <select name="reason" id="reason" disabled>
+                                    <option value="">Saving Account</option>
+                                    <option value="">Youth Account</option>
+                                    <option value="">House Loan</option>
+                                    <option value="">Education Loan</option>
+                                    <option value="">Debit Card</option>
+                                    <option value="">Credit Card</option>
+                                    <option value="">Fixed Deposit</option>
+                                    <option value="">Q Plus Invesment</option>
+                                </select>
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <label for="nic">NIC Number*</label>

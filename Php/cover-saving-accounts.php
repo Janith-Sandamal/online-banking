@@ -101,7 +101,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php">Apply Now</a>
+            <a href="application-form.Php?reason=savingaccount">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
@@ -158,7 +158,7 @@
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Power Plus Account</h2>
+            <h2>Youth Account</h2>
         </div>
         <div class="blog-post-date">
             <span>Friday</span>
@@ -170,7 +170,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php">Apply Now</a>
+            <a href="application-form.Php?reason=youthaccount">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
