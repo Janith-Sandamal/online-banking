@@ -11,6 +11,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 li {
@@ -27,26 +28,26 @@ h3 {
 }
 
 .btn {
-    background: #f09854;
+    background: #8a8fa5;
     color: white;
     padding: 5px 10px;
     text-align: center;
 }
 
 .btn:hover {
-    color: #5473f0;
+    color: #999;
     background: white;
     padding: 3px 8px;
-    border: 2px solid #5473f0;
+    border: 2px solid #999;
 }
 
-/* .title {
+.title {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 15px 10px;
-    border-bottom: 2px solid #5473f0;
-} */
+    border-bottom: 2px solid #999;
+}
 
 table {
     padding: 10px;
@@ -72,7 +73,7 @@ table h3{
 
 .side-menu {
     position: fixed;
-    background: #5473f0;
+    background: #999;
     width: 20vw;
     min-height: 100vh;
     display: flex;
@@ -98,7 +99,7 @@ table h3{
 
 .side-menu li:hover {
     background: white;
-    color: #5473f0;
+    color: #999;
 }
 
 .container {
@@ -243,7 +244,7 @@ table h3{
         height: 40px;
     }
     .side-menu  li:hover {
-        background: #5473f0;
+        background: #999;
         padding: 8px 38px;
         border: 2px solid white;
     }

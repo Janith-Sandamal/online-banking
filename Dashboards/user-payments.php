@@ -32,9 +32,9 @@ require '../lib/db.php';
             <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./user.php" target="_self">Dashboard</a></span> </li>
             <li><img src="https://i.ibb.co/4fxyt0k/transaction-1.png" alt="">&nbsp;<span><a href="./user-transactions.php">Transaction</a></span> </li>
             <li><img src="https://i.ibb.co/h26bpwQ/credit-card-1.png" alt="">&nbsp;<span><a href="./user-payments.php" target="_self">Payments</a></span> </li>
-            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="#">Settings</a></span> </li>
+            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="./user-settings.php">Settings</a></span> </li>
             <li><img src="https://i.ibb.co/vsK6jgH/information.png" alt="">&nbsp;<span><a href="#">Help</a></span> </li>
-            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="#">Log Out</a></span></li>
+            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="./logout.php">Log Out</a></span></li>
         </ul>
     </div>
     <div class="container">
@@ -68,7 +68,7 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="from">From*</label><br>
-                                    <select name="from" id="from">
+                                    <select name="from" id="from" required>
                                         <option value="">-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
@@ -80,7 +80,7 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="type">Type</label><br>
-                                    <select name="type" id="type">
+                                    <select name="type" id="type" required>
                                         <option value="">-Select-</option>
                                         <option value="water bill">Water Bill</option>
                                         <option value="electricity bill">Electricity Bill</option>
@@ -91,7 +91,7 @@ require '../lib/db.php';
                                 </td>
                                 <td>
                                     <label for="provider">Provider</label><br>
-                                    <select name="provider" id="provider">
+                                    <select name="provider" id="provider" required>
                                         <option value="">-Select-</option>
                                         <option value="water board">Sri Lanka Water Board</option>
                                         <option value="ceb">CEB</option>
@@ -106,22 +106,22 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="account number">Account Number</label><br>
-                                    <input type="text" name="account number" id="account number" placeholder="Enter account number">
+                                    <input type="text" name="account number" id="account number" placeholder="Enter account number" required>
                                 </td>
                                 <td>
                                     <label for="reaccount number">Account Number</label><br>
-                                    <input type="text" name="reaccount number" id="reaccount number" placeholder="Re-Enter account number">
+                                    <input type="text" name="reaccount number" id="reaccount number" placeholder="Re-Enter account number" required>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="amount">Amount</label><br>
-                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount">
+                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount" required>
                                 </td>
                                 <td>
                                     <label for="date">Date</label><br>
-                                    <input type="date" name="date" id="date">
+                                    <input type="date" name="date" id="date" required>
                                 </td>
 
                             </tr>

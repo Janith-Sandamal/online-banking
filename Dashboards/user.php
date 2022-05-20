@@ -32,9 +32,9 @@ require '../lib/db.php';
             <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./user.php" target="_self">Dashboard</a></span> </li>
             <li><img src="https://i.ibb.co/4fxyt0k/transaction-1.png" alt="">&nbsp;<span><a href="./user-transactions.php">Transaction</a></span> </li>
             <li><img src="https://i.ibb.co/h26bpwQ/credit-card-1.png" alt="">&nbsp;<span><a href="./user-payments.php" target="_self">Payments</a></span> </li>
-            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="#">Settings</a></span> </li>
+            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="./user-settings.php">Settings</a></span> </li>
             <li><img src="https://i.ibb.co/vsK6jgH/information.png" alt="">&nbsp;<span><a href="#">Help</a></span> </li>
-            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="#">Log Out</a></span></li>
+            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="./logout.php">Log Out</a></span></li>
         </ul>
     </div>
     <div class="container">
@@ -70,10 +70,11 @@ require '../lib/db.php';
                                 
                             </tr>
                             <tr>
-                                <td><h3>RS 15600.00</h3></td>
+                                <td><h3>Available Account Balance</h3></td>
+                                
                             </tr>
                             <tr>
-                                <td><h3>Available Account Balance</h3></td>
+                            <td><h3 class="btn">RS 15600.00</h3></td>
                             </tr>
                         </table>
                     </div>
@@ -97,21 +98,31 @@ require '../lib/db.php';
 
                 <div class="card">
                     <div class="box">
-                        <h2>5</h2>
-                        <h3>Schools</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="schools.png" alt="">
+                    <table>
+                            <tr>
+                                <td><h2>Loans</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Loan Number</h3></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="btn">756215645</h4></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="box">
-                        <h2>350000</h2>
-                        <h3>Income</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="income.png" alt="">
+                    <table>
+                            <tr>
+                                <td><h2>Loan Amount</h2></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><h4 class="btn">756215645</h4></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

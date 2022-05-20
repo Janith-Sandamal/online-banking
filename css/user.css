@@ -11,6 +11,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 li {
@@ -27,18 +28,13 @@ h3 {
 }
 
 .btn {
-    background: #5473f0;
+    background: #8a8fa5;
     color: white;
     padding: 5px 10px;
     text-align: center;
 }
 
-.btn:hover {
-    color: #5473f0;
-    background: white;
-    padding: 3px 8px;
-    border: 2px solid #5473f0;
-}
+
 
 .title {
     display: flex;
@@ -60,7 +56,7 @@ td {
 
 .side-menu {
     position: fixed;
-    background: #5473f0;
+    background: #999;
     width: 20vw;
     min-height: 100vh;
     display: flex;
@@ -86,7 +82,7 @@ td {
 
 .side-menu li:hover {
     background: white;
-    color: #5473f0;
+    color: #999;
 }
 
 .container {
@@ -154,6 +150,7 @@ td {
 .container .header .nav .user img {
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .container .header .nav .user .img-case {
@@ -247,7 +244,7 @@ td {
         height: 40px;
     }
     .side-menu  li:hover {
-        background: #5473f0;
+        background: 999;
         padding: 8px 38px;
         border: 2px solid white;
     }

@@ -32,9 +32,9 @@ require '../lib/db.php';
             <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./user.php" target="_self">Dashboard</a></span> </li>
             <li><img src="https://i.ibb.co/4fxyt0k/transaction-1.png" alt="">&nbsp;<span><a href="#">Transaction</a></span> </li>
             <li><img src="https://i.ibb.co/h26bpwQ/credit-card-1.png" alt="">&nbsp;<span><a href="./user-payments.php" target="_self">Payments</a></span> </li>
-            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="#">Settings</a></span> </li>
+            <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="./user-settings.php">Settings</a></span> </li>
             <li><img src="https://i.ibb.co/vsK6jgH/information.png" alt="">&nbsp;<span><a href="#">Help</a></span> </li>
-            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="#">Log Out</a></span></li>
+            <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="./logout.php">Log Out</a></span></li>
         </ul>
     </div>
     <div class="container">
@@ -68,7 +68,7 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="from">From Account*</label><br>
-                                    <select name="from" id="from">
+                                    <select name="from" id="from" required>
                                         <option value="" selected>-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
@@ -76,7 +76,7 @@ require '../lib/db.php';
                                 </td>
                                 <td>
                                 <label for="type">Type*</label><br>
-                                    <select name="type" id="type">
+                                    <select name="type" id="type" required>
                                         <option value="" selected>-Select-</option>
                                         <option value="one time transaction">One Time Transaction</option>
                                         <option value="immediate transfer">Immediate Transfer</option>
@@ -88,22 +88,22 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="beneficiary name">Beneficiary Name</label><br>
-                                    <input type="text" name="beneficiary name" placeholder="Beneficiary Name">
+                                    <input type="text" name="beneficiary name" placeholder="Beneficiary Name" required>
                                 </td>
                                 <td>
                                     <label for="beneficiary account">Beneficiary Account Number</label><br>
-                                    <input type="text" name="beneficiary account" placeholder="Beneficiary Account">
+                                    <input type="text" name="beneficiary account" placeholder="Beneficiary Account" required>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="email">Beneficiary Email*</label> <br>
-                                    <input type="email" name="beneficiary email" placeholder="Beneficiary Email">
+                                    <input type="email" name="beneficiary email" placeholder="Beneficiary Email" required>
                                 </td>
                                 <td>
                                     <label for="branch">Branch*</label><br>
-                                    <select name="branch" id="branch">
+                                    <select name="branch" id="branch" required>
                                         <option value="">-Select-</option>
                                         <option value="galle">Galle</option>
                                         <option value="colombo">Colombo</option>
@@ -123,18 +123,18 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="mobile number">Beneficiary Mobile Number</label><br>
-                                    <input type="text" name="mobile number" placeholder="Mobile Number">
+                                    <input type="text" name="mobile number" placeholder="Mobile Number" required>
                                 </td>
                                 <td>
                                     <label for="amount">Amount*</label><br>
-                                    <input type="text" name="amount" placeholder="Amount">
+                                    <input type="text" name="amount" placeholder="Amount" required>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="purpose">Purpose</label><br>
-                                    <input type="text" name="purpose" placeholder="Purpose">
+                                    <input type="text" name="purpose" placeholder="Purpose" required>
                                 </td>
                                 <td>
                                     <label for="remarks">Remarks</label><br>
@@ -145,7 +145,7 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="date">Date*</label><br>
-                                    <input type="date" name="date" placeholder="Date">
+                                    <input type="date" name="date" placeholder="Date"required>
                                 </td>
                             </tr>
                             
