@@ -7,6 +7,62 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     header('Location: ../index.php');
 }
 
+$nic = $_SESSION['nic'];
+
+//saving acc
+$query = "SELECT * FROM saving_acc WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+$saving_acc = mysqli_fetch_assoc($result);
+
+//youth acc
+$query = "SELECT * FROM youth_acc WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) == 1) {
+    $youth_acc = mysqli_fetch_assoc($result);
+}
+
+//debit card
+$query = "SELECT card_no FROM debit_cards WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) == 1) {
+    $debit_card = mysqli_fetch_assoc($result);
+}
+
+//loans
+$query = "SELECT * FROM loans WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) == 1) {
+    $loan = mysqli_fetch_assoc($result);
+}
+
+//credit cards
+$query = "SELECT * FROM credit_cards WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) == 1) {
+    $creditCard = mysqli_fetch_assoc($result);
+}
+
+//Receive Transaction
+$savingAccNo = $saving_acc['acc_no'];
+$query = "SELECT * FROM transactions WHERE receive_acc={$savingAccNo};";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) > 0) {
+    $receiveTran = mysqli_fetch_assoc($result);
+}
+
+//Sent Transaction
+$query = "SELECT * FROM transactions WHERE sent_acc={$savingAccNo};";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) > 0) {
+    $sentTran = mysqli_fetch_assoc($result);
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,9 +127,14 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <table>
                             <tr>
                                 <td>
-                                    <select name="" id="">
-                                        <option value="">400254189</option>
-                                        <option value="">700545699</option>
+                                    <select name="selected_acc" id="selected_acc">
+                                        <option>--Account Number--</option>
+                                        <?php
+                                        echo "<option value='" . $saving_acc['acc_no'] . "'>" . $saving_acc['acc_no'] . "</option>";
+                                        if (isset($youth_acc)) {
+                                            echo "<option value='" . $youth_acc['acc_no'] . "'>" . $youth_acc['acc_no'] . "</option>";
+                                        }
+                                        ?>
                                     </select>
                                 </td>
 
@@ -86,7 +147,7 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             </tr>
                             <tr>
                                 <td>
-                                    <h3 class="btn">RS 15600.00</h3>
+                                    <h3 id="acc_balance" class="btn">RS: -----.--</h3>
                                 </td>
                             </tr>
                         </table>
@@ -108,7 +169,11 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             </tr>
                             <tr>
                                 <td>
-                                    <h4 class="btn">756215645</h4>
+                                    <h4 class="btn"><?php if (isset($debit_card)) {
+                                                        echo $debit_card['card_no'];
+                                                    } else {
+                                                        echo "No Debit Card";
+                                                    } ?></h4>
                                 </td>
                             </tr>
                         </table>
@@ -125,12 +190,16 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Loan Number</h3>
+                                    <h3>Loan Type</h3>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <h4 class="btn">756215645</h4>
+                                    <h4 class="btn"><?php if (isset($loan)) {
+                                                        echo $loan['loan_type'];
+                                                    } else {
+                                                        echo "No Loan Yet!";
+                                                    } ?></h4>
                                 </td>
                             </tr>
                         </table>
@@ -148,7 +217,11 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
                             <tr>
                                 <td>
-                                    <h4 class="btn">756215645</h4>
+                                    <h4 class="btn"><?php if (isset($loan)) {
+                                                        echo $loan['loan_amount'];
+                                                    } else {
+                                                        echo "No Loan Yet!";
+                                                    } ?></h4>
                                 </td>
                             </tr>
                         </table>
@@ -169,60 +242,34 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             <th>Amount</th>
                             <th>Date</th>
                         </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Inter Bank Transfer</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Water Bill</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Mobile Reload</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Electricity Bill</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Cargils</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Sri Lanka Telecom</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Sri Lanka Telecom</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Sri Lanka Telecom</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Sri Lanka Telecom</td>
-                            <td>$120</td>
-                            <td>5/19/2022</td>
-                        </tr>
+                        <?php
+
+                        if (!empty($receiveTran)) {
+                            foreach ($receiveTran as $rTran) {
+                                echo "<tr>"
+                                    . "<td>" . $rTran["sent_acc"] . "</td>"
+                                    . "<td>" . "Recevice Funds" . "</td>"
+                                    . "<td>" . $rTran["amount"] . "</td>"
+                                    . "<td>" . $rTran["datetime"] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+                        if (!empty($sentTran)) {
+                            // echo implode("|", $sentTran);
+                            foreach ($sentTran as $sTran) {
+                                echo "<tr>"
+                                    . "<td>" . $sTran['receive_acc'] . "</td>"
+                                    . "<td>" . "Sent Funds" . "</td>"
+                                    . "<td>" . $sTran['amount'] . "</td>"
+                                    . "<td>" . $sTran['datetime'] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+
+
+
+
+                        ?>
                     </table>
                 </div>
                 <div class="new-students">
@@ -233,32 +280,47 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                     <table>
                         <tr>
                             <th>Card Number</th>
-                            <td class="btn">800456210</td>
+                            <td class="btn"><?php if (isset($creditCard)) {
+                                                echo $creditCard['card_no'];
+                                            } else {
+                                                echo "No Credit Card Yet!";
+                                            } ?></td>
 
                         </tr>
                         <tr>
                             <th>Expire Date</th>
-                            <td>9/25/2026</td>
+                            <td><?php if (isset($creditCard)) {
+                                    echo $creditCard['expire_date'];
+                                } else {
+                                    echo "No Credit Card Yet!";
+                                } ?></td>
 
                         </tr>
                         <tr>
                             <th>Status</th>
-                            <td>Active</td>
+                            <td><?php if (isset($creditCard)) {
+                                    echo $creditCard['status'];
+                                } else {
+                                    echo "No Credit Card Yet!";
+                                } ?></td>
 
                         </tr>
                         <tr>
                             <th>Available Balance</th>
-                            <td>Rs 356784.00</td>
+                            <td><?php if (isset($creditCard)) {
+                                    echo $creditCard['credit_limit'] - $creditCard['credit_amount'];
+                                } else {
+                                    echo "No Credit Card Yet!";
+                                } ?></td>
 
                         </tr>
                         <tr>
-                            <th>Current Balance</th>
-                            <td>Rs 210456.00</td>
-
-                        </tr>
-                        <tr>
-                            <th>Payment Due Date</th>
-                            <td>5/29/2022</td>
+                            <th>Credit Loan Amount</th>
+                            <td><?php if (isset($creditCard)) {
+                                    echo $creditCard['credit_amount'];
+                                } else {
+                                    echo "No Credit Card Yet!";
+                                } ?></td>
 
                         </tr>
 
@@ -268,5 +330,22 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
         </div>
     </div>
 </body>
+
+<script>
+    document.getElementById("selected_acc").addEventListener("change", function() {
+        let xhr = new XMLHttpRequest();
+        let endPoint = './getBalance.php?selection=' + this.value;
+        xhr.open('GET', endPoint, true);
+
+        xhr.onload = function() {
+            if (this.status == 200) {
+                let data = JSON.parse(this.responseText);
+                document.getElementById("acc_balance").innerHTML = "Rs: " + data.amount;
+            }
+        }
+
+        xhr.send();
+    });
+</script>
 
 </html>
