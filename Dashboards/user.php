@@ -7,6 +7,22 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     header('Location: ../index.php');
 }
 
+$nic = $_SESSION['nic'];
+
+//saving acc
+$query = "SELECT * FROM saving_acc WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+$saving_acc = mysqli_fetch_assoc($result);
+
+//youth acc
+$query = "SELECT * FROM youth_acc WHERE nic='{$nic}';";
+$result = mysqli_query($connection, $query);
+
+if (mysqli_num_rows($result) == 1) {
+    $youth_acc = mysqli_fetch_assoc($result);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -71,9 +87,14 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <table>
                             <tr>
                                 <td>
-                                    <select name="" id="">
-                                        <option value="">400254189</option>
-                                        <option value="">700545699</option>
+                                    <select name="selected_acc" id="selected_acc">
+                                        <option>--Account Number--</option>
+                                        <?php
+                                        echo "<option value='" . $saving_acc['acc_no'] . "'>" . $saving_acc['acc_no'] . "</option>";
+                                        if (isset($youth_acc)) {
+                                            echo "<option value='" . $youth_acc['acc_no'] . "'>" . $youth_acc['acc_no'] . "</option>";
+                                        }
+                                        ?>
                                     </select>
                                 </td>
 
@@ -86,7 +107,7 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             </tr>
                             <tr>
                                 <td>
-                                    <h3 class="btn">RS 15600.00</h3>
+                                    <h3 id="acc_balance" class="btn">RS: -----.--</h3>
                                 </td>
                             </tr>
                         </table>
@@ -268,5 +289,22 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
         </div>
     </div>
 </body>
+
+<script>
+    document.getElementById("selected_acc").addEventListener("change", function() {
+        let xhr = new XMLHttpRequest();
+        let endPoint = './getBalance.php?selection=' + this.value;
+        xhr.open('GET', endPoint, true);
+
+        xhr.onload = function() {
+            if (this.status == 200) {
+                let data = JSON.parse(this.responseText);
+                document.getElementById("acc_balance").innerHTML = "Rs: " + data.amount;
+            }
+        }
+
+        xhr.send();
+    });
+</script>
 
 </html>
