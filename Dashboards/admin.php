@@ -30,9 +30,9 @@ require '../lib/db.php';
             <!-- <h1>Brand</h1> -->
         </div>
         <ul>
-            <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./admin.php" target="_self">Dashboard</a></span> </li>
+            <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./admin.php" >Dashboard</a></span> </li>
             <li><img src="https://i.ibb.co/frgxY9k/refresh.png" alt="">&nbsp;<span><a href="./admin-update.php">Update</a></span> </li>
-            <li><img src="https://i.ibb.co/x7fg256/checked.png" alt="">&nbsp;<span><a href="./admin-check.php" target="_self">Check</a></span> </li>
+            <li><img src="https://i.ibb.co/x7fg256/checked.png" alt="">&nbsp;<span><a href="./admin-check.php" >Check</a></span> </li>
             <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="./admin-settings.php">Settings</a></span> </li>
             <li><img src="https://i.ibb.co/vsK6jgH/information.png" alt="">&nbsp;<span><a href="#">Help</a></span> </li>
             <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="./logout.php">Log Out</a></span></li>
@@ -91,10 +91,10 @@ require '../lib/db.php';
                     <div class="box">
                     <table>
                             <tr>
-                                <td><h3><button class="btn">Add User</button></h3></td>
+                                <td><h3><a href="./admin-update.php" class="btn">Add User</a></h3></td>
                             </tr>
                             <tr>
-                            <td><h3><button class="btn">Remove User</button></h3></td>
+                            <td><h3><a href="./admin-settings.php" class="btn">Add Admin</a></h3></td>
                             </tr>
                         </table>
                     </div>
@@ -119,7 +119,7 @@ require '../lib/db.php';
                 <div class="recent-payments">
                     <div class="title">
                         <h2>Recent Payments/Transactions</h2>
-                        <!-- <a href="#" class="btn">View All</a> -->
+                        
                     </div>
                     <table>
                         <tr>
@@ -186,18 +186,19 @@ require '../lib/db.php';
                 </div>
                 <div class="new-students">
                     <div class="title">
-                        <h2>Credit Cards</h2>
-                        <!-- <a href="#" class="btn">View All</a> -->
+                        <h2>Admin Details</h2>
+                        
                     </div>
+
                     <table>
                         <tr>
-                            <th>Card Number</th>
-                            <td class="btn">800456210</td>
+                            <th>Admin ID</th>
+                            <td class="btn">10556</td>
                             
                         </tr>
                         <tr>
-                            <th>Expire Date</th>
-                            <td>9/25/2026</td>
+                            <th>Login Time</th>
+                            <td>13:53:25</td>
                             
                         </tr>
                         <tr>

@@ -1,3 +1,52 @@
+<?php 
+require "../lib/db.php";
+
+if(isset($_POST['submit'])){
+
+    $type = $_POST['type'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $number = $_POST['number'];
+    $message = $_POST['message'];
+
+$errors=array();
+
+if (!isset($_POST['fname']) || strlen(trim($_POST['fname'])) < 1) {
+        $errors[] = "First Name is invalid";
+}
+if (!isset($_POST['lname']) || strlen(trim($_POST['lname'])) < 1) {
+    $errors[] = "Last Name is invalid";
+}
+if (!isset($_POST['email']) || strlen(trim($_POST['email'])) < 1) {
+    $errors[] = "Email is invalid";
+}
+if (!isset($_POST['number']) || strlen(trim($_POST['number'])) < 1) {
+    $errors[] = "First Name is invalid";
+}
+if (!isset($_POST['message']) || strlen(trim($_POST['message'])) < 1) {
+    $errors[] = "First Name is invalid";
+}
+
+if(empty($errors)){
+    $query = "INSERT INTO  inform_us(type,frist_name,last_name,email,phone_number,massage) VALUES ('{$type}','{$fname}','{$lname}','{$email}','{$number}','{$message}');";
+    $result = mysqli_query($connection,$query);
+
+    if($result){
+        $success = "Your Response Recorded";
+    }
+    else{
+        $errors[] = "Something went wrong";
+    }
+    
+}
+
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,6 +263,20 @@
                 </table>
                 
             </form>
+
+            <?php
+        if(isset($success)){
+            echo "<script type='text/javascript'>alert('$success');</script>"; 
+        }
+        if (!empty($errors)) {
+            $messages=implode(" | ", $errors);
+            echo "<script type='text/javascript'>alert('$messages');</script>";
+        }
+
+
+
+        ?>
+
         </div>
     </div>
             <!-- Contact Form -->
@@ -227,22 +290,21 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Bank Loans</a></li>
+                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="#">Credit Card Application</a></li>
-                        <li><a href="#">New Customer Registrations</a></li>
-                        <li><a href="#">New Card Application Status</a></li>
+                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
+                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="#">Deposits</a></li>
-                        <li><a href="#">Current Accounts</a></li>
-                        <li><a href="#">Cards</a></li>
-                        <li><a href="#">Savings Accounts</a></li>
-                        <li><a href="#">Loans</a></li>    
+                        <li><a href="./php/cover-deposit.php" target="_self">Deposits</a></li>
+                        <li><a href="./php/cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
+                        <li><a href="./php/cover-cards.php" target="_self">Cards</a></li>
+                        <li><a href="./php/cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
+                        <li><a href="./php/cover-loans.php" target="_self">Loans</a></li>    
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -274,7 +336,6 @@
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
                         <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
-                        <p>Design & Developed by <strong><a href="#"> BinaryPage Solutions</a></strong></p>
             </div>
 </body>
 </html>

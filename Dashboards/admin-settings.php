@@ -1,5 +1,8 @@
 <?php
 require '../lib/db.php';
+
+$errors=array();
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +16,7 @@ require '../lib/db.php';
     <link rel="icon" href="Images/Favicon sample.png" type="image/x-icon">
 
     <!-- user-settings File -->
-    <link rel="stylesheet" href="../css/user-settings.css">
+    <link rel="stylesheet" href="../css/admin-settings.css">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -31,9 +34,9 @@ require '../lib/db.php';
             <!-- <h1>Brand</h1> -->
         </div>
         <ul>
-            <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./admin.php" target="_self">Dashboard</a></span> </li>
+            <li><img src="https://i.ibb.co/q5Xj3NW/dashboard-1.png" alt="">&nbsp; <span><a href="./admin.php" >Dashboard</a></span> </li>
             <li><img src="https://i.ibb.co/frgxY9k/refresh.png" alt="">&nbsp;<span><a href="./admin-update.php">Update</a></span> </li>
-            <li><img src="https://i.ibb.co/x7fg256/checked.png" alt="">&nbsp;<span><a href="./admin-check.php" target="_self">Check</a></span> </li>
+            <li><img src="https://i.ibb.co/x7fg256/checked.png" alt="">&nbsp;<span><a href="./admin-check.php" >Check</a></span> </li>
             <li><img src="https://i.ibb.co/jhNDBNb/settings-2.png" alt="">&nbsp;<span><a href="./admin-settings.php">Settings</a></span> </li>
             <li><img src="https://i.ibb.co/vsK6jgH/information.png" alt="">&nbsp;<span><a href="#">Help</a></span> </li>
             <li><img src="https://i.ibb.co/8gznnxt/logout-1.png" alt="">&nbsp; <span><a href="./logout.php">Log Out</a></span></li>
@@ -62,7 +65,7 @@ require '../lib/db.php';
 
             <div class="content-2">
                 <!-- Change Password -->
-                <div class="recent-payments">
+                <div class="admin-settings">
                     <div class="title">
                         <h2>Change Admin Password</h2>
                     </div>
@@ -99,12 +102,9 @@ require '../lib/db.php';
                 </div>
                 <!-- Change Password -->
 
-                <div class="new-students">
-
-                </div>
 
                 <!-- Change Admin Username -->
-                <div class="recent-payments">
+                <div class="admin-settings">
                     <div class="title">
                         <h2>Change Admin Username</h2>
                     </div>
@@ -140,6 +140,51 @@ require '../lib/db.php';
                     </table>
                 </div>
                 <!-- Change Username -->
+
+                <!-- Add Admin  -->
+                <div class="admin-settings">
+                    <div class="title">
+                        <h2>Add Admin </h2>
+                    </div>
+                    <table>
+                        <form action="" method="POST">
+                            <tr>
+                                <td>
+                                    <label for="id">Admin ID*</label><br>
+                                    <input type="id" name="id" id="id" placeholder="Admin ID" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="add_admin_username">Admin Username*</label><br>
+                                    <input type="text" name="add_admin_username" id="add_admin_username" placeholder="Enter Admin Username" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="add_password">Password*</label><br>
+                                    <input type="password" name="add_password" placeholder="Enter Password" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Cpassword">Confirm Password*</label><br>
+                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Confirm Admin Password" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
+                                </td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+                <!-- Add Admin -->
 
             </div>
         </div>
