@@ -11,49 +11,49 @@ if (isset($_POST['submit'])) {
 
 //check required fields
 
-$required = array('username', 'password');
+// $required = array('username', 'password');
 
-foreach ($required as $field) {
-    if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
-        $errors[] = $field . ' is required';
-    }
+// foreach ($required as $field) {
+//     if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
+//         $errors[] = $field . ' is required';
+//     }
 
-}
+// }
 
-//min length
-$min_length = array('username' => 8, 'password' => 8);
+// //min length
+// $min_length = array('username' => 8, 'password' => 8);
 
-foreach ($min_length as $field => $length) {
-    if (strlen($_POST[$field]) < $length) {
-        $errors[] = $field . ' must be at least ' . $length . ' characters';
-    }
-}
-
-}
-
-    // if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
-    //     $errors[] = "Username is invalid";
-    // }
-    // if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
-    //     $errors[] = "Password is invalid";
-    // }
-
-//     if (empty($errors)) {
-//         $hasedPassword = sha1($password);
-//         $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
-//         $result = mysqli_query($connection, $query);
-//         if (mysqli_num_rows($result) == 1) {
-//             $user = mysqli_fetch_assoc($result);
-
-//             $_SESSION['id'] = $user['id'];
-//             $_SESSION['username'] = $user['user_name'];
-//             $_SESSION['nic'] = $user['nic'];
-//             header('Location: ../Dashboards/user.php');
-//         } else {
-//             $errors[] = "Something went wrong!";
-//         }
+// foreach ($min_length as $field => $length) {
+//     if (strlen($_POST[$field]) < $length) {
+//         $errors[] = $field . ' must be at least ' . $length . ' characters';
 //     }
 // }
+
+// }
+
+    if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
+        $errors[] = "Username is invalid";
+    }
+    if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
+        $errors[] = "Password is invalid";
+    }
+
+    if (empty($errors)) {
+        $hasedPassword = sha1($password);
+        $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
+        $result = mysqli_query($connection, $query);
+        if (mysqli_num_rows($result) == 1) {
+            $user = mysqli_fetch_assoc($result);
+
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['user_name'];
+            $_SESSION['nic'] = $user['nic'];
+            header('Location: ../Dashboards/user.php');
+        } else {
+            $errors[] = "Something went wrong!";
+        }
+    }
+}
 
 ?>
 

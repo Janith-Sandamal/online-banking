@@ -258,10 +258,10 @@ if (mysqli_num_rows($result) > 0) {
                             // echo implode("|", $sentTran);
                             foreach ($sentTran as $sTran) {
                                 echo "<tr>"
-                                    . "<td>" . $sTran['receive_acc'] . "</td>"
-                                    . "<td>" . "Sent Funds" . "</td>"
-                                    . "<td>" . $sTran['amount'] . "</td>"
-                                    . "<td>" . $sTran['datetime'] . "</td>"
+                                    . "<td>" . $sTran["receive_acc"] . "</td>"
+                                    . "<td>" . "Send Funds" . "</td>"
+                                    . "<td>" . $sTran["amount"] . "</td>"
+                                    . "<td>" . $sTran["datetime"] . "</td>"
                                     . "</tr>";
                             }
                         }
