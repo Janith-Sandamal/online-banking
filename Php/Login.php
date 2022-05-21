@@ -9,29 +9,51 @@ if (isset($_POST['submit'])) {
 
     $errors = array();
 
-    if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
-        $errors[] = "Username is invalid";
-    }
-    if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
-        $errors[] = "Password is invalid";
+//check required fields
+
+$required = array('username', 'password');
+
+foreach ($required as $field) {
+    if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
+        $errors[] = $field . ' is required';
     }
 
-    if (empty($errors)) {
-        $hasedPassword = sha1($password);
-        $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
-        $result = mysqli_query($connection, $query);
-        if (mysqli_num_rows($result) == 1) {
-            $user = mysqli_fetch_assoc($result);
+}
 
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['username'] = $user['user_name'];
-            $_SESSION['nic'] = $user['nic'];
-            header('Location: ../Dashboards/user.php');
-        } else {
-            $errors[] = "Something went wrong!";
-        }
+//min length
+$min_length = array('username' => 8, 'password' => 8);
+
+foreach ($min_length as $field => $length) {
+    if (strlen($_POST[$field]) < $length) {
+        $errors[] = $field . ' must be at least ' . $length . ' characters';
     }
 }
+
+}
+
+    // if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
+    //     $errors[] = "Username is invalid";
+    // }
+    // if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
+    //     $errors[] = "Password is invalid";
+    // }
+
+//     if (empty($errors)) {
+//         $hasedPassword = sha1($password);
+//         $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
+//         $result = mysqli_query($connection, $query);
+//         if (mysqli_num_rows($result) == 1) {
+//             $user = mysqli_fetch_assoc($result);
+
+//             $_SESSION['id'] = $user['id'];
+//             $_SESSION['username'] = $user['user_name'];
+//             $_SESSION['nic'] = $user['nic'];
+//             header('Location: ../Dashboards/user.php');
+//         } else {
+//             $errors[] = "Something went wrong!";
+//         }
+//     }
+// }
 
 ?>
 
@@ -96,23 +118,6 @@ if (isset($_POST['submit'])) {
     </header>
 
     <!-- Body Section -->
-    <!-- <section id="login">
-    <div class="loginbox">
-        <img src="../Images/login-avatar.png" class="avatar">
-        <h1>Login Here!</h1>
-        <form action="../php/login.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password"><br>
-            <input type="submit" name="submit" value="Login"><br>
-            <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br>
-            <a href="../Html/account-reset.html" target="_self">Having trouble Login In?</a>
-
-            
-        </form>
-    </div>
-</section> -->
     <section class="home-banner">
         <div class="banner">
             <div class="slider">

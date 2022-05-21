@@ -1,35 +1,45 @@
 <?php 
+
+// Import database connection
 require "../lib/db.php";
 
+// Define variables and initialize with empty values
+$errors = array();
+
+
+
+// Check if the form is submitted
 if(isset($_POST['submit'])){
 
-    $type = $_POST['type'];
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $message = $_POST['message'];
+    $type=$_POST['type'];
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $number=$_POST['number'];
+    $message=$_POST['message'];
 
-$errors=array();
 
-if (!isset($_POST['fname']) || strlen(trim($_POST['fname'])) < 1) {
-        $errors[] = "First Name is invalid";
-}
-if (!isset($_POST['lname']) || strlen(trim($_POST['lname'])) < 1) {
-    $errors[] = "Last Name is invalid";
-}
-if (!isset($_POST['email']) || strlen(trim($_POST['email'])) < 1) {
-    $errors[] = "Email is invalid";
-}
-if (!isset($_POST['number']) || strlen(trim($_POST['number'])) < 1) {
-    $errors[] = "First Name is invalid";
-}
-if (!isset($_POST['message']) || strlen(trim($_POST['message'])) < 1) {
-    $errors[] = "First Name is invalid";
-}
+    //checking Required Fields
+    $required_fields = array('type'=> 'type','fname' =>'First Name','lname' => 'Last Name','email' => 'Email','number' => 'Email','message' => 'Message');
+            
+        foreach($required_fields as $field => $label){
+            if(empty($_POST[$field]) || $_POST[$field] == ''){
+                $errors[] = $label.' is a required field.';
+            }
+        }
 
+        //checking max length
+        $max_length_fields = array('fname' => 255,'lname' => 255,'email' => 255,'number' => 10,'message' => 150);
+        
+        foreach($max_length_fields as $fieldname => $max_length){
+            if(strlen(trim(($_POST[$fieldname]))) > $max_length){
+                $errors[] = $fieldname . " must be less than " . $max_length . " characters.";
+            }
+        }
+
+        //check if there are any errors in the form
 if(empty($errors)){
-    $query = "INSERT INTO  inform_us(type,frist_name,last_name,email,phone_number,massage) VALUES ('{$type}','{$fname}','{$lname}','{$email}','{$number}','{$message}');";
+    $query = "INSERT INTO  inform_us(type,first_name,last_name,email,phone_number,message) VALUES ('{$type}','{$fname}','{$lname}','{$email}','{$number}','{$message}');";
     $result = mysqli_query($connection,$query);
 
     if($result){
@@ -40,8 +50,7 @@ if(empty($errors)){
     }
     
 }
-
-}
+    }
 ?>
 
 
@@ -209,17 +218,31 @@ if(empty($errors)){
     <!-- Contact Form -->
     <div class="contact-form">
         <div class="form-header">
-            <h2>Inform Us</h2>
+            <h2 id="inform">Inform Us</h2>
         </div>
         <div class="form-description">
             <p>If you need help or want contact us,Complte the Online enquiry form below</p>
         </div>
         <div class="form-body">
-            <form action="../Php/contact us.php" method="post">
+            <form action="#inform" method="post">
                 <table>
                     <tr>
+                        <td>
+                        <?php
                         
-                        <td><select name="" id="" placeholder="Select">
+                        if(!empty($errors)){
+                            echo "<p style='color:red'>There were errors in your form</p>";
+                            foreach($errors as $error){
+                                echo "<p style='color:red'>-".$error."</p>";
+                            }
+                        }
+                        ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td><select name="type" id="type" placeholder="Select">
+                            <option value="">-Select-</option>
                             <option value="Credit Cards" >Credit Cards</option>
                             <option value="Saving Accounts">Saving Accounts</option>
                             <option value="Digital Banking">Digital Banking</option>
@@ -232,27 +255,27 @@ if(empty($errors)){
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" required>
+                            <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" >
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
+                            <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" >
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="email" name="email" id="email" placeholder="Enter your Email " required>
+                            <input type="email" name="email" id="email" placeholder="Enter your Email " >
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="number" id="number" placeholder="Enter your Phone Number" required>
+                            <input type="text" name="number" id="number" placeholder="Enter your Phone Number" >
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords." required></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords." ></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -260,23 +283,21 @@ if(empty($errors)){
                             <input type="submit" name="submit" value="Submit">
                         </td>
                     </tr>
+                    <tr>
+                    <td>
+                        <?php
+                        
+                        if(isset($_POST['submit']) && (empty($errors))){
+                            echo "<p style='color:green'>Your message has been sent</p>";
+                        }
+                        
+                        
+                        ?>
+                    </td>
+                    </tr>
                 </table>
                 
             </form>
-
-            <?php
-        if(isset($success)){
-            echo "<script type='text/javascript'>alert('$success');</script>"; 
-        }
-        if (!empty($errors)) {
-            $messages=implode(" | ", $errors);
-            echo "<script type='text/javascript'>alert('$messages');</script>";
-        }
-
-
-
-        ?>
-
         </div>
     </div>
             <!-- Contact Form -->

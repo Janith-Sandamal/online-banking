@@ -108,7 +108,7 @@ if(empty($errors)){
                 </nav>
             </div>
         </div>
-     </header>
+    </header>
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
@@ -190,9 +190,6 @@ Sri Lanka.</p></pre>
                             echo "<p style='color:red'>-".$error."</p>";
                         }
                     }
-
-            
-
                     ?>
                     </td>
                 </tr>

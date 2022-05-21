@@ -1,8 +1,13 @@
 <?php
 require '../lib/db.php';
+session_start();
 
+//Check the user is logged in
+if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
+    header('Location: ../index.php');
+}
 
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
