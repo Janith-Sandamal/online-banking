@@ -46,23 +46,6 @@ $result = mysqli_query($connection, $query);
 if (mysqli_num_rows($result) == 1) {
     $creditCard = mysqli_fetch_assoc($result);
 }
-
-//Receive Transaction
-$savingAccNo = $saving_acc['acc_no'];
-$query = "SELECT * FROM transactions WHERE receive_acc={$savingAccNo};";
-$result = mysqli_query($connection, $query);
-
-if (mysqli_num_rows($result) > 0) {
-    $receiveTran = mysqli_fetch_assoc($result);
-}
-
-//Sent Transaction
-$query = "SELECT * FROM transactions WHERE sent_acc={$savingAccNo};";
-$result = mysqli_query($connection, $query);
-
-if (mysqli_num_rows($result) > 0) {
-    $sentTran = mysqli_fetch_assoc($result);
-}
 ?>
 
 <!DOCTYPE html>
@@ -242,34 +225,6 @@ if (mysqli_num_rows($result) > 0) {
                             <th>Amount</th>
                             <th>Date</th>
                         </tr>
-                        <?php
-
-                        if (!empty($receiveTran)) {
-                            foreach ($receiveTran as $rTran) {
-                                echo "<tr>"
-                                    . "<td>" . $rTran["sent_acc"] . "</td>"
-                                    . "<td>" . "Recevice Funds" . "</td>"
-                                    . "<td>" . $rTran["amount"] . "</td>"
-                                    . "<td>" . $rTran["datetime"] . "</td>"
-                                    . "</tr>";
-                            }
-                        }
-                        if (!empty($sentTran)) {
-                            // echo implode("|", $sentTran);
-                            foreach ($sentTran as $sTran) {
-                                echo "<tr>"
-                                    . "<td>" . $sTran["receive_acc"] . "</td>"
-                                    . "<td>" . "Send Funds" . "</td>"
-                                    . "<td>" . $sTran["amount"] . "</td>"
-                                    . "<td>" . $sTran["datetime"] . "</td>"
-                                    . "</tr>";
-                            }
-                        }
-
-
-
-
-                        ?>
                     </table>
                 </div>
                 <div class="new-students">
