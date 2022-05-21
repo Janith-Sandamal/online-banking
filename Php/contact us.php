@@ -1,35 +1,45 @@
 <?php 
+
+// Import database connection
 require "../lib/db.php";
 
+// Define variables and initialize with empty values
+$errors = array();
+
+
+
+// Check if the form is submitted
 if(isset($_POST['submit'])){
 
-    $type = $_POST['type'];
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $message = $_POST['message'];
+    $type=$_POST['type'];
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $number=$_POST['number'];
+    $message=$_POST['message'];
 
-$errors=array();
 
-if (!isset($_POST['fname']) || strlen(trim($_POST['fname'])) < 1) {
-        $errors[] = "First Name is invalid";
-}
-if (!isset($_POST['lname']) || strlen(trim($_POST['lname'])) < 1) {
-    $errors[] = "Last Name is invalid";
-}
-if (!isset($_POST['email']) || strlen(trim($_POST['email'])) < 1) {
-    $errors[] = "Email is invalid";
-}
-if (!isset($_POST['number']) || strlen(trim($_POST['number'])) < 1) {
-    $errors[] = "First Name is invalid";
-}
-if (!isset($_POST['message']) || strlen(trim($_POST['message'])) < 1) {
-    $errors[] = "First Name is invalid";
-}
+    //checking Required Fields
+    $required_fields = array('type'=> 'type','fname' =>'First Name','lname' => 'Last Name','email' => 'Email','number' => 'Email','message' => 'Message');
+            
+        foreach($required_fields as $field => $label){
+            if(empty($_POST[$field]) || $_POST[$field] == ''){
+                $errors[] = $label.' is a required field.';
+            }
+        }
 
+        //checking max length
+        $max_length_fields = array('fname' => 255,'lname' => 255,'email' => 255,'number' => 10,'message' => 150);
+        
+        foreach($max_length_fields as $fieldname => $max_length){
+            if(strlen(trim(($_POST[$fieldname]))) > $max_length){
+                $errors[] = $fieldname . " must be less than " . $max_length . " characters.";
+            }
+        }
+
+        //check if there are any errors in the form
 if(empty($errors)){
-    $query = "INSERT INTO  inform_us(type,frist_name,last_name,email,phone_number,massage) VALUES ('{$type}','{$fname}','{$lname}','{$email}','{$number}','{$message}');";
+    $query = "INSERT INTO  inform_us(type,first_name,last_name,email,phone_number,message) VALUES ('{$type}','{$fname}','{$lname}','{$email}','{$number}','{$message}');";
     $result = mysqli_query($connection,$query);
 
     if($result){
@@ -40,8 +50,7 @@ if(empty($errors)){
     }
     
 }
-
-}
+    }
 ?>
 
 
@@ -78,11 +87,11 @@ if(empty($errors)){
                 <nav class="nav"> 
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self">Home</a></li>
-                      <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.Php" target="_self">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
+                      <li><a href="../index.Php">Home</a></li>
+                      <li><a href="personal banking.Php">Peronal Banking</a></li>
+                      <li><a href="services.Php" >services</a></li>
+                      <li><a href="Digital banking.Php">Asia Bank Digital</a></li>
+                      <li><a href="about us.Php">About Us</a></li>
                       <li><a href="#" class="active">Contact Us</a></li>
                       <span class="search">
                           <li>
@@ -118,7 +127,6 @@ if(empty($errors)){
                 </p>
                 <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.html">Contact!</a></button>
-                    <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
                 </div>
 
     
@@ -164,17 +172,35 @@ Sri Lanka.</p></pre>
         <!-- Contact Form -->
 <div class="contact-form">
     <div class="form-header">
-        <h2>Inform Us</h2>
+        <h2 id="inform">Inform Us</h2>
     </div>
     <div class="form-description">
         <p>If you need help or want contact us,Complte the Online enquiry form below</p>
     </div>
     <div class="form-body">
-        <form action="./contact us.php" method="POST">
+        <form action="contact us.php" method="POST">
             <table>
+            <tr>
+                    <td>
+                    <?php
+                    
+                    if(!empty($errors)){
+                        echo "<p style='color:red'>There were errors in your form</p>";
+                        foreach($errors as $error){
+                            echo "<p style='color:red'>-".$error."</p>";
+                        }
+                    }
+
+            
+
+                    ?>
+                    </td>
+                </tr>
                 <tr>
                     
-                    <td><select name="type" id="type" placeholder="Select">
+                    <td>
+                        <select name="type" id="type" placeholder="Select">
+                        <option value="">-Select-</option>    
                         <option value="Credit Cards" >Credit Cards</option>
                         <option value="Saving Accounts">Saving Accounts</option>
                         <option value="Digital Banking">Digital Banking</option>
@@ -183,8 +209,11 @@ Sri Lanka.</p></pre>
                         <option value="Personal Loans">Q Plus Account</option>
                         <option value="Complains">Complains</option>
                         <option value="Others">Others</option>
-                    </select></td>
+                        </select>
+                    </td>
+                    
                 </tr>
+
                 <tr>
                     <td>
                         <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" >
@@ -207,30 +236,30 @@ Sri Lanka.</p></pre>
                 </tr>
                 <tr>
                     <td>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords." ></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords."></textarea>
                     </td>
                 </tr>
+
                 <tr>
                     <td>
                         <input type="submit" name="submit" value="Submit" >
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <?php
+                        
+                        if(isset($_POST['submit']) && (empty($errors))){
+                            echo "<p style='color:green'>Your message has been sent</p>";
+                        }
+                        
+                        
+                        ?>
+                    </td>
+                </tr>
             </table>
             
         </form>
-
-        <?php
-        if(isset($success)){
-            echo "<script type='text/javascript'>alert('$success');</script>"; 
-        }
-        if (!empty($errors)) {
-            $messages=implode(" | ", $errors);
-            echo "<script type='text/javascript'>alert('$messages');</script>";
-        }
-
-
-
-        ?>
 
     </div>
 </div>
@@ -245,22 +274,21 @@ Sri Lanka.</p></pre>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Bank Loans</a></li>
+                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="#">Credit Card Application</a></li>
-                        <li><a href="#">New Customer Registrations</a></li>
-                        <li><a href="#">New Card Application Status</a></li>
+                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
+                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="#">Deposits</a></li>
-                        <li><a href="#">Current Accounts</a></li>
-                        <li><a href="#">Cards</a></li>
-                        <li><a href="#">Savings Accounts</a></li>
-                        <li><a href="#">Loans</a></li>    
+                        <li><a href="./php/cover-deposit.php" target="_self">Deposits</a></li>
+                        <li><a href="./php/cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
+                        <li><a href="./php/cover-cards.php" target="_self">Cards</a></li>
+                        <li><a href="./php/cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
+                        <li><a href="./php/cover-loans.php" target="_self">Loans</a></li>    
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -292,7 +320,6 @@ Sri Lanka.</p></pre>
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
                         <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
-                        <p>Design & Developed by <strong><a href="#"> BinaryPage Solutions</a></strong></p>
             </div>
 </body>
 </html>

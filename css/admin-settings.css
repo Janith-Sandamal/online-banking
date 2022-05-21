@@ -205,7 +205,7 @@ td {
     flex-wrap: wrap;
 }
 
-.container .content .content-2 .recent-payments {
+.container .content .content-2 .admin-settings {
     min-height: 50vh;
     flex: 5;
     background: white;
@@ -264,8 +264,8 @@ td {
         width: 30px;
         height: 30px;
     }
-    .container .content .content-2 .recent-payments table th:nth-child(2),
-    .container .content .content-2 .recent-payments table td:nth-child(2) {
+    .container .content .content-2 .admin-settings table th:nth-child(2),
+    .container .content .content-2 .admin-settings table td:nth-child(2) {
         display: none;
     }
 }
