@@ -74,10 +74,63 @@ if(empty($add_errors)){
         $add_errors[]='User not added';
     }
 }
+}
 
+//Check the admin is Submit remove user form
+if(isset($_POST['remove_submit'])){
+    $required_fields = array('nic'=>'NIC','username'=>'User Name');
+    
+    $remove_errors=array();
+
+    foreach($required_fields as $fieldname => $fieldvalue){
+        if(empty($_POST[$fieldname]) || $_POST[$fieldname]==""){
+            $remove_errors[]=$fieldvalue . ' is required';
+        }
+    }
+
+//Check nic is exist or not in users table
+if(!empty($_POST['nic'])){
+    $nic=$_POST['nic'];
+    $sql="SELECT * FROM users WHERE nic='$nic'";
+    $result=mysqli_query($connection,$sql);
+    if(mysqli_num_rows($result)==0){
+        $remove_errors[]='NIC is not exist';
+    }
+    
+}
+
+//Nic is only letter and number
+if(!empty($_POST['username'])){
+    $username=$_POST['username'];
+    if(!preg_match('/^[a-zA-Z0-9]*$/',$username)){
+        $remove_errors[]='Username is only letter and number';
+    }
 
 }
 
+//Nic number length is between 10 and 12 and ignore space
+if(!empty($_POST['nic'])){
+    $nic=$_POST['nic'];
+    if(!preg_match('/^[a-zA-Z0-9]{10,12}$/',$nic)){
+        $remove_errors[]='NIC number length is between 10 and 12 and ignore space';
+    }
+
+}
+
+//errors are empty then remove the user
+if(empty($remove_errors)){
+    $nic=$_POST['nic'];
+    $username=$_POST['username'];
+    $sql="DELETE FROM users WHERE nic='$nic' AND user_name='$username'";
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        $remove_success_message='User removed successfully';
+    }else{
+        $remove_errors[]='User not removed';
+    }
+}
+
+}
 ?> 
 
 <!DOCTYPE html>
@@ -216,23 +269,42 @@ if(empty($add_errors)){
                         <h2>Remove User</h2>   
                     </div>
                     <table>
-                        <form action="">
-
+                        <form action="./admin-update.php" method="POST">
+                        <tr>
+                                <td>
+                                    <?php
+                                    if (isset($remove_errors) && !empty($remove_errors)) {
+                                        foreach ($remove_errors as $remove_error) {
+                                            echo "<p style='color:red'>" . '-' . $remove_error . '-' . "</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <label for="nic">NIC*</label><br>
-                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" required>
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" >
                                 </td>
 
                                 <td>
                                     <label for="username">Username*</label><br>
-                                    <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                                    <input type="text" name="username" id="username" placeholder="Enter Username" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <input type="submit" name="submit" value="Confirm &rarr;">
+                                    <input type="submit" name="remove_submit" value="Confirm &rarr;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if (isset($remove_success_message) && !empty($remove_success_message)) {
+                                        echo "<p style='color:green'>" . '-' . $remove_success_message . '-' . "</p>";
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                         </form>
