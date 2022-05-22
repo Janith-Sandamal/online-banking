@@ -30,12 +30,6 @@ foreach ($min_length as $field => $length) {
 }
 
 
-
-
-
-
-
-
     if (empty($errors)) {
         $hasedPassword = sha1($password);
         $query = "SELECT * FROM users WHERE user_name = '{$username}' AND password = '{$hasedPassword}' LIMIT 1;";
