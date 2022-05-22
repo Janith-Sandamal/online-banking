@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -13,8 +13,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- cover-loans CSS file -->
-    <link rel="stylesheet" href="../css/cover-loans.css">
+    <!-- cover-cards CSS file -->
+    <link rel="stylesheet" href="../css/cover-cards.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -22,37 +22,39 @@
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Welcome to Aisa Bank!</title>
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+
+    <title>Loans | MTC Bank</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.Php" target="_self">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="services.Php" target="_self">Services</a></li>
+                    <li><a href="Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="about us.Php" target="_self">About Us</a></li>
+                    <li><a href="contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
      </header>
+    
+
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
@@ -64,10 +66,7 @@
             <div class="content">
                 <h1>Loans.</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
+                Meridian Trust personal Loans have made it as easy as it can be to transcend from dreaming to sharing. And what is more exciting and fulfilling than sharing a dream with someone you love. It could be a trip abroad with your mother, or sending your child to university, or maybe to finance your perfect wedding. Whatever it may be, always remember, the best things in life were meant to be shared.
                 </p>
                 <div>
                     <button type="button" class="btn-1" ><a href="Login.Php">Explore !</a></button>
@@ -80,142 +79,86 @@
 </section>
 
 
-<!-- House Loan -->
+<div class="part1">
+            <h2>Loans</h2>
+            <p>Meridian Trust Personal Loans have made it as easy as it can be to transcend from dreaming to sharing. And what is more exciting and fulfilling than sharing a dream with someone you love. It could be a trip abroad with your mother or sending your child to university, or maybe financing your perfect wedding. Whatever it may be, always remember, that the best things in life we’re meant to be shared.</p>
+        </div>
+        <div class="part2">
+            <h3> Step 01</h3>
+            <ul>
+                <li>Call or visit our nearest System</li>
+                <li>Doorstep service for loans over 5 Mn</li>
+            </ul>
+        </div>
+        <div class="part2">
+            <h3> Step 02</h3>
+            <ul>
+                <li>Customize your loan</li>
+                <li>No guarantors required</li>
+                <li>Fixed or floating rate</li>
+                <li>Top-up option for existing borrowers</li>
+            </ul>
+        </div>
+        <div class="part2">
+            <h3> Step 03</h3>
+            <ul>
+                <li>Easy documentation</li>
+                <li>A single document to complete</li>
+            </ul>
+        </div>
+        <div class="part2">
+            <h3> Step 04</h3>
+            <ul>
+                <li>Money in your account</li>
+                <li>Within 2 working days</li>
+            </ul>
+        </div>
+        
+
+
+<!-- Reguler Saving Account -->
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/homeloan.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>House Loan</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
+            <h2>Home loan</h2>
         </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust Normal Savings Accounts can be opened by any Sri Lankan Citizen above the age of 18 years at any Meridian Trust System island-wide</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=houseloan">Apply Now</a>
+            <a href="application-form.Php?reason=savingaccount">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- House Loan -->
-
-<!-- Details House Loan -->
-<div class="digital-banking-info">
-    <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
-            <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-            </ul>
-        </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
-        </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
-            <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-            </ol>
-        </div>
-        <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
-        </div>
-    </div>
-</div>
-<!-- Details About House Loan -->
+<!-- Reguler Saving Account -->
 
 
-<!-- Education Loan -->
+
+<!-- Power Plus Account -->
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/educationloan.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>Education Loan</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust Youth Accounts can be opened by any Sri Lankan Citizen above the age of 18 years at any Meridian Trust System island-wide</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=educationloan">Apply Now</a>
+            <a href="application-form.Php?reason=youthaccount">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
 </div>
-<!-- Education Loan -->
-
-<!-- Details About Education Loan -->
-<div class="digital-banking-info">
-    <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
-            <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-            </ul>
-        </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
-        </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
-            <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-            </ol>
-        </div>
-        <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
-        </div>
-    </div>
-</div>
-<!-- Details About Education Loan -->
+<!-- Power Plus Account -->
 
 
     <!-- Contact Form -->
@@ -328,12 +271,12 @@
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

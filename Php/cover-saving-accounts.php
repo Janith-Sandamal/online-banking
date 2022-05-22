@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -13,8 +13,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- Personal banking CSS file -->
-    <link rel="stylesheet" href="../css/cover-saving-accounts.css">
+    <!-- cover-cards CSS file -->
+    <link rel="stylesheet" href="../css/cover-cards.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -22,52 +22,50 @@
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Welcome to Aisa Bank!</title>
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+
+    <title>Saving Account| MTC Bank</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.Php" target="_self">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="services.Php" target="_self">Services</a></li>
+                    <li><a href="Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="about us.Php" target="_self">About Us</a></li>
+                    <li><a href="contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
      </header>
+    
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="../Images/personalbanking.jpg" alt="banner" id="slideimg">
+            <img src="../Images/banner1.png" alt="banner" id="slideimg">
     
         </div>
         <div class="overlay">
             <div class="content">
                 <h1>Saving Accounts.</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
+                Our General Saving Account is designed to cater, to all your general savings requirements. Save your money with Meridian Trust Finance to reap the benefits of the highest interest rates in the market.
                 </p>
                 <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
@@ -80,24 +78,47 @@
     </div>
 </section>
 
+<div class="part1">
+            <h2>Savings Account</h2>
+            <p>Our General Saving Account is designed to cater, to all your general savings requirements. Save your money with Meridian Trust Finance to reap the benefits of the highest interest rates in the market.
+            Meridian Trust Normal Savings Accounts can be opened by any Sri Lankan Citizen above the age of 18 years at any Meridian Trust System island-wide.
+            </p>
+        </div>
+        <div class="part2">
+            <h2> Features</h2>
+            <ul>
+                <li>Account can be opened jointly.</li>
+                <li>Account can be opened jointly</li>
+                <li>The Trust and Assurance from the State bank</li>
+                <li>Internet Banking and SMS Banking facilities</li>
+                <li>Internet Banking and SMS Banking facilities</li>
+                <li>Deposits can be made at over 600 Systems Island wide</li>
+                <li>24 hour Call Centre facility</li>
+                <li>24 Hours Customer Service 1975</li>
+            </ul>
+        </div>
+        <div class="part2">
+            <h2> Requirements</h2>
+            <ul>
+                <li>Completion of mandate</li>
+                <li>KYC Requirement (Know your Customer)</li>
+                <li>KYC Requirement (Know your Customer)</li>
+            </ul>
+        </div>
+        
 
 
 <!-- Reguler Saving Account -->
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/savi.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>Reguler Saving Account</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust Normal Savings Accounts can be opened by any Sri Lankan Citizen above the age of 18 years at any Meridian Trust System island-wide</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
@@ -108,65 +129,19 @@
 </div>
 <!-- Reguler Saving Account -->
 
-<!-- Details About Reguler Account -->
-<div class="digital-banking-info">
-    <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
-            <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-            </ul>
-        </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
-        </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
-            <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-            </ol>
-        </div>
-        <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
-        </div>
-    </div>
-</div>
-<!-- Details About Reguler Account -->
 
 
 <!-- Power Plus Account -->
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/Deposits.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>Youth Account</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust Youth Accounts can be opened by any Sri Lankan Citizen above the age of 18 years at any Meridian Trust System island-wide</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
@@ -177,47 +152,6 @@
 </div>
 <!-- Power Plus Account -->
 
-<!-- Details About Power Plus Account -->
-<div class="digital-banking-info">
-    <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
-            <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-            </ul>
-        </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
-        </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
-            <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-            </ol>
-        </div>
-        <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
-        </div>
-    </div>
-</div>
-<!-- Details About Power Plus Account -->
 
 
 
@@ -331,12 +265,12 @@
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>
