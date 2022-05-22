@@ -109,6 +109,10 @@ td {
   align-items: center;
 }
 
+.hide{
+  display: hidden;
+}
+
 .container .header .nav .search {
   flex: 3;
   display: flex;

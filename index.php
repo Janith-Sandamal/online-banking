@@ -24,8 +24,8 @@
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
-  
+
+
     <!-- Font awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     
@@ -41,11 +41,11 @@
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="Php/personal banking.Php" >Peronal Banking</a></li>
-                    <li><a href="Php/services.Php" >Services</a></li>
-                    <li><a href="Php/Digital banking.Php" target="_blank">MT Digital </a></li>
-                    <li><a href="Php/about us.Php" >About Us</a></li>
-                    <li><a href="Php/contact us.Php" >Contact Us</a></li>
+                    <li><a href="./Php/personal banking.Php" >Peronal Banking</a></li>
+                    <li><a href="./Php/services.Php" >Services</a></li>
+                    <li><a href="./Php/Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./Php/about us.Php" >About Us</a></li>
+                    <li><a href="./Php/contact us.Php" >Contact Us</a></li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
             <li class="search-icon">
@@ -159,7 +159,7 @@
 
         <!-- POST -->
 
-        <!-- Cards Offers -->
+
 
 
         <!-------- How Can We Help ! -------->
@@ -226,10 +226,10 @@
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="#"><img src="Images/facebook.png" alt="facebook"></a>
-                        <a href="#"><img src="Images/instagram.png" alt="instagram"></a>
-                        <a href="#"><img src="Images/linkedin.png" alt="linkedin"></a>
-                        <a href="#"><img src="Images/youtube.png" alt="youtube"></a>
+                        <a href="#"><img src="./Images/facebook.png" alt="facebook"></a>
+                        <a href="#"><img src="./Images/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="./Images/linkedin.png" alt="linkedin"></a>
+                        <a href="#"><img src="./Images/youtube.png" alt="youtube"></a>
                     </div>
                 </div>
             </div>

@@ -70,8 +70,7 @@
                     Quisquam, quidem.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
-                    <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
+                    <button type="button" class="btn-1" ><a href="#">Explore !</a></button>
                 </div>
 
     
@@ -100,7 +99,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=debitcard">Apply Now</a>
+            <a href="#">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>
@@ -169,7 +168,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=creditcard">Apply Now</a>
+            <a href="#">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>

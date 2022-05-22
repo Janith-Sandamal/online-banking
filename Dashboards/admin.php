@@ -49,10 +49,7 @@ $user_count = mysqli_num_rows($result);
         <div class="container">
             <div class="header">
                 <div class="nav">
-                    <!-- <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="search.png" alt=""></button>
-                </div> -->
+                  
                     <div class="user">
                         <a href="#" class="btn"><?php echo "Hello, " . $_SESSION['admin_first_name']; ?></a>
                         <!-- <img src="notifications.png" alt=""> -->
@@ -120,21 +117,11 @@ $user_count = mysqli_num_rows($result);
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="box">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <h2>Loan Amount</h2>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <h4 class="btn">756215645</h4>
-                                    </td>
-                                </tr>
-                            </table>
+                    <div class="hide">
+                        <div class="card">
+                            <!-- <div class="box">
+                        
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -208,45 +195,12 @@ $user_count = mysqli_num_rows($result);
                             </tr>
                         </table>
                     </div>
-                    <div class="new-students">
-                        <div class="title">
-                            <h2>Admin Details</h2>
 
+
+                    <div class="hide">
+                        <div class="new-students">
+                        
                         </div>
-
-                        <table>
-                            <tr>
-                                <th>Admin ID</th>
-                                <td class="btn">10556</td>
-
-                            </tr>
-                            <tr>
-                                <th>Login Time</th>
-                                <td>13:53:25</td>
-
-                            </tr>
-                            <tr>
-                                <th>Status</th>
-                                <td>Active</td>
-
-                            </tr>
-                            <tr>
-                                <th>Available Balance</th>
-                                <td>Rs 356784.00</td>
-
-                            </tr>
-                            <tr>
-                                <th>Current Balance</th>
-                                <td>Rs 210456.00</td>
-
-                            </tr>
-                            <tr>
-                                <th>Payment Due Date</th>
-                                <td>5/29/2022</td>
-
-                            </tr>
-
-                        </table>
                     </div>
                 </div>
             </div>

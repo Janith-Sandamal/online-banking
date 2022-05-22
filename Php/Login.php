@@ -93,12 +93,12 @@ foreach ($min_length as $field => $length) {
             <li class="logo">Meridian Trust</li>
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="Php/personal banking.Php" target="_self">Peronal Banking</a></li>
-                    <li><a href="Php/services.Php" target="_self">Services</a></li>
-                    <li><a href="Php/Digital banking.Php" target="_blank">MT Digital </a></li>
-                    <li><a href="Php/about us.Php" target="_self">About Us</a></li>
-                    <li><a href="Php/contact us.Php" target="_self">Contact Us</a></li>
+                    <li><a href="../index.php" >Home</a></li>
+                    <li><a href="./Php/personal banking.Php" >Peronal Banking</a></li>
+                    <li><a href="./Php/services.Php" >Services</a></li>
+                    <li><a href="./Php/Digital banking.Php" target="_blank" class="active">MT Digital </a></li>
+                    <li><a href="./Php/about us.Php" >About Us</a></li>
+                    <li><a href="./Php/contact us.Php" >Contact Us</a></li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
             <li class="search-icon">

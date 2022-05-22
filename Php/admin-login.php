@@ -92,9 +92,9 @@ if (isset($_POST['submit'])) {
                     <li><a href="../index.php" target="_self">Home</a></li>
                     <li><a href="#">Peronal Banking</a></li>
                     <li><a href="#">services</a></li>
-                    <li><a href="Digital banking.php" target="_self" class="active">Asia Bank Digital</a></li>
-                    <li><a href="about us.php" target="_self">About Us</a></li>
-                    <li><a href="contact us.php" target="_self">Contact Us</a></li>
+                    <li><a href="./Digital banking.php" target="_self" >Asia Bank Digital</a></li>
+                    <li><a href="./about us.php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.php" target="_self">Contact Us</a></li>
                     <span class="search">
                         <li>
                             <form action="" method="">
@@ -150,17 +150,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </section>
                 <div class="content">
-                    <!-- <h1>Connect With Online Banking!</h1> -->
-                    <!-- <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
-                </p> -->
-                    <!-- <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
-                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
-                </div> -->
+                  
 
 
                 </div>

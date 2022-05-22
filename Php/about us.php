@@ -32,11 +32,11 @@
                    <ul>
                       <li><a href="#"><img  src="" alt="Logo"></a></li>
                       <li><a href="../index.php" target="_self" >Home</a></li>
-                      <li><a href="personal banking.php" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.php" target="_self">services</a></li>
-                      <li><a href="Digital banking.php" target="_self">Asia Bank Digital</a></li>
+                      <li><a href="./personal banking.php" target="_self">Peronal Banking</a></li>
+                      <li><a href="./services.php" target="_self">services</a></li>
+                      <li><a href="./Digital banking.php" target="_self">Asia Bank Digital</a></li>
                       <li><a href="#" class="active">About Us</a></li>
-                      <li><a href="contact us.php" target="_self">Contact Us</a></li>
+                      <li><a href="./contact us.php" target="_self">Contact Us</a></li>
                       <span class="search">
                           <li>
                               <form action="" method="">
