@@ -63,7 +63,7 @@ if(empty($errors)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -80,52 +80,52 @@ if(empty($errors)){
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+
     <title>Welcome to Aisa Bank!</title>
 </head>
 <body>
     <!-- Header Section of web page -->
     <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="#"  class="active">Peronal Banking</a></li>
-                      <li><a href="services.Php" target="_self">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="../index.Php" target="_self">Home</a></li>
+                    <li><a href="#"  class="active">Peronal Banking</a></li>
+                    <li><a href="./services.Php" target="_self">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
      </header>
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="../Images/personalbanking.jpg" alt="banner" id="slideimg">
+            <img src="../Images/pbankslide1.jpg" alt="banner" id="slideimg">
     
         </div>
         <div class="overlay">
             <div class="content">
                 <h1>Welcome to Personal Banking.</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
+                Professional who takes care of the personal accounts of their customers,
+                mostly in retail banking divisions Retail Banking Divisions 
+                Retail banking or personal banking refers to the financial services 
+                offered by the financial institutions exclusively to the individual clients.
                 </p>
                 <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.Php">Explore !</a></button>
@@ -142,7 +142,7 @@ if(empty($errors)){
 <div class="account-types-cards">
     <div class="card">
         <div class="image-data">
-            <div class="background-image"></div>
+            <div class="background-image"> <img src="../Images/SavingAccount.jpg" alt="credit card" id="cardimg"></div>
             <div class="publication-details"></div>
             <a href="#" class="author">User</a>
             <span class="data">Hello Customer</span>
@@ -151,7 +151,9 @@ if(empty($errors)){
     <div class="post-data">
         <h1 class="title">Savings Accounts</h1>
         <h2 class="subtitle">You Can rock the World</h2>
-        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eaque rerum ratione consectetur nobis quae vitae consequatur ad suscipit modi facilis excepturi ut nesciunt non, voluptas error veniam quia quasi!</p>
+        <p class="description">This is a bank account at a retail bank whose features include the requirements 
+            that only a limited number of withdrawals can take place, 
+            it does not have cheque facilities and usually do not have a linked debit card facility, it has limited transfer facilities and cannot be overdrawn.</p>
         <div class="cta">
             <a href="cover-saving-accounts.Php">Read More &rarr;</a>
         </div>
@@ -160,7 +162,7 @@ if(empty($errors)){
 <div class="account-types-cards">
     <div class="card">
         <div class="image-data">
-            <div class="background-image"></div>
+            <div class="background-image"><img src="../Images/billls.jpg" alt="credit card" id="cardimg"></div>
             <div class="publication-details"></div>
             <a href="#" class="author">User</a>
             <span class="data">Hello Customer</span>
@@ -169,7 +171,11 @@ if(empty($errors)){
     <div class="post-data">
         <h1 class="title">Loans</h1>
         <h2 class="subtitle">You Can rock the World</h2>
-        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eaque rerum ratione consectetur nobis quae vitae consequatur ad suscipit modi facilis excepturi ut nesciunt non, voluptas error veniam quia quasi!</p>
+        <p class="description">Meridian Trust personal Loans have made it as easy as it can be to transcend 
+            from dreaming to sharing. And what is more exciting and fulfilling than sharing a dream 
+            with someone you love. It could be a trip abroad with your mother, or sending your child to
+             university, or maybe to finance your perfect wedding. Whatever it may be, always remember, 
+             the best things in life were meant to be shared.</p>
         <div class="cta">
             <a href="cover-loans.Php">Read More &rarr;</a>
         </div>
@@ -178,7 +184,7 @@ if(empty($errors)){
 <div class="account-types-cards">
     <div class="card">
         <div class="image-data">
-            <div class="background-image"></div>
+            <div class="background-image" > <img src="../Images/cardss.jpg" alt="credit card" id="cardimg"></div>
             <div class="publication-details"></div>
             <a href="#" class="author">User</a>
             <span class="data">Hello Customer</span>
@@ -187,7 +193,11 @@ if(empty($errors)){
     <div class="post-data">
         <h1 class="title">Cards</h1>
         <h2 class="subtitle">You Can rock the World</h2>
-        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eaque rerum ratione consectetur nobis quae vitae consequatur ad suscipit modi facilis excepturi ut nesciunt non, voluptas error veniam quia quasi!</p>
+        <p class="description">In today's fast-paced world, being able to do things on the move 
+            is of paramount importance. This enables you, our valued customer, to command the 
+            respect you deserve, in a world as challenging and competitive as ours. 
+            The opportunity to be rewarded for your professionalism is surely more than welcome.
+            that is why with the Meridian Account you are provided with the following benefits.</p>
         <div class="cta">
             <a href="cover-cards.Php">Read More &rarr;</a>
         </div>
@@ -196,7 +206,7 @@ if(empty($errors)){
 <div class="account-types-cards">
     <div class="card">
         <div class="image-data">
-            <div class="background-image"></div>
+            <div class="background-image"><img src="../Images/Deposits.jpg" alt="credit card" id="cardimg"></div>
             <div class="publication-details"></div>
             <a href="#" class="author">User</a>
             <span class="data">Hello Customer</span>
@@ -205,7 +215,12 @@ if(empty($errors)){
     <div class="post-data">
         <h1 class="title">Deposit</h1>
         <h2 class="subtitle">You Can rock the World</h2>
-        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eaque rerum ratione consectetur nobis quae vitae consequatur ad suscipit modi facilis excepturi ut nesciunt non, voluptas error veniam quia quasi!</p>
+        <p class="description">
+            In today's fast-paced world, being able to do things on the move 
+            is of paramount importance. This enables you, our valued customer, to command the 
+            respect you deserve, in a world as challenging and competitive as ours. 
+            The opportunity to be rewarded for your professionalism is surely more than welcome.
+            that is why with the Meridian Account you are provided with the following benefits.</p>
         <div class="cta">
             <a href="cover-deposit.Php">Read More &rarr;</a>
         </div>
@@ -351,12 +366,12 @@ if(empty($errors)){
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

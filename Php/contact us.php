@@ -61,7 +61,7 @@ if(empty($errors)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -77,38 +77,37 @@ if(empty($errors)){
 
     <!-- Footer CSS file -->
     <link rel="stylesheet" href="../css/footer.css">
+    
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 
     <title>Contact Us!</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php">Home</a></li>
-                      <li><a href="personal banking.Php">Peronal Banking</a></li>
-                      <li><a href="services.Php" >services</a></li>
-                      <li><a href="Digital banking.Php">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php">About Us</a></li>
-                      <li><a href="#" class="active">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="../index.Php" >Home</a></li>
+                    <li><a href="./personal banking.Php" >Peronal Banking</a></li>
+                    <li><a href="./services.Php" >services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" >About Us</a></li>
+                    <li><a href="#" class="active">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
-    </header>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
 <!-- Body Section -->
 <section class="home-banner">
     <div class="banner">
@@ -310,13 +309,13 @@ Sri Lanka.</p></pre>
             </div>
         </div>
 </footer>
-            <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+<div class="sub-footer">
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

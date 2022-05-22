@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="css/Normalize.css">
@@ -25,53 +25,53 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     
+  
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 
-    <title>Welcome to Aisa Bank!</title>
+    <title>Meridian Trust | Welcome!</title>
 </head>
 <body  onload="slider()">
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="#" alt="Logo" ></a></li>
-                      <li><a href="#" class="active">Home</a></li>
-                      <li><a href="Php/personal banking.Php" target="_self">Peronal Banking</a></li>
-                      <li><a href="Php/services.Php" target="_self">services</a></li>
-                      <li><a href="Php/Digital banking.Php" target="_blank">Asia Bank Digital</a></li>
-                      <li><a href="Php/about us.Php" target="_self">About Us</a></li>
-                      <li><a href="Php/contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-            
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="Php/personal banking.Php" >Peronal Banking</a></li>
+                    <li><a href="Php/services.Php" >Services</a></li>
+                    <li><a href="Php/Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="Php/about us.Php" >About Us</a></li>
+                    <li><a href="Php/contact us.Php" >Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
      </header>
-
+    
  <!-- Body Section -->
 
  <!-------- Banner -------->
 <section class="home-banner">
     <div class="banner">
         <div class="slider">
-            <img src="Images/banner1.png" alt="banner" id="slideimg">
-    
+            <img src="./Images/banner1.jpg" alt="banner" id="slideimg">
         </div>
         <div class="overlay">
             <div class="content">
-                <h1>Welcome to Asia Bank!</h1>
-                <p>We are the best bank in the world Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatibus dignissimos sapiente numquam distinctio obcaecati unde repellat sed laboriosam eum, laborum cumque illo, deleniti aspernatur a. Voluptates, odit? Exercitationem, labore.
-                Iste, optio. Sed saepe, enim praesentium voluptate cum explicabo facilis doloribus quae deserunt labore magni autem molestiae ducimus perspiciatis nulla nihil sit blanditiis dicta, delectus rerum. Animi similique dolores modi.</p>
+                <h1>Welcome to Meridian Trust Bank!</h1>
+                <h5>Meridian’s internet banking facility allows you to carry out your banking online with complete security,
+                    in the comfort of your home office or anywhere. It gives you complete control of your finances, unfettered from usual banking hours. 
+                    Meridian now offers access to its Internet Banking facility to all Meridian account holders for their convenience.</h5>
                 <div>
                     <button type="button">Read More</button>
                 </div>
@@ -79,8 +79,8 @@
             </div>
         </div>
     </div>
-    <script src="js/banner.js">
     
+    <script src="./js/banner.js">
     </script>
 </section>
 
@@ -90,19 +90,14 @@
 
 <div class="blog-post">
             <div class="blog-post-img">
-                <img src="Images/img.jpg" alt="Banner">
+                <img src="Images/tradeservices.jpg" alt="Banner">
             </div>
             <div class="blog-post-info">
                 <div class="blog-post-title">
-                    <h2>Post Card</h2>
-                </div>
-                <div class="blog-post-date">
-                    <span>Friday</span>
-                    <span>May 16 2022</span>
+                    <h2>TRADE SERVICES</h2>
                 </div>
                 <div class="blog-post-description">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                        pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+                    <p>Are you an importer looking for a credit facility? We at MTC can help make you with your quest. With MTC trade services customers can now enjoy,</p>
                 </div>
                 <div class="blog-post-read-more">
                     <a href="#">Read More</a>
@@ -111,19 +106,15 @@
 </div>
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="Images/img.jpg" alt="Banner">
+        <img src="Images/Safetydeposit.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Post Card</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
+            <h2>SAFETY DEPOSIT LOCKERS</h2>
         </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>The Safest Bank offers its valuable customers the safety of its vaults through safety deposit lockers. 
+                Store your priceless articles in an MTC Safety Locker and be rest assured.</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
@@ -132,19 +123,15 @@
 </div>
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="Images/img.jpg" alt="Banner">
+        <img src="Images/financialplanning.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Post Card</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
+            <h2>FINANCIAL PLANNING</h2>
         </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Worth isn’t always calculated by numbers. It is defined differently by everyone. 
+                What matters most to you, matters most to us. And that’s why we are here to help.</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
@@ -153,19 +140,16 @@
 </div>
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="Images/img.jpg" alt="Banner">
+        <img src="Images/persontoperson.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
-            <h2>Post Card</h2>
-        </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
+            <h2>PERSON TO PERSON PAYMENTS</h2>
         </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Make IOU’s a thing of the past with Person to Person Payments.
+                Get paid or pay someone back using Meridian Trust Online Banking or Mobile Banking. 
+                To make a payment, you just need the payee’s name and email address.</p>
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
@@ -181,25 +165,24 @@
         <!-------- How Can We Help ! -------->
 <div id="how-we-can-help">
     <div class="container">
-        <div class="row">
+        <div class="rowhead">
             <h2>Any Questions? Get In Touch</h2>
         </div>
-        <div class="row">
-            <div class="box-email">
+        <div class="rows">
+            <div class="box">
                 <a href="#"><img src="Images/review.png" alt="Rate us"><br> Rate Us</a>
             </div>
-            <div class="box-locate">
-                <a href="#"><img src="Images/location.png" alt=""><br>Visit Us in</a>
+            <div class="box">
+                <a href="#"><img src="Images/location.png" alt=""><br>Visit Us In</a>
             </div>
-            <div class="box-phone">
-                <a href="#"><img src="Images/support.png" alt=""><br>Contact us</a>
+            <div class="box">
+                <a href="#"><img src="Images/support.png" alt=""><br>Contact Us</a>
             </div>
 
         </div>
     </div>   
 </div>
-
-            
+          
         <!-------- How Can We Help ! -------->
 
 
@@ -253,12 +236,12 @@
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

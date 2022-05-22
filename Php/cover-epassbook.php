@@ -53,7 +53,7 @@ if(empty($errors)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -62,7 +62,7 @@ if(empty($errors)){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
     <!-- Services CSS file -->
-    <link rel="stylesheet" href="../css/cover-digital-banking.css">
+    <link rel="stylesheet" href="../css/cover-epassbook.css">
 
     <!-- Header CSS File -->
     <link rel="stylesheet" href="../css/header.css">
@@ -70,56 +70,53 @@ if(empty($errors)){
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Services!</title>
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+
+    <title>e-Passbook | MTC Bank</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="personal banking.Php" target="_self" >Peronal Banking</a></li>
-                      <li><a href="#" class="active">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="../index.Php" target="_self">Home</a></li>
+                    <li><a href="Php/personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="Digital banking.Php" target="_self">MT Digital </a></li>
+                    <li><a href="Php/about us.Php" target="_self">About Us</a></li>
+                    <li><a href="Php/contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+        </nav>
      </header>
 <!-- Body Section -->
             <!-- Banner -->
             <section class="home-banner" >
                 <div class="banner">
                     <div class="slider">
-                        <img src="../Images/Services.jpg" alt="banner" id="slideimg">
+                        <img src="../Images/epassbook.jpg" alt="banner" id="slideimg">
                 
                     </div>
                     <div class="overlay">
                         <div class="content">
                             <h1>e-Passbook.</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.
+                            Meridian Trust E-Passbook is an electronic version of the traditional passbook / current account statement, which allows you to download and check your account balances and transaction details in real-time, anywhere, anytime.
                             </p>
                             <div>
-                                <button type="button" class="btn-1" ><a href="#Key-Values">Explore!</a></button>
+                                <button type="button" class="btn-1" ><a href="#mainfeatures">Explore!</a></button>
 
                             </div>
             
@@ -130,52 +127,56 @@ if(empty($errors)){
             </section>
             <!-- Banner -->
 
-    <!-- Details About Digital Banking -->
-<div class="digital-banking-info">
+    <!-- Details Body Info-->
+<div class="body-info">
     <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
+        <div class="part1">
+            <h1 id="mainfeatures">Main Features</h1>
+            <p>Meridian Trust E-Passbook is an electronic version of the traditional passbook / current account statement, which allows you to download and check your account balances and transaction details in real-time, anywhere, anytime.</p>
+
             <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
+                <li>Self-Registration with NIC and Mobile number (Local/ Foreign)</li>
+                <li>Account balances & Transaction details</li>
+                <li>Can view transaction details of the last 3 months</li>
+                <li>Foreign remittances tracker</li>
+                <li>Available in Tri-languages (Sinhala, English, or in Tamil as preferred)</li>
+                <li>Optional login PIN</li>
+                <li>Can be used on multiple devices (up to 5 devices per registration)</li>
+                <li>Last-viewed transactions displayed in offline mode</li>
+                <li>Assign preferred names for accounts for easy reference and identification</li>
+                <li>‘Default Account’ option to view a selected account on top of the account list.</li>
             </ul>
         </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
+        <div class="part1">
+            <h2>Eligibility</h2>
+            <p>Personal Savings / Current account holders who have a valid mobile number registered with the Bank, including Joint Account holders.</p>
         </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
-            <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-            </ol>
+
+        <div class="part1">
+            <h2>Fees & charges</h2>
+            <p>Meridian Trust E-Passbook is available for free of charge</p>
         </div>
+
         <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
+            <h5>Terms & Conditions</h5>
+            <p>We hereby formulate the Terms and Conditions of Online Banking Services (the “Terms”) in order to provide you with better Online Banking Services, prevent risks inherent in Online Banking, and specify the rights and obligations of the parties in the Online Banking. Please read the Terms carefully before you use any of our Online Banking Services. If you have any questions, please feel free to contact us, and you can browse our official.</p>
         </div>
-        <div class="apply">
-            <button><a href="application-form.Php?reason=epassbook"> Apply Online</a></button>
-            <button>Download Application</button>
+         <div class="btnall">
+            <div>
+                <button type="button" class="btn-2"><a href="application-form.Php"> Apply Online</a></button>
+             </div>
+            <div>
+                <button type="button" class="btn-3"><a href="#"> Download </a></button>
+            </div>
         </div>
+
+
+
+    </div>
         
     </div>
 </div>
-    
+   
     <!-- Details About Digital Banking -->
 
        <!-- Contact Form -->
@@ -256,57 +257,7 @@ if(empty($errors)){
 
 <!-- More Info -->
 
-<!-- <div class="more-info">
-    <div class="heading">If You Want More Info?</div>
-    <div class="description"><p>Please feel Free to use our Enquariy Form.</p></div>
-    <div class="form">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <select name="select" id="select">
-                            <option value="" selected>Like to learn more about</option>
-                            <option value="">Web Development</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Hosting</option>
-                            <option value="">Web Maintenance</option>
-                            <option value="">Web Security</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Frist-Name*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Last-Name*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="email" name="email" placeholder="Email*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="phone" placeholder="Phone*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><textarea name="message" id="" cols="45" rows="10" placeholder="Let us know if there are any special notes.*"></textarea></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="submit" value="Submit"></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</div> -->
 
-<!-- More Info -->
 
 <!-- Body Section -->
 
@@ -357,12 +308,12 @@ if(empty($errors)){
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

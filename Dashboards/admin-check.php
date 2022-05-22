@@ -1,5 +1,10 @@
 <?php
 require '../lib/db.php';
+
+
+//admin user details check if form is submitted
+$required = array('username', 'password');
+
 ?> 
 
 <!DOCTYPE html>
@@ -40,15 +45,12 @@ require '../lib/db.php';
     <div class="container">
         <div class="header">
             <div class="nav">
-                <!-- <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="search.png" alt=""></button>
-                </div> -->
+                
                 <div class="user">
-                    <a href="#" class="btn">Pilana Gamage Eranga Janith Sandamal</a>
+                    
                     
                     <div class="img-case">
-                        <img src="user.png" alt="">
+                        
                     </div>
                 </div>
             </div>
@@ -71,33 +73,25 @@ require '../lib/db.php';
                             <tr>
                                 <td>
                                     <label for="nic">NIC*</label><br>
-                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" required>
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" >
                                 </td>
 
                                 <td>
                                     <label for="email">Email*</label><br>
-                                    <input type="email" name="email" id="email" placeholder="Enter Email Address" required>
+                                    <input type="email" name="email" id="email" placeholder="Enter Email Address" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="username">Username*</label><br>
-                                    <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                                    <input type="text" name="username" id="username" placeholder="Enter Username" >
                                 </td>
 
-                                <td>
-                                    <label for="password">Password*</label><br>
-                                    <input type="password" name="password" id="password" placeholder="Enter Password" required>
-                                </td>
+                                
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <label for="Cpassword">Confirm Password</label><br>
-                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Enter Password Again" required>
-                                </td>
-                            </tr>
+                            
 
                             <tr>
                                 <td>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -22,37 +22,42 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     
+    
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 
-    <title>Connect with Online!</title>
+
+    <title>Connect with Online! |MTC Bank</title>
 </head>
 <body  onload="slider()">
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self">Home</a></li>
-                      <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
-                      <li><a href="services.Php" target="_self">services</a></li>
-                      <li><a href="#"  class="active">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header >
+
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="Php/personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="Php/services.Php" target="_self">Services</a></li>
+                    <li><a href="Php/Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="Php/about us.Php" target="_self">About Us</a></li>
+                    <li><a href="Php/contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
+
+
+
      </header>
 
 <!-- Body Section -->
@@ -67,10 +72,9 @@
             <div class="content">
                 <h1>Connect With Online Banking!</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam, quidem.
+                With Meridian Trust online Banking Services offered absolutely free of charge, 
+                enjoy the convenience of obtaining an array of banking services amidst the 
+                comfort of your workplace or home.
                 </p>
                 <div>
                     <button type="button" class="btn-1" ><a href="../Php/Login.Php">Login!</a></button>
@@ -132,12 +136,12 @@
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

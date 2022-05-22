@@ -1,4 +1,9 @@
+:root
 
+{
+    --primary: rgba(255, 255, 255, 0);
+    --secondary: rgba(255,255,255.5)
+}
 .banner {
     width: 100%;
     height: 100vh;
@@ -36,6 +41,7 @@
 
 .content h1{
     font-size: 60px;
+    color: white;
     
 }
 
@@ -43,20 +49,28 @@
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 5px;
+    color: aqua;
 }
 
 button{
     background: #fff;
     width: 200px;
     padding: 15px;
+    margin-top: 5%;
     text-align: center;
     margin:0px 0px 0px 0px;
-    border-radius: 10px;
-    /* font-weight: bold; */
+    border-radius: 200px;
+    font-weight: bold;
+    color: #24262b;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: background 0.5s ;
-    margin-top: 5%;
+    transition: background 1s ;
+}
+button:hover{
+    background: transparent;
+    border : 2px solid rgba(255, 255, 255, 0.441);
+    color: white;
+    font-style: none;
 }
 
  /* Personal Banking Services  */
@@ -70,18 +84,28 @@ button{
 .account-types-cards{
     font-family: 'Open Sans', sans-serif;
     font-size: 10px;
-    background-color: #eee;
     /* color:#333; */
-    width: 1100px;
-    height: 400px;
+    position: relative;
+    width: 80%;
+    height: 20%; 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin:80px 60px 80px 200px;
-    
+    margin: 5% 10% 5% 10%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+    border-top: 10px solid rgba(110, 107, 107, 0.01);
+    border-left: 1px solid rgba(2, 1, 21, 0.01);
+    backdrop-filter: blur(10px);
 
 }
+body{
+    background-color: #ffffff;
+}
+
 
 
 a{
@@ -98,22 +122,29 @@ a{
 .image-data{
     width: 400px;
     display: flex;
-    height: 25rem;
+    height: 20rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
+    padding-right: 20PX;
+    
 }
-
-.background-image{
+#cardimg{
     width: 400px;
+    height: 400px;
+    position: absolute;
+   justify-content: center;
+}
+.background-image{
+    width: 600px;
     height: 400px;
     position: absolute;
     top: 0;
     left:0;
-    background: url('../Images/img.jpg') center no-repeat;
+   /* background: url('../Images/img.jpg') center no-repeat;*/
     background-size: cover;
     /* z-index: -1; */
-    transition:transform 5s;
+    transition:transform 3s;
 }
 
 .card:hover .background-image{
@@ -156,7 +187,9 @@ a{
 
 .title{
     font-size: 3rem;
-    line-height: 1;
+    color: #24262b;
+    line-height: 10px;
+    margin-left: 50px;
 }
 
 .subtitle{
@@ -164,16 +197,21 @@ a{
     font-weight: 400;
     text-transform: uppercase;
     color: #a2a2a2;
-    margin:1rem 0 1.5rem 0;
+    margin:0 0 10px 50px;
+    line-height: 1;
 }
 
 .description{
-    font-size:10px;
+    font-size:0.9rem;
     position: relative;
+    margin: 20px 50px 0 70px;
+    text-align: left;
+    color: #24262b;
 }
 
 .description::first-letter{
     margin-left: 1rem;
+    font-size: 1.1rem;;
 }
 
 .description::before{
@@ -187,16 +225,17 @@ a{
 }
 
 .cta{
-    text-align: right;
+    font-size: 12px;
+    text-align: center;
     font-weight: bold;
     margin-top: 1rem;
-    
 }
+
 
 .cta a{
     color: transparent;
     position: relative;
-    color: #333;
+    color: rgb(52, 30, 30);
 }
 
 .cta a::before{

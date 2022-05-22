@@ -58,7 +58,7 @@ if(empty($errors)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -74,37 +74,37 @@ if(empty($errors)){
 
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
+  
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 
-    <title>Services!</title>
+    <title>digital Banking | MTC Bank</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="personal banking.Php" target="_self" >Peronal Banking</a></li>
-                      <li><a href="#" class="active">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="../index.Php" >Home</a></li>
+                    <li><a href="./personal banking.Php" >Peronal Banking</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" >About Us</a></li>
+                    <li><a href="./contact us.Php" >Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+        </nav>
      </header>
 <!-- Body Section -->
             <!-- Banner -->
@@ -118,13 +118,9 @@ if(empty($errors)){
                         <div class="content">
                             <h1>Digital Banking.</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.
-                            </p>
+                            Available To All Personal And Business Meridian Trust Online Banking Users, Meridian Trust Mobile Banking Offers Secure Access And Money Management Tools Through An App For Your Smartphone And Other Mobile Devices.</p>
                             <div>
-                                <button type="button" class="btn-1" ><a href="#Key-Values">Explore!</a></button>
+                                <button type="button" class="btn-1" ><a href="#explore">Explore!</a></button>
 
                             </div>
             
@@ -136,51 +132,86 @@ if(empty($errors)){
             <!-- Banner -->
 
     <!-- Details About Digital Banking -->
-<div class="digital-banking-info">
+<div class="body-info">
     <div class="container">
-        <div class="features">
-            <h2>features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore tenetur fugiat, ullam sequi nisi aliquam expedita beatae rem veritatis, dolor amet aut necessitatibus consequatur dolorem vero, soluta veniam neque!</p>
-        </div>
-        <div class="available-facility">
-            <h2>available-facility</h2>
+        <div class="part1">
+            <h2>Meridian Trust online banking</h2>
+            <p>Meridian Trust Online Banking offers the ability for you to securely view and 
+                manage your Meridian Trust personal or business accounts from anywhere at any time.</p>
             <ul>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
-                <li>facility</li>
+                <li>Account Information: View balances on your deposit and loan accounts</li>
+                <li>Bill Pay: Pay Bills, people, send gifts or charitable contributions, and receive eBills</li>
+                <li>View Check Images: Maintain images of checks for your record and account review</li>
+                <li>Review Transactions: Reconcile your account by monitoring your purchases and activity</li>
+                <li>Access eStatements and Notices: Maintain all account documents electronically for your review, print or save them for your financial needs facility</li>
+                <li>Transfer Funds: Transfer funds between your Meridian Trust accounts and accounts at other financial institutions to make managing your money quick and simple</li>
+                <li>Alerts: Set up personalized email and text alerts for items such as low balances, ACH credits/debits, bill payments, and more</li>
+                <li>Account and Payment Management: Place stop payments, activate and/or report debit cards lost/ stolen, and more</li>
+                <li>Mobile Banking: Gain additional access through Meridian Trust Mobile Bankingy</li>
             </ul>
         </div>
-        <div class="Benifits">
-            <h2>Benifits</h2>
+        <div class="btnall">
+            <div>
+                <button type="button" class="btn-2"><a href="application-form.Php"> Apply Online</a></button>
+             </div>
+            <div>
+                <button type="button" class="btn-3"><a href="#"> Download </a></button>
+            </div>
         </div>
-        <div class="how-to-register">
-            <h2>How to Register</h2>
+        <div id="explore" class="part1">
+            <h2>Meridian Trust mobile banking</h2>
+        </div>
+        <div class="part4" >
+            <p>Available to all personal and business Meridian Trust Online Banking users, Meridian Trust Mobile Banking offers secure access and money management tools through an app for your smartphone and other mobile devices.</p>
             <ol>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
-                <li>Step</li>
+                <li>My Accounts: View balances on your deposit and loan accounts</li>
+                <li>Mobile Deposit: Deposit checks by enrolling in Remote / Mobile Deposit</li>
+                <li>P2P: Pay friends, family or others with Person-to-Person Payments</li>
+                <li>Bill Pay: Pay bills, people or send monetary or charitable gifts</li>
+                <li>View Check Images: See check images when reviewing transactions</li>
+                <li>Review Transactions: Reconcile your account by monitoring your purchases and activity</li>
+                <li>Statements: Access eStatements and Notices from anywhere at any time</li>
+                <li>Transfer Funds: Transfer funds between your Meridian Trust accounts and accounts at other financial institutions</li>
+                <li>Alerts: Review personalized alerts for items such as low balances, ACH credits/debits, bill payments and more</li>
             </ol>
         </div>
-        <div class="terms-condition">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam sequi quod similique sit repellendus officia suscipit reiciendis! Eos explicabo qui voluptate adipisci fugit eveniet pariatur repudiandae repellendus quia ut.</p>
+        <div class="btnall">
+            <div>
+                <button type="button" class="btn-2"><a href="application-form.Php"> Apply Online</a></button>
+             </div>
+            <div>
+                <button type="button" class="btn-3"><a href="#"> Download </a></button>
+            </div>
         </div>
-        <div class="apply">
-            <button><a href="application-form.Php?reason=digitalbanking"> Apply Online</a></button>
-            <button>Download Application</button>
+        <div id="whatsapp-banking" class="part5">
+        <h2>Whatsapp Banking</h2>
+            <h4>Here's why you'll love this!</h4>
+            <p>The bank is always 'Available' - 24/7 x 365 (even on holidays!) <br>
+                You don't have to be a customer of Meridian Trust Bank. We can still be friends.,<br>
+                    It is seriously secure! (End to end encryption)</p>
+
+            <h4>Things to do </h4>
+            <p>Currently, Meridian Trust Bank lets you get the following things done. <br>
+                You can click on each section for more details <br>
+                We will continue to add more and more services for your convenience. </p>
+
+            <h4>How to begin chatting with us?</h4>
+            <p>
+            Step 1. Register <br>
+            Save the number 70659 70659 and send a WhatsApp message 'SUB' <br>
+            Step 2. Begin chatting
+
+            </p>
+
+        </div>
+        <div class="terms-condition">
+            <h5>Terms & Conditions</h5>
+            <p>We hereby formulate the Terms and Conditions of Online Banking Services (the “Terms”) in order to provide you with better Online Banking Services, prevent risks inherent in Online Banking, and specify the rights and obligations of the parties in the Online Banking. Please read the Terms carefully before you use any of our Online Banking Services. If you have any questions, please feel free to contact us, and you can browse our official.</p>
         </div>
         
     </div>
 </div>
-    
+ 
     <!-- Details About Digital Banking -->
 
     <!-- Contact Form -->
@@ -256,60 +287,6 @@ if(empty($errors)){
 
     </div>
 </div>
-        <!-- Contact Form -->
-
-
-<!-- More Info -->
-
-<!-- <div class="more-info">
-    <div class="heading">If You Want More Info?</div>
-    <div class="description"><p>Please feel Free to use our Enquariy Form.</p></div>
-    <div class="form">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <select name="select" id="select">
-                            <option value="" selected>Like to learn more about</option>
-                            <option value="">Web Development</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Hosting</option>
-                            <option value="">Web Maintenance</option>
-                            <option value="">Web Security</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Design</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Frist-Name*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="name" placeholder="Last-Name*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="email" name="email" placeholder="Email*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="text" name="phone" placeholder="Phone*"></td>
-                </tr>
-                <tr>
-                    
-                    <td><textarea name="message" id="" cols="45" rows="10" placeholder="Let us know if there are any special notes.*"></textarea></td>
-                </tr>
-                <tr>
-                    
-                    <td><input type="submit" value="Submit"></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</div> -->
 
 <!-- More Info -->
 
@@ -362,12 +339,12 @@ if(empty($errors)){
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+            <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

@@ -61,7 +61,7 @@ if(empty($errors)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -78,53 +78,50 @@ if(empty($errors)){
     <!-- Footer CSS File -->
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Services!</title>
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+
+    <title>services | MTC Bank</title>
 </head>
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-                <nav class="nav"> 
-                   <ul>
-                      <li><a href="#"><img  src="" alt="Logo"></a></li>
-                      <li><a href="../index.Php" target="_self" >Home</a></li>
-                      <li><a href="personal banking.Php" target="_self" >Peronal Banking</a></li>
-                      <li><a href="#" class="active">services</a></li>
-                      <li><a href="Digital banking.Php" target="_self">Asia Bank Digital</a></li>
-                      <li><a href="about us.Php" target="_self">About Us</a></li>
-                      <li><a href="contact us.Php" target="_self">Contact Us</a></li>
-                      <span class="search">
-                          <li>
-                              <form action="" method="">
-                                    <input type="text" name="search" placeholder="Search">
-                                    <input type="submit" name="submit" value="Search">
-                                    
-                              </form>
-                          </li>
-                      </span>
-                      <li><a href="#"><img src="" alt="login"></a></li>
-                      
-                   </ul>
-                </nav>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+                    <li><a href="../index.Php" target="_self">Home</a></li>
+                    <li><a href="./personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.Php" target="_self">Contact Us</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
-        </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
      </header>
 <!-- Body Section -->
             <!-- Banner -->
             <section class="home-banner" >
                 <div class="banner">
                     <div class="slider">
-                        <img src="../Images/Services.jpg" alt="banner" id="slideimg">
+                        <img src="../Images/servicesbanner.jpg" alt="banner" id="slideimg">
                 
                     </div>
                     <div class="overlay">
                         <div class="content">
                             <h1>Services.</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quidem.
+                            Meridian Trust Corparation Bank is a full-service community bank, which offers you a complete array of financial services solutions beyond traditional bank products and services. When it comes to professional financial solutions…think INSIDE the Bank!
                             </p>
                             <div>
                                 <button type="button" class="btn-1" ><a href="#Key-Values">Explore!</a></button>
@@ -146,37 +143,37 @@ if(empty($errors)){
             <div class="icon">
                 <img src="../Images/support.png" alt="icon">
             </div>
-            <h3 class="title">Careers</h3>
+            <h3 class="title">Utility Bill Payment</h3>
             <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
+            Now with Internet Banking, utility bill payment is within your fingertips.
+            NSB introduces the convenience of paying your utility bills under one roof.Electricity bills, Water bills,Telecommunication bills,
+            Insurance payments and other bill payments <br>
         </div>
         <div class="box">
             <div class="icon">
                 <img src="../Images/support.png" alt="icon">
             </div>
-            <h3 class="title">Careers</h3>
+            <h3 class="title">SpeedCash</h3>
             <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br> 
+            MTB SpeedCash is a secured and fastest over the counter fund transfer service which facilitates to transfer funds between any two parties. <br> 
         </div>
         <div class="box">
             <div class="icon">
                 <img src="../Images/support.png" alt="icon">
             </div>
-            <h3 class="title">Careers</h3>
+            <h3 class="title">Environmental friendly</h3>
             <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing <br>
+              By embracing paperless Digital Banking culture, you will be protecting the environment for the future generations.<br>
         </div>
         <div class="box">
             <div class="icon">
                 <img src="../Images/support.png" alt="icon">
             </div>
-            <h3 class="title">Careers</h3>
+            <h3 class="title">Trust Services</h3>
             <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing  <br>
+            Trust and Estate planning are fundamental to the preservation of your assets. 
+            MTC Bank Trust Services provides professional advice that takes your individual needs and 
+            goals into consideration.  <br>
         </div>
     </div>
 </section>
@@ -187,7 +184,7 @@ if(empty($errors)){
 
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/settings.png" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
@@ -198,8 +195,8 @@ if(empty($errors)){
             <span>May 16 2022</span>
         </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust Online Banking offers the ability for you to securely view and 
+                manage your Meridian Trust personal or business accounts from anywhere at any time.</p>
         </div>
         <div class="blog-post-read-more">
             <a href="cover-digital-banking.Php">Read More</a>
@@ -210,19 +207,16 @@ if(empty($errors)){
 
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/epasscover.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>E-Passbook</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Meridian Trust E-Passbook is an electronic version of the traditional passbook / current account 
+                statement, which allows you to download and check your account balances and transaction 
+                details in real-time, anywhere, anytime.</p>
         </div>
         <div class="blog-post-read-more">
             <a href="cover-epassbook.Php">Read More</a>
@@ -233,44 +227,38 @@ if(empty($errors)){
 
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/whatsapp.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>Whatsapp Banking</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>The bank is always ‘Available’ – 24/7 x 365 (even on holidays!), You don’t have 
+                to be a customer of Meridian Trust Bank. We can still be friends.
+                It is seriously secure! (End to end encryption)</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="#">Read More</a>
+            <a href="cover-digital-banking.Php#whatsapp-banking">Read More</a>
         </div>
     </div> 
 </div>
 
 <div class="blog-post">
     <div class="blog-post-img">
-        <img src="../Images/img.jpg" alt="Banner">
+        <img src="../Images/mobilebank.jpg" alt="Banner">
     </div>
     <div class="blog-post-info">
         <div class="blog-post-title">
             <h2>Mobile Banking</h2>
         </div>
-        <div class="blog-post-date">
-            <span>Friday</span>
-            <span>May 16 2022</span>
-        </div>
         <div class="blog-post-description">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur impedit minus aperiam repellat incidunt,
-                pariatur similique inventore, aut recusandae voluptas numquam quidem non earum temporibus ab, ullam saepe ea fuga!</p>
+            <p>Available to all personal and business Meridian Trust Online Banking users, 
+                Meridian Trust Mobile Banking offers secure access and money management tools 
+                through an app for your smartphone and other mobile devices.</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="#">Read More</a>
+            <a href="cover-digital-banking.Php#explore">Read More</a>
         </div>
     </div>
 </div>
@@ -304,7 +292,8 @@ if(empty($errors)){
                 </tr>
                 <tr>
                     
-                    <td><select name="" id="" placeholder="Select">
+                    <td><select name="type" id="type">
+                        <option value="">-Select-</option>
                         <option value="Credit Cards" >Credit Cards</option>
                         <option value="Saving Accounts">Saving Accounts</option>
                         <option value="Digital Banking">Digital Banking</option>
@@ -415,12 +404,12 @@ if(empty($errors)){
         </div>
 </footer>
             <div class="sub-footer">
-                        <p>Asia Bank of Ceylon PLC</p>
-                        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+                        <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
                         
                         <br>
                         <p>Legal Notice | Accessibility | Security Measure</p>
-                        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
             </div>
 </body>
 </html>

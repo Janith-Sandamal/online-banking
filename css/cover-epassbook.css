@@ -2,25 +2,25 @@
 
 
  /*  Banner  */
-
+*{
+    margin: 0;
+}
 .banner {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     position: relative;
     overflow: hidden;
 }
-
-
 #slideimg{
     width: 100%;
-    height: 100vh;
+    height: 750px;
     animation: zoom 3s linear infinite;
 }
 
 .overlay{
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    height: 150vh;
+   /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));*/
     position: absolute;
     top: 0;
 }
@@ -29,23 +29,31 @@
     width: 60%;
     margin:50px 0px 0px 30px;
     text-align: left;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .content h1{
     font-size: 60px;
-    
+    color: rgb(216, 216, 216);
 }
 
 .content p{
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 10px;
+    width: 60%;
+    color: #fff;
 
 }
+.btn-1 a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
 
-button{
-    background: #fff;
+button.btn-1{
+    background: rgba(13, 13, 13, 0.829);
     width: 200px;
     padding: 15px;
     text-align: center;
@@ -56,16 +64,246 @@ button{
     cursor: pointer;
     transition: background 0.5s ;
     margin-top: 10%;
+    color: black;
 }
 
 /* Hover Effect for Button */
-button:hover{
-    background: transparent;
+button.btn-1:hover{
+    background-color: #24242b;
     border : 2px solid rgba(255, 255, 255, 0.167);
     color: #fff;
-    
-
-
 }
 
   /*  Banner  */
+
+
+  /* Details Body Info */
+
+  .body-info .container{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 50px;
+    margin-top: -10%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    /* background: rgba(114, 6, 6, 0.678); */
+}
+.part1 h1{
+    margin: 2vh 0 5vh 0;
+    text-align: left;
+
+}
+
+.part1 h2{
+    font-size: 2.5rem;
+    margin: 5vh 0 5vh 0;
+    text-align: left;
+}
+
+.part1 p{
+    margin: 0 5vw 10vh 5vw;
+    font-size: 1.2rem;
+}
+.part1 p::first-letter{
+    font-size: 1.8rem;
+    margin-left: 3rem;
+}
+
+.part1 ul{
+    margin:0 10rem 2rem 10rem  ;
+    padding: 1rem 0 2rem 2rem;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    text-align: lcenter;
+    font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 rgba(3, 145, 126, 0.219);	
+    backdrop-filter: blur(10px);
+    line-height: 4rem;
+    list-style:disc;
+    color: rgb(5, 58, 81);
+}
+
+.part2{
+
+    margin: 5rem;
+
+}
+
+.part4 p{
+    margin: 0 5vw 10vh 5vw;
+    font-size: 1rem;
+}
+
+
+.part4 p::first-letter{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+.part4 ol{
+    margin:0 10rem 2rem 10rem  ;
+    padding: 1rem 0 2rem 2rem;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    text-align: lcenter;
+    font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 rgba(3, 145, 126, 0.219);	
+    backdrop-filter: blur(10px);
+    line-height: 4rem;
+    color: rgb(5, 58, 81);
+}
+.part5 h2{
+    font-size: 2.5rem;
+    margin: 5vh 0 5vh 0;
+    text-align: left;
+}
+
+
+.part5 h4{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4vh; 
+    text-align: center;
+
+}
+.part5 p{
+
+    font-size: 1.2rem;
+    margin: 0 10% 5vh 10%;
+    padding: 2rem;
+    text-align: center;
+    display: block;
+    background-color: rgba(164, 222, 76, 0.281);
+    line-height: 2rem;
+    border-radius: 150px;
+    background-color: red;
+    animation-name: para ;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 60ms;
+}
+
+@keyframes para {
+    from {background-color: rgba(164, 222, 76, 0.081);;}
+    to {background-color: rgba(5, 214, 141, 0.156);}
+  }
+.terms-condition{
+
+    margin: 5rem;
+    font-size: 0.8rem;
+}
+.btnall{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 10px;
+    font-weight: bold;
+    color:white;
+}
+.btnall a{
+    text-decoration: none;
+    font-weight: bold ;
+}
+
+button.btn-2 {
+    border-radius: 100px;
+    border: 2px solid yellowgreen;
+    margin: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.5s ;
+    
+}
+
+button.btn-3 {
+    border-radius: 100px;
+    border: 2px solid yellowgreen;
+    margin: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.5s ;
+    color:black;
+
+}
+ button.btn-2:hover {
+    background: transparent;
+    color: #fff;
+    
+}
+
+button.btn-3:hover {
+    background: transparent;
+    color: #fff;
+    
+}
+
+
+/* contact form */
+
+
+.contact-form{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.sbtn{
+    padding: 10px;
+}
+
+.form-header{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.675);
+    
+}
+
+.form-description{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.form-body  td{
+    padding: 10px;
+}
+
+.form-body input[type="text"],input[type="email"],select{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Complaint Form */

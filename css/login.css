@@ -2,17 +2,18 @@
 #login{
     margin: 0;
     padding: 0;
-    background: url(../Images/login-background.png) no-repeat;
+    background: url(../Images/loginhere.jpg) no-repeat;
     background-size: cover;
     background-position: right;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    
 }
 
 /* Login Form CSS */
 .loginbox{
-    width: 320px;
-    height: 440px;
+    width: 350px;
+    height: 70%;
     background: #000;
     color: #fff;
     top: 50%;
@@ -23,6 +24,7 @@
     padding: 70px 30px;
     border-radius: 5%;
     opacity: 0.8;
+    
 }
 
 /* Avater Setup CSS */
