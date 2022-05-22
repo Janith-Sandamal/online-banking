@@ -4,7 +4,91 @@ session_start();
 
 //Check the user is logged in
 if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
-    header('Location: ../index.php');
+    header('Location: ../php/Login.Php');
+}
+
+
+
+//Check the user is Submit Password Change Form
+if(isset($_POST['psubmit'])){
+
+
+//Validate the user input
+$required_fields = array('nic' =>'NIC','old_password'=>'Current Password','new_password'=>'New Password','confirm_password'=>'Confirm Password');
+$errors = array();
+foreach ($required_fields as $field => $value) {
+    if(empty($_POST[$field]) || $_POST[$field] == ''){
+        $errors[] = $value . ' is required';
+    }
+}
+
+//Check NIC characters can be only numbers and letters
+if(!preg_match('/^[a-zA-Z0-9]*$/',$_POST['nic'])){
+    $errors[] = 'NIC can only be numbers and letters';
+}
+
+//check nic already exists ignore space
+$nic = $_POST['nic'];
+$sql = "SELECT * FROM users WHERE nic = '$nic'";
+$result = mysqli_query($connection,$sql);
+$row = mysqli_fetch_assoc($result);
+if(empty($row)){
+    $errors[] = 'NIC Does not exists';
+}
+
+
+
+//check Change password values are set
+if(isset($_POST['nic']) && isset($_POST['old_password']) && isset($_POST['confirm_password']) && isset($_POST['new_password'])){
+    $nic=$_POST['nic'];
+    $old_password=$_POST['old_password'];
+    $confirm_password=$_POST['confirm_password'];
+    $new_password=$_POST['new_password'];
+
+    //check the old password is correct sha1 encripted
+    $sql="SELECT * FROM users WHERE nic='$nic'";
+    $result=mysqli_query($connection,$sql);
+    $row=mysqli_fetch_assoc($result);
+    $old_password_db=$row['password'];
+
+    if(sha1($old_password)==$old_password_db){
+        //check the new password and confirm password are the same
+        if($new_password==$confirm_password){
+            //update the password
+            $new_password=sha1($new_password);
+            $sql="UPDATE users SET password='$new_password' WHERE nic='$nic'";
+            $result=mysqli_query($connection,$sql);
+            if($result){
+                $success_message="Password Changed Successfully";
+            }else{
+                $errors[]="Password Change Failed";
+            }
+        }else{
+            $errors[]="New Password and Confirm Password do not match";
+        }
+    }else{
+        $errors[]="Old Password is incorrect";
+    }
+}
+
+}
+$username_error =array();
+//Array for Username change form
+
+
+//Check the user is Submit Username Change Form
+if(isset($_POST['submit'])){
+
+
+//Validate the user input
+$required_fields = array('nic' =>'NIC','username'=>'Username');
+$username_error = array();
+foreach ($required_fields as $field => $value) {
+    if(empty(trim(($_POST[$field]))) || $_POST[$field] == ''){
+        $username_error[] = $value . ' is required';
+    }
+}
+
 }
 
 ?>
@@ -49,15 +133,12 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     <div class="container">
         <div class="header">
             <div class="nav">
-                <!-- <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="search.png" alt=""></button>
-                </div> -->
+                
                 <div class="user">
-                    <a href="#" class="btn">Pilana Gamage Eranga Janith Sandamal</a>
-                    <!-- <img src="notifications.png" alt=""> -->
+                    <a href="#" class="btn"><?php echo "Hello, " .  $_SESSION['username']; ?></a>
+                    
                     <div class="img-case">
-                        <img src="user.png" alt="">
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['username'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
@@ -74,33 +155,59 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <h2>Change User Password</h2>
                     </div>
                     <table>
-                        <form action="" method="POST">
+                        <form action="./user-settings.php" method="POST">
                             <tr>
                                 <td>
-                                    <label for="current_password">Current Password*</label><br>
-                                    <input type="password" name="current_password" id="current_password" placeholder="Current Password" required>
+                                    <?php
+                                    if(isset($errors) && !empty($errors)){
+                                        foreach($errors as $error){
+                                            echo "<p style='color:red'>".'-' . $error .'-'. "</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nic">NIC*</label><br>
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC" >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="old_password">Old Password*</label><br>
+                                    <input type="password" name="old_password" id="old_password" placeholder="Enter Old Password" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="new_password">New Password*</label><br>
-                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" required>
+                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="confirm_password">Confirm Password*</label><br>
-                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
+                                    <input type="submit" class="btn" value="Confirm &rarr;" name="psubmit">
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(isset($success_message) && !empty($success_message)){
+                                        echo "<p style='color:green'>".'-' . $success_message .'-'. "</p>";
+                                    }
+                                    ?>
+                                </td>
                         </form>
                     </table>
                 </div>
@@ -116,31 +223,58 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <h2>Change User Name</h2>
                     </div>
                     <table>
-                        <form action="" method="POST">
+                        <form action="./user-settings.php" method="POST">
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(isset($username_error) && !empty($username_error)){
+                                        foreach($username_error as $error){
+                                            echo "<p style='color:red'>".'-' . $error .'-'. "</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nic">NIC*</label><br>
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC" >
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <label for="current_username">Current Username*</label><br>
-                                    <input type="current_username" name="current_username" id="current_username" placeholder="Current Username" required>
+                                    <input type="current_username" name="current_username" id="current_username" placeholder="Current Username" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="new_username">New Username*</label><br>
-                                    <input type="new_username" name="new_username" id="new_username" placeholder="New Username" required>
+                                    <input type="new_username" name="new_username" id="new_username" placeholder="New Username" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="confirm_username">Confirm Username*</label><br>
-                                    <input type="confirm_username" name="confirm_username" id="confirm_username" placeholder="Confirm Username" required>
+                                    <input type="confirm_username" name="confirm_username" id="confirm_username" placeholder="Confirm Username" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(isset($Usuccess_message) && !empty($Usuccess_message)){
+                                        echo "<p style='color:green'>".'-' . $Usuccess_message .'-'. "</p>";
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                         </form>

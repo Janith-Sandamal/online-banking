@@ -4,7 +4,7 @@ session_start();
 
 //Check the user is logged in
 if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
-    header('Location: ../index.php');
+    header('Location: ../php/Login.Php');
 }
 
 $nic = $_SESSION['nic'];
@@ -216,7 +216,7 @@ if (mysqli_num_rows($result) == 1) {
                 <div class="recent-payments">
                     <div class="title">
                         <h2>Recent Payments/Transactions</h2>
-                        <!-- <a href="#" class="btn">View All</a> -->
+                        
                     </div>
                     <table>
                         <tr>
@@ -230,7 +230,7 @@ if (mysqli_num_rows($result) == 1) {
                 <div class="new-students">
                     <div class="title">
                         <h2>Credit Cards</h2>
-                        <!-- <a href="#" class="btn">View All</a> -->
+                        
                     </div>
                     <table>
                         <tr>
