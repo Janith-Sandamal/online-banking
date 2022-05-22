@@ -14,6 +14,7 @@ $query = "SELECT * FROM saving_acc WHERE nic='{$nic}';";
 $result = mysqli_query($connection, $query);
 
 $saving_acc = mysqli_fetch_assoc($result);
+$saving_acc_no = $saving_acc['acc_no'];
 
 //youth acc
 $query = "SELECT * FROM youth_acc WHERE nic='{$nic}';";
@@ -21,6 +22,7 @@ $result = mysqli_query($connection, $query);
 
 if (mysqli_num_rows($result) == 1) {
     $youth_acc = mysqli_fetch_assoc($result);
+    $youth_acc_no = $youth_acc['acc_no'];
 }
 
 //debit card
@@ -225,6 +227,74 @@ if (mysqli_num_rows($result) == 1) {
                             <th>Amount</th>
                             <th>Date</th>
                         </tr>
+
+                        <?php
+
+                        //sent Tran Saving
+                        $query = "SELECT * FROM transactions WHERE sent_acc={$saving_acc_no} LIMIT 2;";
+                        $result = mysqli_query($connection, $query);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($data = mysqli_fetch_assoc($result)) {
+                                echo "<tr>"
+                                    . "<td>" . $data['receive_acc'] . "</td>"
+                                    . "<td>" . "Sent Funds" . "</td>"
+                                    . "<td>" . $data['amount'] . "</td>"
+                                    . "<td>" . $data['datetime'] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+
+                        //Receive Tran Saving
+                        $query = "SELECT * FROM transactions WHERE receive_acc={$saving_acc_no} LIMIT 2;";
+                        $result = mysqli_query($connection, $query);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($data = mysqli_fetch_assoc($result)) {
+                                echo "<tr>"
+                                    . "<td>" . $data['sent_acc'] . "</td>"
+                                    . "<td>" . "Receive Funds" . "</td>"
+                                    . "<td>" . $data['amount'] . "</td>"
+                                    . "<td>" . $data['datetime'] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+
+                        //sent Tran Youth
+                        $query = "SELECT * FROM transactions WHERE sent_acc={$youth_acc_no} LIMIT 2;";
+                        $result = mysqli_query($connection, $query);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($data = mysqli_fetch_assoc($result)) {
+                                echo "<tr>"
+                                    . "<td>" . $data['receive_acc'] . "</td>"
+                                    . "<td>" . "Sent Funds" . "</td>"
+                                    . "<td>" . $data['amount'] . "</td>"
+                                    . "<td>" . $data['datetime'] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+
+                        //Receive Tran Youth
+                        $query = "SELECT * FROM transactions WHERE receive_acc={$youth_acc_no} LIMIT 2;";
+                        $result = mysqli_query($connection, $query);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($data = mysqli_fetch_assoc($result)) {
+                                echo "<tr>"
+                                    . "<td>" . $data['sent_acc'] . "</td>"
+                                    . "<td>" . "Receive Funds" . "</td>"
+                                    . "<td>" . $data['amount'] . "</td>"
+                                    . "<td>" . $data['datetime'] . "</td>"
+                                    . "</tr>";
+                            }
+                        }
+
+
+
+
+
+                        ?>
                     </table>
                 </div>
                 <div class="new-students">
