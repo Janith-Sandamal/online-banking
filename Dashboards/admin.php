@@ -5,6 +5,30 @@ session_start();
 $query = "SELECT * FROM users";
 $result = mysqli_query($connection, $query);
 $user_count = mysqli_num_rows($result);
+
+if (isset($_POST['accept'])) {
+    $id = $_POST['accept'];
+    $query = "SELECT * FROM temp_users WHERE id={$id};";
+    $result = mysqli_query($connection, $query);
+    $data = mysqli_fetch_assoc($result);
+    $nic = $data['nic'];
+    $email = $data['email'];
+    $username = $data['user_name'];
+    $password = $data['password'];
+
+    $query = "INSERT INTO users (nic, email, user_name, password) VALUES ('{$nic}', '{$email}', '{$username}', '{$password}');";
+    $result = mysqli_query($connection, $query);
+
+    $query = "DELETE FROM temp_users WHERE id={$id};";
+    $result = mysqli_query($connection, $query);
+}
+if (isset($_POST['decline'])) {
+    $id = $_POST['decline'];
+    $query = "DELETE FROM temp_users WHERE id={$id};";
+    $result = mysqli_query($connection, $query);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -134,65 +158,31 @@ $user_count = mysqli_num_rows($result);
                         </div>
                         <table>
                             <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Amount</th>
-                                <th>Date</th>
+                                <th>NIC</th>
+                                <th>Username</th>
+                                <th></th>
+                                <th></th>
                             </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Inter Bank Transfer</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Water Bill</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Mobile Reload</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Electricity Bill</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Cargils</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Sri Lanka Telecom</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Sri Lanka Telecom</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Sri Lanka Telecom</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Sri Lanka Telecom</td>
-                                <td>$120</td>
-                                <td>5/19/2022</td>
-                            </tr>
+                            <form action="./admin.php" method="POST">
+                                <?php
+
+                                $query = "SELECT * FROM temp_users";
+                                $result = mysqli_query($connection, $query);
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($data = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>"
+                                            . "<td>" . $data['nic'] . "</td>"
+                                            . "<td>" . $data['user_name'] . "</td>"
+                                            . "<td><button type='submit' id='accept' name='accept' value=" . $data['id'] . ">Accept</button></td>"
+                                            . "<td><button type='submit' id='decline' name='decline' value=" . $data['id'] . ">Decline</button></td>";
+                                    }
+                                }
+
+
+
+                                ?>
+                            </form>
                         </table>
                     </div>
 
