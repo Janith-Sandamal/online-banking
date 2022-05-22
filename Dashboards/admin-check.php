@@ -146,12 +146,34 @@ if (isset($_POST['submit'])) {
                                     <input type="submit" name="submit" value="Search &rarr;">
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
 
                             <?php
 
-                            if (empty($errors)) {
+                            if (empty($errors) && isset($data)) {
                                 echo "<tr>"
-                                    . "<td>" . $data['title'] . " " . $data['frist_name'] . "</td>";
+                                    . "<td> Full Name: </td>"
+                                    . "<th>" . $data['title'] . " " . $data['frist_name'] . " " . $data["last_name"] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> NIC: </td>"
+                                    . "<th>" . $data['nic'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> E-mail: </td>"
+                                    . "<th>" . $data['email'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> Mobile Number: </td>"
+                                    . "<th>" . $data['phone_number'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> City: </td>"
+                                    . "<th>" . $data['city'] . "</th>"
+                                    . "</tr>";
                             }
 
                             ?>
