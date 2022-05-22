@@ -1,8 +1,75 @@
 <?php
 require '../lib/db.php';
 
+//Change admin password if form is submitted
+if (isset($_POST['add_admin'])) {
+
+//Validate Admin input
+$required_fields = array('nic'=>'NIC','fname'=>'First Name','lname'=>'Last Name','add_admin_username'=>'Admin Username','add_password'=>'Password','Cpassword'=>'Confirm Password');
+
 $errors=array();
 
+foreach ($required_fields as $field => $label) {
+    if (!isset($_POST[$field]) || empty($_POST[$field])) {
+        $errors[] = $label . ' is a required field.';
+    }
+
+}
+
+//addmin username only letters and numbers
+if (!preg_match('/^[a-zA-Z0-9]*$/', $_POST['add_admin_username'])) {
+    $errors[] = 'The Admin Username can only contain letters and numbers.';
+
+}
+
+//frist name only letters and last name only letters
+if (!preg_match('/^[a-zA-Z]*$/', $_POST['fname'])) {
+    $errors[] = 'The First Name can only contain letters.';
+}
+
+//password and confirm password must match
+if ($_POST['add_password'] != $_POST['Cpassword']) {
+    $errors[] = 'The Password and Confirm Password do not match.';
+}
+
+//password must be at least 8 characters and ingnore white space
+if (!preg_match('/^\S{8,}$/', $_POST['add_password'])) {
+    $errors[] = 'The Password must be at least 8 characters long and ingnore space.';
+}
+
+//NIC number characters must between 10 and 12 and ingnore white space and only numbers and letters
+if (!preg_match('/^[0-9a-zA-Z]{10,12}$/', $_POST['nic'])) {
+    $errors[] = 'The NIC number must be between 10 and 12 characters long "<br>"ingnore space and only numbers and letters.';
+}
+
+//errors are empty then insert the data and password insert as sha1
+if (empty($errors)) {
+    $nic = mysqli_real_escape_string($connection, $_POST['nic']);
+    $fname = mysqli_real_escape_string($connection, $_POST['fname']);
+    $lname = mysqli_real_escape_string($connection, $_POST['lname']);
+    $username = mysqli_real_escape_string($connection, $_POST['add_admin_username']);
+    $password = mysqli_real_escape_string($connection, $_POST['add_password']);
+    $password = sha1($password);
+
+    $sql = "INSERT INTO admins ( first_name,last_name,nic, user_name, password) VALUES ( '$fname', '$lname','$nic', '$username', '$password')";
+    $result = mysqli_query($connection, $sql);
+
+    if ($result) {
+        $success_message = 'Admin Added Successfully';
+    }else{
+        $errors[] = 'Admin could not be added';
+    }
+
+
+}
+
+
+
+
+
+
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,82 +131,6 @@ $errors=array();
             </div>
 
             <div class="content-2">
-                <!-- Change Password -->
-                <div class="admin-settings">
-                    <div class="title">
-                        <h2>Change Admin Password</h2>
-                    </div>
-                    <table>
-                        <form action="" method="POST">
-                            <tr>
-                                <td>
-                                    <label for="current_password">Current Password*</label><br>
-                                    <input type="password" name="current_password" id="current_password" placeholder="Current Password" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label for="new_password">New Password*</label><br>
-                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label for="confirm_password">Confirm Password*</label><br>
-                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
-                                </td>
-                            </tr>
-                        </form>
-                    </table>
-                </div>
-                <!-- Change Password -->
-
-
-                <!-- Change Admin Username -->
-                <div class="admin-settings">
-                    <div class="title">
-                        <h2>Change Admin Username</h2>
-                    </div>
-                    <table>
-                        <form action="" method="POST">
-                            <tr>
-                                <td>
-                                    <label for="current_username">Current Username*</label><br>
-                                    <input type="current_username" name="current_username" id="current_username" placeholder="Current Admin Username" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label for="new_username">New Username*</label><br>
-                                    <input type="new_username" name="new_username" id="new_username" placeholder="New Admin Username" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label for="confirm_username">Confirm Username*</label><br>
-                                    <input type="confirm_username" name="confirm_username" id="confirm_username" placeholder="Confirm Admin Username" required>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
-                                </td>
-                            </tr>
-                        </form>
-                    </table>
-                </div>
-                <!-- Change Username -->
 
                 <!-- Add Admin  -->
                 <div class="admin-settings">
@@ -147,38 +138,71 @@ $errors=array();
                         <h2>Add Admin </h2>
                     </div>
                     <table>
-                        <form action="" method="POST">
+                        <form action="./admin-settings.php" method="POST">
+                        <tr>
+                                <td>
+                                    <?php
+                                    if (isset($errors) && !empty($errors)) {
+                                        foreach ($errors as $error) {
+                                            echo "<p style='color:red'>" . '-' . $error . '-' . "</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
-                                    <label for="id">Admin ID*</label><br>
-                                    <input type="id" name="id" id="id" placeholder="Admin ID" required>
+                                    <label for="nic">NIC Number</label><br>
+                                    <input type="text" name="nic" id="nic" placeholder="NIC Number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="fname">First Name</label><br>
+                                    <input type="text" name="fname" id="fname" placeholder="First name">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
+                                    <label for="lname">Last Name</label><br>
+                                    <input type="text" name="lname" id="lname" placeholder="Last name">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
                                     <label for="add_admin_username">Admin Username*</label><br>
-                                    <input type="text" name="add_admin_username" id="add_admin_username" placeholder="Enter Admin Username" required>
+                                    <input type="text" name="add_admin_username" id="add_admin_username" placeholder="Enter Admin Username" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="add_password">Password*</label><br>
-                                    <input type="password" name="add_password" placeholder="Enter Password" required>
+                                    <input type="password" name="add_password" placeholder="Enter Password" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="Cpassword">Confirm Password*</label><br>
-                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Confirm Admin Password" required>
+                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Confirm Admin Password" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
+                                    <input type="submit" class="btn" value="Confirm &rarr;" name="add_admin">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if (isset($success_message) && !empty($success_message)) {
+                                        echo "<p style='color:green'>" . '-' . $success_message . '-' . "</p>";
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                         </form>
