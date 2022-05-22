@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 
 
 //Requried fields
-$required = array('from'=>'From Account','type'=>'Bill Type','provider'=>'Provider','account_number`'=>'Account Number','confirm_account_number'=>'Confirm Account Number','amount'=>'Amount','date'=>'Date');
+$required = array('from'=>'From Account','type'=>'Bill Type','provider'=>'Provider','account_number'=>'Account Number','confirm_account_number'=>'Confirm Account Number','amount'=>'Amount','date'=>'Date');
 
 $errors= array();
 
@@ -26,7 +26,7 @@ foreach ($required as $field => $label) {
 
 
 // account Number and confirm account number length should 10
-if(empty((strlen(trim(($_POST['account_number'])))))!=10 || (empty(strlen(trim(($_POST['confirm_account_number']))))) !=10){
+if(!empty((strlen(trim(($_POST['account_number'])))))!=10 || (!empty(strlen(trim(($_POST['confirm_account_number']))))) !=10){
     $errors[]='Account Number should be 10 digits';
 }
 
