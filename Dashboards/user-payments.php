@@ -8,39 +8,74 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 }
 
 //Check user submit trabsaction form
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
 
 
-//Requried fields
-$required = array('from'=>'From Account','type'=>'Bill Type','provider'=>'Provider','account_number'=>'Account Number','confirm_account_number'=>'Confirm Account Number','amount'=>'Amount','date'=>'Date');
+    //Requried fields
+    $required = array('from' => 'From Account', 'type' => 'Bill Type', 'provider' => 'Provider', 'account_number' => 'Account Number', 'confirm_account_number' => 'Confirm Account Number', 'amount' => 'Amount', 'date' => 'Date');
 
-$errors= array();
+    $errors = array();
 
-//Check if all required fields are filled
-foreach ($required as $field => $label) {
-    if(empty($_POST[$field]) || $_POST[$field]==''){
-        $errors[]=$label.' is required';
+    //Check if all required fields are filled
+    foreach ($required as $field => $label) {
+        if (empty($_POST[$field]) || $_POST[$field] == '') {
+            $errors[] = $label . ' is required';
+        }
     }
-}
 
 
 
-// account Number and confirm account number length should 10
-if(!empty((strlen(trim(($_POST['account_number'])))))!=10 || (!empty(strlen(trim(($_POST['confirm_account_number']))))) !=10){
-    $errors[]='Account Number should be 10 digits';
-}
+    // account Number and confirm account number length should 10
+    if (!empty((strlen(trim(($_POST['account_number']))))) != 10 || (!empty(strlen(trim(($_POST['confirm_account_number']))))) != 10) {
+        $errors[] = 'Account Number should be 10 digits';
+    }
 
 
-//Confirm account number and account numbers should be same
-if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_account_number'])))){
-    $errors[]='Account Number and Confirm Account Number should be same';
-}
+    //Confirm account number and account numbers should be same
+    if ((!empty(trim($_POST['account_number']))) != (!empty(trim($_POST['confirm_account_number'])))) {
+        $errors[] = 'Account Number and Confirm Account Number should be same';
+    }
 
+    if (empty($errors)) {
+        $nic = $_SESSION['nic'];
+        if ($_POST['from'] == 'reguler savings') {
+            $query = "SELECT * FROM saving_acc WHERE nic='{$nic}'";
+            $result = mysqli_query($connection, $query);
+            $data = mysqli_fetch_assoc($result);
+
+            $user_acc = $data['acc_no'];
+            $current_amount = $data['amount'];
+            $new_amount = $current_amount - $_POST['amount'];
+
+            $query = "UPDATE saving_acc SET amount={$new_amount} WHERE acc_no='{$user_acc}' LIMIT 1";
+            $result = mysqli_query($connection, $query);
+        } elseif ($_POST['from'] == 'youth plus') {
+            $query = "SELECT * FROM youth_acc WHERE nic='{$nic}'";
+            $result = mysqli_query($connection, $query);
+            $data = mysqli_fetch_assoc($result);
+
+            $user_acc = $data['acc_no'];
+            $current_amount = $data['amount'];
+            $new_amount = $current_amount - $_POST['amount'];
+
+            $query = "UPDATE youth_acc SET amount={$new_amount} WHERE acc_no='{$user_acc}' LIMIT 1";
+            $result = mysqli_query($connection, $query);
+        }
+
+        $sent_acc_no = $_POST['account_number'];
+        $bill_type = $_POST['type'];
+        $provider = $_POST['provider'];
+        $amount = $_POST['amount'];
+
+        $query = "INSERT INTO utilities (nic, receive_acc, sent_acc, bill_type, provider, amount, datetime) VALUES ('{$nic}', {$sent_acc_no}, {$user_acc}, '{$bill_type}', '{$provider}', {$amount}, now());";
+        $result = mysqli_query($connection, $query);
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,13 +88,14 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
-    
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
+
 
     <title>User Dashboard</title>
 </head>
+
 <body>
     <div class="side-menu">
         <div class="brand-name">
@@ -77,10 +113,10 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
     <div class="container">
         <div class="header">
             <div class="nav">
-                
+
                 <div class="user">
                     <a href="#" class="btn"><?php echo "Hello, " .  $_SESSION['username']; ?></a>
-                    
+
                     <div class="img-case">
                         <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['username'] . "'/>"; ?>
                     </div>
@@ -91,20 +127,20 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
 
             <div class="cards">
             </div>
-            
+
             <div class="content-2">
                 <div class="recent-payments">
                     <div class="title">
-                        <h2>Utility Payments</h2>   
+                        <h2>Utility Payments</h2>
                     </div>
                     <table>
                         <form action="./user-payments.php" method="POST">
                             <tr>
                                 <td>
                                     <?php
-                                    if(isset($errors) && !empty($errors)){
-                                        foreach($errors as $error){
-                                            echo "<p style='color:red;'>"."-".$error."-"."</p>";
+                                    if (isset($errors) && !empty($errors)) {
+                                        foreach ($errors as $error) {
+                                            echo "<p style='color:red;'>" . "-" . $error . "-" . "</p>";
                                         }
                                     }
                                     ?>
@@ -113,10 +149,10 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
                             <tr>
                                 <td>
                                     <label for="from">From*</label><br>
-                                    <select name="from" id="from" >
+                                    <select name="from" id="from">
                                         <option value="">-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
-                                        <option value="youth  plus">Youth Plus</option>
+                                        <option value="youth plus">Youth Plus</option>
                                     </select>
                                 </td>
                                 <td></td>
@@ -125,7 +161,7 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
                             <tr>
                                 <td>
                                     <label for="type">Type</label><br>
-                                    <select name="type" id="type" >
+                                    <select name="type" id="type">
                                         <option value="">-Select-</option>
                                         <option value="water bill">Water Bill</option>
                                         <option value="electricity bill">Electricity Bill</option>
@@ -136,7 +172,7 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
                                 </td>
                                 <td>
                                     <label for="provider">Provider</label><br>
-                                    <select name="provider" id="provider" >
+                                    <select name="provider" id="provider">
                                         <option value="">-Select-</option>
                                         <option value="water board">Sri Lanka Water Board</option>
                                         <option value="ceb">CEB</option>
@@ -151,22 +187,22 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
                             <tr>
                                 <td>
                                     <label for="account_number">Account Number</label><br>
-                                    <input type="text" name="account_number" id="account_number" placeholder="Enter account number" >
+                                    <input type="text" name="account_number" id="account_number" placeholder="Enter account number">
                                 </td>
                                 <td>
-                                    <label for="confirm_account_number">Account Number</label><br>
-                                    <input type="text" name="confirm_account_number" id="confirm_account_number" placeholder="Re-Enter account number" >
+                                    <label for="confirm_account_number">Confirm Account Number</label><br>
+                                    <input type="text" name="confirm_account_number" id="confirm_account_number" placeholder="Re-Enter account number">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="amount">Amount</label><br>
-                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount" >
+                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount">
                                 </td>
                                 <td>
                                     <label for="date">Date</label><br>
-                                    <input type="date" name="date" id="date" >
+                                    <input type="date" name="date" id="date">
                                 </td>
 
                             </tr>
@@ -179,8 +215,8 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
                             <tr>
                                 <td>
                                     <?php
-                                    if(empty($errors)&&isset($_POST['submit'])){
-                                        echo "<p style='color:green;'>"."Payment Successful"."</p>";
+                                    if (empty($errors) && isset($_POST['submit'])) {
+                                        echo "<p style='color:green;'>" . "Payment Successful" . "</p>";
                                     }
                                     ?>
                                 </td>
@@ -232,4 +268,5 @@ if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_acco
         </div>
     </div>
 </body>
+
 </html>
