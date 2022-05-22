@@ -11,32 +11,30 @@ if (isset($_POST['submit'])) {
 
 //check required fields
 
-// $required = array('username', 'password');
+$required = array('username', 'password');
 
-// foreach ($required as $field) {
-//     if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
-//         $errors[] = $field . ' is required';
-//     }
+foreach ($required as $field) {
+    if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
+        $errors[] = $field . ' is required';
+    }
 
-// }
+}
 
 // //min length
-// $min_length = array('username' => 8, 'password' => 8);
+$min_length = array('username' => 8, 'password' => 8);
 
-// foreach ($min_length as $field => $length) {
-//     if (strlen($_POST[$field]) < $length) {
-//         $errors[] = $field . ' must be at least ' . $length . ' characters';
-//     }
-// }
-
-// }
-
-    if (!isset($_POST['username']) || strlen(trim($_POST['username'])) < 1) {
-        $errors[] = "Username is invalid";
+foreach ($min_length as $field => $length) {
+    if (strlen($_POST[$field]) < $length) {
+        $errors[] = $field . ' must be at least ' . $length . ' characters';
     }
-    if (!isset($_POST['password']) || (strlen(trim($_POST['password'])) > 255 || strlen($_POST['password']) < 1)) {
-        $errors[] = "Password is invalid";
-    }
+}
+
+
+
+
+
+
+
 
     if (empty($errors)) {
         $hasedPassword = sha1($password);
@@ -53,6 +51,8 @@ if (isset($_POST['submit'])) {
             $errors[] = "Something went wrong!";
         }
     }
+
+
 }
 
 ?>
@@ -147,6 +147,12 @@ if (isset($_POST['submit'])) {
                                 echo "</ul></p>";
                             }
 
+                            ?>
+
+                            <?php
+                            if(isset($_GET['logout'])){
+                                echo "<p style='color:lightgreen'>You successfully Logout in the system....</p><br>";
+                            }
                             ?>
                             <input type="submit" name="submit" value="Login"><br>
                             <!-- <a href="../Html/signup.html" target="_self">Enroll to Digital Banking?</a><br> -->

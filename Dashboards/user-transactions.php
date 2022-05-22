@@ -4,7 +4,7 @@ session_start();
 
 //Check the user is logged in
 if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
-    header('Location: ../index.php');
+    header('Location: ../php/Login.Php');
 }
 
 ?>
@@ -52,10 +52,10 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                     <button type="submit"><img src="search.png" alt=""></button>
                 </div> -->
                 <div class="user">
-                    <a href="#" class="btn">Pilana Gamage Eranga Janith Sandamal</a>
-                    <!-- <img src="notifications.png" alt=""> -->
+                    <a href="#" class="btn"><?php echo "Hello, " .  $_SESSION['username']; ?></a>
+                    
                     <div class="img-case">
-                        <img src="user.png" alt="">
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['username'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
