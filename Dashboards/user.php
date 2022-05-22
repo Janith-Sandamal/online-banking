@@ -218,7 +218,7 @@ if (mysqli_num_rows($result) == 1) {
                 <div class="recent-payments">
                     <div class="title">
                         <h2>Recent Payments/Transactions</h2>
-                        
+
                     </div>
                     <table>
                         <tr>
@@ -261,19 +261,23 @@ if (mysqli_num_rows($result) == 1) {
                         }
 
                         //sent Tran Youth
-                        $query = "SELECT * FROM transactions WHERE sent_acc={$youth_acc_no} LIMIT 2;";
-                        $result = mysqli_query($connection, $query);
+                        if (isset($youth_acc_no) && !empty($youth_acc_no)) {
 
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($data = mysqli_fetch_assoc($result)) {
-                                echo "<tr>"
-                                    . "<td>" . $data['receive_acc'] . "</td>"
-                                    . "<td>" . "Sent Funds" . "</td>"
-                                    . "<td>" . $data['amount'] . "</td>"
-                                    . "<td>" . $data['datetime'] . "</td>"
-                                    . "</tr>";
+
+                            $query = "SELECT * FROM transactions WHERE sent_acc={$youth_acc_no} LIMIT 2;";
+                            $result = mysqli_query($connection, $query);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($data = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>"
+                                        . "<td>" . $data['receive_acc'] . "</td>"
+                                        . "<td>" . "Sent Funds" . "</td>"
+                                        . "<td>" . $data['amount'] . "</td>"
+                                        . "<td>" . $data['datetime'] . "</td>"
+                                        . "</tr>";
+                                }
                             }
-                        }
+                        
 
                         //Receive Tran Youth
                         $query = "SELECT * FROM transactions WHERE receive_acc={$youth_acc_no} LIMIT 2;";
@@ -289,6 +293,7 @@ if (mysqli_num_rows($result) == 1) {
                                     . "</tr>";
                             }
                         }
+                    }
 
 
 
@@ -300,7 +305,7 @@ if (mysqli_num_rows($result) == 1) {
                 <div class="new-students">
                     <div class="title">
                         <h2>Credit Cards</h2>
-                        
+
                     </div>
                     <table>
                         <tr>

@@ -101,6 +101,53 @@ if (isset($_POST['submit'])) {
 
         $query = "INSERT INTO transactions (receive_acc, sent_acc, remark, amount, type, ben_name, ben_email, ben_mobile, branch, datetime) VALUES ({$receive_acc}, {$user_acc}, '{$remark}', {$sent_amount}, '{$type}', '{$name}', '{$email}', '{$mobile}', '{$branch}', now());";
         $result = mysqli_query($connection, $query);
+    } elseif (empty($errors) && $_POST['ptype'] == 'youth plus') {
+
+        $query = "SELECT * FROM youth_acc WHERE nic='{$nic}';";
+        $result = mysqli_query($connection, $query);
+        $data = mysqli_fetch_assoc($result);
+        $user_acc = $data['acc_no'];
+        $user_current_balance = $data['amount'];
+        $sent_amount = $_POST['amount'];
+        $new_amount = $user_current_balance - $sent_amount;
+
+        $query = "UPDATE youth_acc SET amount = {$new_amount} WHERE acc_no='{$user_acc}';";
+        $result = mysqli_query($connection, $query);
+
+        $ben_acc_no = $_POST['beneficiary_account'];
+        $query = "SELECT * FROM saving_acc WHERE acc_no={$ben_acc_no} LIMIT 1;";
+        $result = mysqli_query($connection, $query);
+
+        if (mysqli_num_rows($result) == 1) {
+            $data = mysqli_fetch_assoc($result);
+            $ben_saving_acc_no = $data['acc_no'];
+            $ben_current_balance = $data['amount'];
+            $new_amount = $ben_current_balance + $sent_amount;
+
+            $query = "UPDATE saving_acc SET amount = {$new_amount} WHERE acc_no='{$ben_saving_acc_no}';";
+            $result = mysqli_query($connection, $query);
+        } else {
+            $query = "SELECT * FROM youth_acc WHERE acc_no={$ben_acc_no} LIMIT 1;";
+            $result = mysqli_query($connection, $query);
+            $data = mysqli_fetch_assoc($result);
+            $ben_youth_acc_no = $data['acc_no'];
+            $ben_current_balance = $data['amount'];
+            $new_amount = $ben_current_balance + $sent_amount;
+
+            $query = "UPDATE youth_acc SET amount = {$new_amount} WHERE acc_no='{$ben_youth_acc_no}';";
+            $result = mysqli_query($connection, $query);
+        }
+
+        $receive_acc = $_POST['beneficiary_account'];
+        $remark = $_POST['remarks'];
+        $type = $_POST['type'];
+        $name = $_POST['beneficiary_name'];
+        $email = $_POST['beneficiary_email'];
+        $mobile = $_POST['mobile_number'];
+        $branch = $_POST['branch'];
+
+        $query = "INSERT INTO transactions (receive_acc, sent_acc, remark, amount, type, ben_name, ben_email, ben_mobile, branch, datetime) VALUES ({$receive_acc}, {$user_acc}, '{$remark}', {$sent_amount}, '{$type}', '{$name}', '{$email}', '{$mobile}', '{$branch}', now());";
+        $result = mysqli_query($connection, $query);
     }
 }
 ?>
@@ -187,8 +234,7 @@ if (isset($_POST['submit'])) {
                                         <select name="ptype" id="ptype">
                                             <option value="" selected>-Select-</option>
                                             <option value="reguler savings">Reguler Savings</option>
-                                            <option value="youth  plus">Youth Plus</option>
-                                            <option value="credit card">Credit Card</option>
+                                            <option value="youth plus">Youth Plus</option>
                                         </select>
                                     </td>
                                     <td>
