@@ -207,6 +207,7 @@ if (isset($_POST['submit'])) {
                                     }
                                     ?>
                                 </td>
+                            </tr>
                         </form>
                     </table>
                 </div>

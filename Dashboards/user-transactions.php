@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 
 
 //Reuired field validation
-$required_fields=array('ptype'=> 'Payment Type','type'=>'Payment Method','beneficiary_name'=>'Beneficiary','beneficiary_account'=>'Beneficiary Name','beneficiary_email'=> 'Beneficiary Email','branch'=>'Branch','mobile'=>'Mobile Number','amount'=>'Amount','date'=>'Date','remarks'=>'Remarks');
+$required_fields=array('ptype'=> 'Payment Type','type'=>'Payment Method','beneficiary_name'=>'Beneficiary','beneficiary_account'=>'Beneficiary Name','beneficiary_email'=> 'Beneficiary Email','branch'=>'Branch','mobile_number'=>'Mobile Number','amount'=>'Amount','date'=>'Date','remarks'=>'Remarks');
 
 $errors=array();
 
@@ -22,7 +22,42 @@ foreach ($required_fields as $fieldname => $fieldvalue) {
         }
     }
 
+//Beneficiary account Number validation
+if(!empty($_POST['beneficiary_account'])){
+    if(!preg_match('/^[0-9]{10}$/', $_POST['beneficiary_account'])){
+        $errors[]='Beneficiary Account Number must be 10 digits';
+    }
+}
 
+//Mobile Number validation
+if(!empty($_POST['mobile_number'])){
+    if(!preg_match('/^[0-9]{10}$/', $_POST['mobile_number'])){
+        $errors[]='Mobile Number must be 10 digits';
+    }
+}
+
+//Beneficiary Account Number validation is in saving account table or  Youth account table are exist
+if(!empty($_POST['beneficiary_account'])){
+    $beneficiary_account=$_POST['beneficiary_account'];
+    $sql="SELECT * FROM saving_acc WHERE acc_no='$beneficiary_account'";
+    $result=mysqli_query($connection,$sql);
+    if(mysqli_num_rows($result)>0){
+        $row=mysqli_fetch_assoc($result);
+        $beneficiary_name=$row['account_name'];
+        
+    }else{
+        $sql="SELECT * FROM youth_acc WHERE acc_no='$beneficiary_account'";
+        $result=mysqli_query($connection,$sql);
+        if(mysqli_num_rows($result)>0){
+            $row=mysqli_fetch_assoc($result);
+            $beneficiary_name=$row['account_name'];
+            
+        }else{
+            $errors[]='Beneficiary Account Number is not exist';
+        }
+    }
+
+}
 }
 ?>
 
@@ -88,7 +123,7 @@ foreach ($required_fields as $fieldname => $fieldvalue) {
                         <!-- <a href="#" class="btn">View All</a> -->
                     </div>
                     <table>
-                        <form action="" method="POST">
+                        <form action="./user-transactions.php" method="POST">
                             <tr>
                                 <td>
                                     <?php
