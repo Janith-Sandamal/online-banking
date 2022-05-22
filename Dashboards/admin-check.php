@@ -1,5 +1,6 @@
 <?php
 require '../lib/db.php';
+session_start();
 
 
 if (isset($_POST['submit'])) {
@@ -82,10 +83,10 @@ if (isset($_POST['submit'])) {
             <div class="nav">
 
                 <div class="user">
-
-
+                    <a href="#" class="btn"><?php echo "Hello, " . $_SESSION['admin_first_name']; ?></a>
+                    <!-- <img src="notifications.png" alt=""> -->
                     <div class="img-case">
-
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['admin_first_name'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
