@@ -225,95 +225,104 @@ if (isset($_POST['submit'])) {
                                                 echo "<p style='color:red;'>" . "-" . $error . "-" . "</p>";
                                             }
                                         }
-                                        ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="ptype">From Account*</label><br>
-                                        <select name="ptype" id="ptype">
-                                            <option value="" selected>-Select-</option>
-                                            <option value="reguler savings">Reguler Savings</option>
-                                            <option value="youth plus">Youth Plus</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="type">Type*</label><br>
-                                        <select name="type" id="type">
-                                            <option value="" selected>-Select-</option>
-                                            <option value="one time transaction">One Time Transaction</option>
-                                            <option value="immediate transfer">Immediate Transfer</option>
-                                            <option value="recurring transfer">Recurring Transfer</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="ptype">From Account*</label><br>
+                                    <select name="ptype" id="ptype" >
+                                        <option value="" selected>-Select-</option>
+                                        <option value="reguler savings">Reguler Savings</option>
+                                        <option value="youth  plus">Youth Plus</option>
+                                        <option value="credit card">Credit Card</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <label for="type">Type*</label><br>
+                                    <select name="type" id="type" >
+                                        <option value="" selected>-Select-</option>
+                                        <option value="one time transaction">One Time Transaction</option>
+                                        <option value="immediate transfer">Immediate Transfer</option>
+                                        <option value="recurring transfer">Recurring Transfer</option>
+                                    </select>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <label for="beneficiary_name">Beneficiary Name</label><br>
-                                        <input type="text" name="beneficiary_name" placeholder="Beneficiary Name">
-                                    </td>
-                                    <td>
-                                        <label for="beneficiary_account">Beneficiary Account Number</label><br>
-                                        <input type="text" name="beneficiary_account" placeholder="Beneficiary Account">
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <label for="beneficiary_name">Beneficiary Name</label><br>
+                                    <input type="text" name="beneficiary_name" placeholder="Beneficiary Name" >
+                                </td>
+                                <td>
+                                    <label for="beneficiary_account">Beneficiary Account Number</label><br>
+                                    <input type="text" name="beneficiary_account" placeholder="Beneficiary Account" >
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <label for="beneficiary_email">Beneficiary Email*</label> <br>
-                                        <input type="email" name="beneficiary_email" placeholder="Beneficiary Email">
-                                    </td>
-                                    <td>
-                                        <label for="branch">Branch*</label><br>
-                                        <select name="branch" id="branch">
-                                            <option value="">-Select-</option>
-                                            <option value="galle">Galle</option>
-                                            <option value="colombo">Colombo</option>
-                                            <option value="kandy">Kandy</option>
-                                            <option value="matara">Matara</option>
-                                            <option value="kurunegala">Kurunegala</option>
-                                            <option value="badulla">Badulla</option>
-                                            <option value="hambantota">Hambantota</option>
-                                            <option value="jaffna">Jaffna</option>
-                                            <option value="kalutara">Kalutara</option>
-                                            <option value="gampaha">Gampaha</option>
-                                            <option value="malabe">Malabe</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <label for="beneficiary_email">Beneficiary Email*</label> <br>
+                                    <input type="email" name="beneficiary_email" placeholder="Beneficiary Email" >
+                                </td>
+                                <td>
+                                    <label for="branch">Branch*</label><br>
+                                    <select name="branch" id="branch" >
+                                        <option value="">-Select-</option>
+                                        <option value="galle">Galle</option>
+                                        <option value="colombo">Colombo</option>
+                                        <option value="kandy">Kandy</option>
+                                        <option value="matara">Matara</option>
+                                        <option value="kurunegala">Kurunegala</option>
+                                        <option value="badulla">Badulla</option>
+                                        <option value="hambantota">Hambantota</option>
+                                        <option value="jaffna">Jaffna</option>
+                                        <option value="kalutara">Kalutara</option>
+                                        <option value="gampaha">Gampaha</option>
+                                        <option value="malabe">Malabe</option>
+                                    </select>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <label for="mobile_number">Beneficiary Mobile Number</label><br>
-                                        <input type="text" name="mobile_number" placeholder="Mobile Number">
-                                    </td>
-                                    <td>
-                                        <label for="amount">Amount*</label><br>
-                                        <input type="text" name="amount" placeholder="Amount">
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <label for="mobile_number">Beneficiary Mobile Number</label><br>
+                                    <input type="text" name="mobile_number" placeholder="Mobile Number" >
+                                </td>
+                                <td>
+                                    <label for="amount">Amount*</label><br>
+                                    <input type="text" name="amount" placeholder="Amount" >
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <label for="date">Date*</label><br>
-                                        <input type="date" name="date" placeholder="Date">
-                                    </td>
-                                    <td>
-                                        <label for="remarks">Remarks</label><br>
-                                        <input type="text" name="remarks" placeholder="Remarks">
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <label for="date">Date*</label><br>
+                                    <input type="date" name="date" placeholder="Date">
+                                </td>
+                                <td>
+                                    <label for="remarks">Remarks</label><br>
+                                    <input type="text" name="remarks" placeholder="Remarks">
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <input type="submit" value="Transfer &rarr;" name="submit" class="btn">
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Transfer &rarr;" name="submit" class="btn">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(empty($errors)&&isset($_POST['submit'])){
+                                        echo "<p style='color:green;'>"."Payment Successful"."</p>";
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
 
-                            </form>
-                        </table>
-                    </div>
+                        </form>
+                    </table>
                 </div>
             </div>
         </div>
