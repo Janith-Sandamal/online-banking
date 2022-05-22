@@ -72,8 +72,7 @@ if (isset($_POST['psubmit'])) {
         }
     }
 }
-$username_error = array();
-//Array for Username change form
+
 
 
 //Check the user is Submit Username Change Form
@@ -81,13 +80,62 @@ if (isset($_POST['submit'])) {
 
 
     //Validate the user input
-    $required_fields = array('nic' => 'NIC', 'username' => 'Username');
-    $username_error = array();
+    $required_fields = array('nic' => 'NIC', 'current_username' => 'Current Username', 'new_username' => 'New Username', 'confirm_username' => 'Confirm Username');
+    $U_errors = array();
     foreach ($required_fields as $field => $value) {
-        if (empty(trim(($_POST[$field]))) || $_POST[$field] == '') {
-            $username_error[] = $value . ' is required';
+        if (empty($_POST[$field]) || $_POST[$field] == '') {
+            $U_errors[] = $value . ' is required';
         }
     }
+
+//Check Username characters can be only numbers and letters
+    if (!preg_match('/^[a-zA-Z0-9]*$/', $_POST['new_username'])) {
+        $U_errors[] = 'Username can only be numbers and letters';
+    }
+
+    //check nic already exists ignore space
+    $nic = $_POST['nic'];
+    $sql = "SELECT * FROM users WHERE nic = '$nic'";
+    $result = mysqli_query($connection, $sql);
+    $row = mysqli_fetch_assoc($result);
+    if (empty($row)) {
+        $U_errors[] = 'NIC Does not exists';
+    }
+
+    //check Change username values are set
+    if (isset($_POST['nic']) && isset($_POST['current_username']) && isset($_POST['confirm_username']) && isset($_POST['new_username'])) {
+        $nic = $_POST['nic'];
+        $current_username = $_POST['current_username'];
+        $confirm_username = $_POST['confirm_username'];
+        $new_username = $_POST['new_username'];
+
+        //check the old username is correct sha1 encripted
+        $sql = "SELECT * FROM users WHERE nic='$nic'";
+        $result = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
+            $current_username_db = $row['user_name'];
+            if (($current_username) == $current_username_db) {
+                //check the new username and confirm username are the same
+                if ($new_username == $confirm_username) {
+                    //update the username
+                    $sql = "UPDATE users SET user_name='$new_username' WHERE nic='$nic'";
+                    $result = mysqli_query($connection, $sql);
+                    if ($result) {
+                        $Usuccess_message = "Username Changed Successfully";
+                    } else {
+                        $U_errors[] = "Username Change Failed";
+                    }
+                } else {
+                    $U_errors[] = "New Username and Confirm Username do not match";
+                }
+            } else {
+                $U_errors[] = "Current Username is incorrect";
+
+            }
+}
+
+}
 }
 
 ?>
@@ -227,9 +275,9 @@ if (isset($_POST['submit'])) {
                             <tr>
                                 <td>
                                     <?php
-                                    if (isset($username_error) && !empty($username_error)) {
-                                        foreach ($username_error as $error) {
-                                            echo "<p style='color:red'>" . '-' . $error . '-' . "</p>";
+                                    if (isset($U_errors) && !empty($U_errors)) {
+                                        foreach ($U_errors as $U_error) {
+                                            echo "<p style='color:red'>" . '-' . $U_error . '-' . "</p>";
                                         }
                                     }
                                     ?>
