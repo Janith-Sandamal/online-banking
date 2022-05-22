@@ -1,140 +1,137 @@
 <?php
 require '../lib/db.php';
+session_start();
 
 
 //Check the admin is Submit user add form
-if(isset($_POST['add_submit'])){
+if (isset($_POST['add_submit'])) {
 
 
-//validate the user input
-$required_fields = array('nic'=>'NIC','account_no'=>'Account Number','username'=>'Username','password'=>'Password','Cpassword'=>'Confirm Password');
+    //validate the user input
+    $required_fields = array('nic' => 'NIC', 'account_no' => 'Account Number', 'username' => 'Username', 'password' => 'Password', 'Cpassword' => 'Confirm Password');
 
-$add_errors=array();
+    $add_errors = array();
 
-foreach($required_fields as $fieldname => $fieldvalue){
-    if(empty($_POST[$fieldname]) || $_POST[$fieldname]==""){
-        $add_errors[]=$fieldvalue . ' is required';
-    }
-
-}
-
-//check the password and confirm password are same and not empty
-if(!empty($_POST['password']) || !empty($_POST['Cpassword'])){
-    if($_POST['password']!=$_POST['Cpassword']){
-        $add_errors[]='Password and Confirm Password are not same';
-    }
-}
-
-//check the nic is exist or not customers table
-if(!empty($_POST['nic'])){
-    $nic=$_POST['nic'];
-    $sql="SELECT * FROM customers WHERE nic='$nic'";
-    $result=mysqli_query($connection,$sql);
-    if(mysqli_num_rows($result)==0){
-        $add_errors[]='NIC is not exist';
-    }
-}
-//check the account number is exist or not  saving account table
-if(!empty($_POST['account_no'])){
-    $account_no=$_POST['account_no'];
-    $sql="SELECT * FROM saving_acc WHERE acc_no='$account_no'";
-    $result=mysqli_query($connection,$sql);
-    if(mysqli_num_rows($result)==0){
-        $add_errors[]='Account Number is not exist';
-    }
-}
-
-//Username is only letter and number
-if(!empty($_POST['username'])){
-    $username=$_POST['username'];
-    if(!preg_match('/^[a-zA-Z0-9]*$/',$username)){
-        $add_errors[]='Username is only letter and number';
-    }
-}
-
-//Password , confirm length is greater than 8 and ignore space
-if(!empty($_POST['password'])){
-    $password=$_POST['password'];
-    if(!preg_match('/^[a-zA-Z0-9]{8,}$/',$password)){
-        $add_errors[]='Password length is greater than 8 and ignore space';
-    }
-}
-
-//errors are empty then insert the data and password insert as sha1
-if(empty($add_errors)){
-    $nic=$_POST['nic'];
-    $account_no=$_POST['account_no'];
-    $username=$_POST['username'];
-    $password=sha1($_POST['password']);
-    $sql="INSERT INTO users(nic,user_name,password) VALUES('$nic','$username','$password')";
-    $result=mysqli_query($connection,$sql);
-    if($result){
-        $add_success_message='User added successfully';
-    }else{
-        $add_errors[]='User not added';
-    }
-}
-}
-
-//Check the admin is Submit remove user form
-if(isset($_POST['remove_submit'])){
-    $required_fields = array('nic'=>'NIC','username'=>'User Name');
-    
-    $remove_errors=array();
-
-    foreach($required_fields as $fieldname => $fieldvalue){
-        if(empty($_POST[$fieldname]) || $_POST[$fieldname]==""){
-            $remove_errors[]=$fieldvalue . ' is required';
+    foreach ($required_fields as $fieldname => $fieldvalue) {
+        if (empty($_POST[$fieldname]) || $_POST[$fieldname] == "") {
+            $add_errors[] = $fieldvalue . ' is required';
         }
     }
 
-//Check nic is exist or not in users table
-if(!empty($_POST['nic'])){
-    $nic=$_POST['nic'];
-    $sql="SELECT * FROM users WHERE nic='$nic'";
-    $result=mysqli_query($connection,$sql);
-    if(mysqli_num_rows($result)==0){
-        $remove_errors[]='NIC is not exist';
-    }
-    
-}
-
-//Nic is only letter and number
-if(!empty($_POST['username'])){
-    $username=$_POST['username'];
-    if(!preg_match('/^[a-zA-Z0-9]*$/',$username)){
-        $remove_errors[]='Username is only letter and number';
+    //check the password and confirm password are same and not empty
+    if (!empty($_POST['password']) || !empty($_POST['Cpassword'])) {
+        if ($_POST['password'] != $_POST['Cpassword']) {
+            $add_errors[] = 'Password and Confirm Password are not same';
+        }
     }
 
-}
-
-//Nic number length is between 10 and 12 and ignore space
-if(!empty($_POST['nic'])){
-    $nic=$_POST['nic'];
-    if(!preg_match('/^[a-zA-Z0-9]{10,12}$/',$nic)){
-        $remove_errors[]='NIC number length is between 10 and 12 and ignore space';
+    //check the nic is exist or not customers table
+    if (!empty($_POST['nic'])) {
+        $nic = $_POST['nic'];
+        $sql = "SELECT * FROM customers WHERE nic='$nic'";
+        $result = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($result) == 0) {
+            $add_errors[] = 'NIC is not exist';
+        }
+    }
+    //check the account number is exist or not  saving account table
+    if (!empty($_POST['account_no'])) {
+        $account_no = $_POST['account_no'];
+        $sql = "SELECT * FROM saving_acc WHERE acc_no='$account_no'";
+        $result = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($result) == 0) {
+            $add_errors[] = 'Account Number is not exist';
+        }
     }
 
-}
+    //Username is only letter and number
+    if (!empty($_POST['username'])) {
+        $username = $_POST['username'];
+        if (!preg_match('/^[a-zA-Z0-9]*$/', $username)) {
+            $add_errors[] = 'Username is only letter and number';
+        }
+    }
 
-//errors are empty then remove the user
-if(empty($remove_errors)){
-    $nic=$_POST['nic'];
-    $username=$_POST['username'];
-    $sql="DELETE FROM users WHERE nic='$nic' AND user_name='$username'";
-    $result=mysqli_query($connection,$sql);
-    if($result){
-        $remove_success_message='User removed successfully';
-    }else{
-        $remove_errors[]='User not removed';
+    //Password , confirm length is greater than 8 and ignore space
+    if (!empty($_POST['password'])) {
+        $password = $_POST['password'];
+        if (!preg_match('/^[a-zA-Z0-9]{8,}$/', $password)) {
+            $add_errors[] = 'Password length is greater than 8 and ignore space';
+        }
+    }
+
+    //errors are empty then insert the data and password insert as sha1
+    if (empty($add_errors)) {
+        $nic = $_POST['nic'];
+        $account_no = $_POST['account_no'];
+        $username = $_POST['username'];
+        $password = sha1($_POST['password']);
+        $sql = "INSERT INTO users(nic,user_name,password) VALUES('$nic','$username','$password')";
+        $result = mysqli_query($connection, $sql);
+        if ($result) {
+            $add_success_message = 'User added successfully';
+        } else {
+            $add_errors[] = 'User not added';
+        }
     }
 }
 
+//Check the admin is Submit remove user form
+if (isset($_POST['remove_submit'])) {
+    $required_fields = array('nic' => 'NIC', 'username' => 'User Name');
+
+    $remove_errors = array();
+
+    foreach ($required_fields as $fieldname => $fieldvalue) {
+        if (empty($_POST[$fieldname]) || $_POST[$fieldname] == "") {
+            $remove_errors[] = $fieldvalue . ' is required';
+        }
+    }
+
+    //Check nic is exist or not in users table
+    if (!empty($_POST['nic'])) {
+        $nic = $_POST['nic'];
+        $sql = "SELECT * FROM users WHERE nic='$nic'";
+        $result = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($result) == 0) {
+            $remove_errors[] = 'NIC is not exist';
+        }
+    }
+
+    //Nic is only letter and number
+    if (!empty($_POST['username'])) {
+        $username = $_POST['username'];
+        if (!preg_match('/^[a-zA-Z0-9]*$/', $username)) {
+            $remove_errors[] = 'Username is only letter and number';
+        }
+    }
+
+    //Nic number length is between 10 and 12 and ignore space
+    if (!empty($_POST['nic'])) {
+        $nic = $_POST['nic'];
+        if (!preg_match('/^[a-zA-Z0-9]{10,12}$/', $nic)) {
+            $remove_errors[] = 'NIC number length is between 10 and 12 and ignore space';
+        }
+    }
+
+    //errors are empty then remove the user
+    if (empty($remove_errors)) {
+        $nic = $_POST['nic'];
+        $username = $_POST['username'];
+        $sql = "DELETE FROM users WHERE nic='$nic' AND user_name='$username'";
+        $result = mysqli_query($connection, $sql);
+        if ($result) {
+            $remove_success_message = 'User removed successfully';
+        } else {
+            $remove_errors[] = 'User not removed';
+        }
+    }
 }
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -147,13 +144,14 @@ if(empty($remove_errors)){
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
-    
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
+
 
     <title>User Dashboard</title>
 </head>
+
 <body>
     <div class="side-menu">
         <div class="brand-name">
@@ -176,10 +174,10 @@ if(empty($remove_errors)){
                     <button type="submit"><img src="search.png" alt=""></button>
                 </div> -->
                 <div class="user">
-                    <a href="#" class="btn">Pilana Gamage Eranga Janith Sandamal</a>
+                    <a href="#" class="btn"><?php echo "Hello, " . $_SESSION['admin_first_name']; ?></a>
                     <!-- <img src="notifications.png" alt=""> -->
                     <div class="img-case">
-                        <img src="user.png" alt="">
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['admin_first_name'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
@@ -188,13 +186,13 @@ if(empty($remove_errors)){
 
             <div class="cards">
             </div>
-            
+
             <div class="content-2">
 
                 <!-- Add User -->
                 <div class="details-update">
                     <div class="title">
-                        <h2>Add User</h2>   
+                        <h2>Add User</h2>
                     </div>
                     <table>
                         <form action="./admin-update.php" method="POST">
@@ -212,31 +210,31 @@ if(empty($remove_errors)){
                             <tr>
                                 <td>
                                     <label for="nic">NIC*</label><br>
-                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" >
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number">
                                 </td>
 
                                 <td>
                                     <label for="account_no">Saving Account Number*</label><br>
-                                    <input type="text" name="account_no" id="account_no" placeholder="Enter Saving Account Number" >
+                                    <input type="text" name="account_no" id="account_no" placeholder="Enter Saving Account Number">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="username">Username*</label><br>
-                                    <input type="text" name="username" id="username" placeholder="Enter Username" >
+                                    <input type="text" name="username" id="username" placeholder="Enter Username">
                                 </td>
 
                                 <td>
                                     <label for="password">Password*</label><br>
-                                    <input type="password" name="password" id="password" placeholder="Enter Password" >
+                                    <input type="password" name="password" id="password" placeholder="Enter Password">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="Cpassword">Confirm Password</label><br>
-                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Enter Password Again" >
+                                    <input type="password" name="Cpassword" id="Cpassword" placeholder="Enter Password Again">
                                 </td>
                             </tr>
 
@@ -266,11 +264,11 @@ if(empty($remove_errors)){
                 <!-- Remove User -->
                 <div class="details-update">
                     <div class="title">
-                        <h2>Remove User</h2>   
+                        <h2>Remove User</h2>
                     </div>
                     <table>
                         <form action="./admin-update.php" method="POST">
-                        <tr>
+                            <tr>
                                 <td>
                                     <?php
                                     if (isset($remove_errors) && !empty($remove_errors)) {
@@ -284,12 +282,12 @@ if(empty($remove_errors)){
                             <tr>
                                 <td>
                                     <label for="nic">NIC*</label><br>
-                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number" >
+                                    <input type="text" name="nic" id="nic" placeholder="Enter NIC Number">
                                 </td>
 
                                 <td>
                                     <label for="username">Username*</label><br>
-                                    <input type="text" name="username" id="username" placeholder="Enter Username" >
+                                    <input type="text" name="username" id="username" placeholder="Enter Username">
                                 </td>
                             </tr>
 
@@ -314,9 +312,10 @@ if(empty($remove_errors)){
 
 
 
-                
+
             </div>
         </div>
     </div>
 </body>
+
 </html>

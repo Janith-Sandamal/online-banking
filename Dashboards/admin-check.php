@@ -1,5 +1,6 @@
 <?php
 require '../lib/db.php';
+session_start();
 
 
 if (isset($_POST['submit'])) {
@@ -82,10 +83,10 @@ if (isset($_POST['submit'])) {
             <div class="nav">
 
                 <div class="user">
-
-
+                    <a href="#" class="btn"><?php echo "Hello, " . $_SESSION['admin_first_name']; ?></a>
+                    <!-- <img src="notifications.png" alt=""> -->
                     <div class="img-case">
-
+                        <?php echo "<img src='https://ui-avatars.com/api/?name=" . $_SESSION['admin_first_name'] . "'/>"; ?>
                     </div>
                 </div>
             </div>
@@ -146,12 +147,34 @@ if (isset($_POST['submit'])) {
                                     <input type="submit" name="submit" value="Search &rarr;">
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
 
                             <?php
 
-                            if (empty($errors)) {
+                            if (empty($errors) && isset($data)) {
                                 echo "<tr>"
-                                    . "<td>" . $data['title'] . " " . $data['frist_name'] . "</td>";
+                                    . "<td> Full Name: </td>"
+                                    . "<th>" . $data['title'] . " " . $data['frist_name'] . " " . $data["last_name"] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> NIC: </td>"
+                                    . "<th>" . $data['nic'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> E-mail: </td>"
+                                    . "<th>" . $data['email'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> Mobile Number: </td>"
+                                    . "<th>" . $data['phone_number'] . "</th>"
+                                    . "</tr>";
+                                echo "<tr>"
+                                    . "<td> City: </td>"
+                                    . "<th>" . $data['city'] . "</th>"
+                                    . "</tr>";
                             }
 
                             ?>
