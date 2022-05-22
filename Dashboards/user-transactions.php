@@ -9,14 +9,21 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
 //Check user submit trabsaction form
 if(isset($_POST['submit'])){
-    $Ptype = $_POST['ptype'];
-    $type= $_POST['type'];
-    $benName =$_POST['beneficiary_name'];
-    $benAcc = $_POST['beneficiary_account'];
-    $benEmail = $_POST['beneficiary_email'];
-    $branch = $_POST['branch'];
-}
 
+
+//Reuired field validation
+$required_fields=array('ptype'=> 'Payment Type','type'=>'Payment Method','beneficiary_name'=>'Beneficiary','beneficiary_account'=>'Beneficiary Name','beneficiary_email'=> 'Beneficiary Email','branch'=>'Branch','mobile'=>'Mobile Number','amount'=>'Amount','date'=>'Date','remarks'=>'Remarks');
+
+$errors=array();
+
+foreach ($required_fields as $fieldname => $fieldvalue) {
+        if(empty($_POST[$fieldname]) || $_POST[$fieldname]==''){
+            $errors[]=$fieldvalue.' is required';
+        }
+    }
+
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +88,22 @@ if(isset($_POST['submit'])){
                         <!-- <a href="#" class="btn">View All</a> -->
                     </div>
                     <table>
-                        <form action="">
+                        <form action="" method="POST">
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(isset($errors) && !empty($errors)){
+                                        foreach($errors as $error){
+                                            echo "<p style='color:red;'>"."-".$error."-"."</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <label for="ptype">From Account*</label><br>
-                                    <select name="ptype" id="ptype" required>
+                                    <select name="ptype" id="ptype" >
                                         <option value="" selected>-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
@@ -94,7 +112,7 @@ if(isset($_POST['submit'])){
                                 </td>
                                 <td>
                                 <label for="type">Type*</label><br>
-                                    <select name="type" id="type" required>
+                                    <select name="type" id="type" >
                                         <option value="" selected>-Select-</option>
                                         <option value="one time transaction">One Time Transaction</option>
                                         <option value="immediate transfer">Immediate Transfer</option>
@@ -121,7 +139,7 @@ if(isset($_POST['submit'])){
                                 </td>
                                 <td>
                                     <label for="branch">Branch*</label><br>
-                                    <select name="branch" id="branch" required>
+                                    <select name="branch" id="branch" >
                                         <option value="">-Select-</option>
                                         <option value="galle">Galle</option>
                                         <option value="colombo">Colombo</option>
@@ -141,18 +159,18 @@ if(isset($_POST['submit'])){
                             <tr>
                                 <td>
                                     <label for="mobile_number">Beneficiary Mobile Number</label><br>
-                                    <input type="text" name="mobile_number" placeholder="Mobile Number" required>
+                                    <input type="text" name="mobile_number" placeholder="Mobile Number" >
                                 </td>
                                 <td>
                                     <label for="amount">Amount*</label><br>
-                                    <input type="text" name="amount" placeholder="Amount" required>
+                                    <input type="text" name="amount" placeholder="Amount" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="date">Date*</label><br>
-                                    <input type="date" name="date" placeholder="Date"required>
+                                    <input type="date" name="date" placeholder="Date">
                                 </td>
                                 <td>
                                     <label for="remarks">Remarks</label><br>
