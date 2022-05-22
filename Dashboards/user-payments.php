@@ -7,6 +7,36 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     header('Location: ../php/Login.Php');
 }
 
+//Check user submit trabsaction form
+if(isset($_POST['submit'])){
+
+
+//Requried fields
+$required = array('from'=>'From Account','type'=>'Bill Type','provider'=>'Provider','account_number`'=>'Account Number','confirm_account_number'=>'Confirm Account Number','amount'=>'Amount','date'=>'Date');
+
+$errors= array();
+
+//Check if all required fields are filled
+foreach ($required as $field => $label) {
+    if(empty($_POST[$field]) || $_POST[$field]==''){
+        $errors[]=$label.' is required';
+    }
+}
+
+
+
+// account Number and confirm account number length should 10
+if(empty((strlen(trim(($_POST['account_number'])))))!=10 || (empty(strlen(trim(($_POST['confirm_account_number']))))) !=10){
+    $errors[]='Account Number should be 10 digits';
+}
+
+
+//Confirm account number and account numbers should be same
+if((!empty(trim($_POST['account_number'])))!= (!empty(trim( $_POST['confirm_account_number'])))){
+    $errors[]='Account Number and Confirm Account Number should be same';
+}
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +77,7 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     <div class="container">
         <div class="header">
             <div class="nav">
-                <!-- <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="search.png" alt=""></button>
-                </div> -->
+                
                 <div class="user">
                     <a href="#" class="btn"><?php echo "Hello, " .  $_SESSION['username']; ?></a>
                     
@@ -71,11 +98,22 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <h2>Utility Payments</h2>   
                     </div>
                     <table>
-                        <form action="">
+                        <form action="./user-payments.php" method="POST">
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(isset($errors) && !empty($errors)){
+                                        foreach($errors as $error){
+                                            echo "<p style='color:red;'>"."-".$error."-"."</p>";
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <label for="from">From*</label><br>
-                                    <select name="from" id="from" required>
+                                    <select name="from" id="from" >
                                         <option value="">-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
@@ -87,7 +125,7 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             <tr>
                                 <td>
                                     <label for="type">Type</label><br>
-                                    <select name="type" id="type" required>
+                                    <select name="type" id="type" >
                                         <option value="">-Select-</option>
                                         <option value="water bill">Water Bill</option>
                                         <option value="electricity bill">Electricity Bill</option>
@@ -98,7 +136,7 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                                 </td>
                                 <td>
                                     <label for="provider">Provider</label><br>
-                                    <select name="provider" id="provider" required>
+                                    <select name="provider" id="provider" >
                                         <option value="">-Select-</option>
                                         <option value="water board">Sri Lanka Water Board</option>
                                         <option value="ceb">CEB</option>
@@ -112,23 +150,23 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
                             <tr>
                                 <td>
-                                    <label for="account number">Account Number</label><br>
-                                    <input type="text" name="account number" id="account number" placeholder="Enter account number" required>
+                                    <label for="account_number">Account Number</label><br>
+                                    <input type="text" name="account_number" id="account_number" placeholder="Enter account number" >
                                 </td>
                                 <td>
-                                    <label for="reaccount number">Account Number</label><br>
-                                    <input type="text" name="reaccount number" id="reaccount number" placeholder="Re-Enter account number" required>
+                                    <label for="confirm_account_number">Account Number</label><br>
+                                    <input type="text" name="confirm_account_number" id="confirm_account_number" placeholder="Re-Enter account number" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
                                     <label for="amount">Amount</label><br>
-                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount" required>
+                                    <input type="text" name="amount" id="amount" placeholder="Enter Amount" >
                                 </td>
                                 <td>
                                     <label for="date">Date</label><br>
-                                    <input type="date" name="date" id="date" required>
+                                    <input type="date" name="date" id="date" >
                                 </td>
 
                             </tr>
@@ -136,6 +174,15 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                             <tr>
                                 <td>
                                     <input type="submit" class="btn" value="Confirm &rarr;" name="submit">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(empty($errors)&&isset($_POST['submit'])){
+                                        echo "<p style='color:green;'>"."Payment Successful"."</p>";
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                         </form>

@@ -218,6 +218,15 @@ if(!empty($_POST['beneficiary_account'])){
                                     <input type="submit" value="Transfer &rarr;" name="submit" class="btn">
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <?php
+                                    if(empty($errors)&&isset($_POST['submit'])){
+                                        echo "<p style='color:green;'>"."Payment Successful"."</p>";
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
 
                         </form>
                     </table>
