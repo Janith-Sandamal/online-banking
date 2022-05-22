@@ -7,6 +7,16 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
     header('Location: ../php/Login.Php');
 }
 
+//Check user submit trabsaction form
+if(isset($_POST['submit'])){
+    $Ptype = $_POST['ptype'];
+    $type= $_POST['type'];
+    $benName =$_POST['beneficiary_name'];
+    $benAcc = $_POST['beneficiary_account'];
+    $benEmail = $_POST['beneficiary_email'];
+    $branch = $_POST['branch'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -74,8 +84,8 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                         <form action="">
                             <tr>
                                 <td>
-                                    <label for="from">From Account*</label><br>
-                                    <select name="from" id="from" required>
+                                    <label for="ptype">From Account*</label><br>
+                                    <select name="ptype" id="ptype" required>
                                         <option value="" selected>-Select-</option>
                                         <option value="reguler savings">Reguler Savings</option>
                                         <option value="youth  plus">Youth Plus</option>
@@ -95,19 +105,19 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
                             <tr>
                                 <td>
-                                    <label for="beneficiary name">Beneficiary Name</label><br>
-                                    <input type="text" name="beneficiary name" placeholder="Beneficiary Name" required>
+                                    <label for="beneficiary_name">Beneficiary Name</label><br>
+                                    <input type="text" name="beneficiary_name" placeholder="Beneficiary Name" >
                                 </td>
                                 <td>
-                                    <label for="beneficiary account">Beneficiary Account Number</label><br>
-                                    <input type="text" name="beneficiary account" placeholder="Beneficiary Account" required>
+                                    <label for="beneficiary_account">Beneficiary Account Number</label><br>
+                                    <input type="text" name="beneficiary_account" placeholder="Beneficiary Account" >
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <label for="email">Beneficiary Email*</label> <br>
-                                    <input type="email" name="beneficiary email" placeholder="Beneficiary Email" required>
+                                    <label for="beneficiary_email">Beneficiary Email*</label> <br>
+                                    <input type="email" name="beneficiary_email" placeholder="Beneficiary Email" >
                                 </td>
                                 <td>
                                     <label for="branch">Branch*</label><br>
@@ -130,8 +140,8 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
                             <tr>
                                 <td>
-                                    <label for="mobile number">Beneficiary Mobile Number</label><br>
-                                    <input type="text" name="mobile number" placeholder="Mobile Number" required>
+                                    <label for="mobile_number">Beneficiary Mobile Number</label><br>
+                                    <input type="text" name="mobile_number" placeholder="Mobile Number" required>
                                 </td>
                                 <td>
                                     <label for="amount">Amount*</label><br>
@@ -141,8 +151,8 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
 
                             <tr>
                                 <td>
-                                    <label for="purpose">Purpose</label><br>
-                                    <input type="text" name="purpose" placeholder="Purpose" required>
+                                    <label for="date">Date*</label><br>
+                                    <input type="date" name="date" placeholder="Date"required>
                                 </td>
                                 <td>
                                     <label for="remarks">Remarks</label><br>
@@ -150,13 +160,6 @@ if (!isset($_SESSION['nic']) && strlen($_SESSION['nic']) < 10) {
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <label for="date">Date*</label><br>
-                                    <input type="date" name="date" placeholder="Date"required>
-                                </td>
-                            </tr>
-                            
                             <tr>
                                 <td>
                                     <input type="submit" value="Transfer &rarr;" name="submit" class="btn">

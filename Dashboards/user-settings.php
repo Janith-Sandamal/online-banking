@@ -72,24 +72,24 @@ if(isset($_POST['nic']) && isset($_POST['old_password']) && isset($_POST['confir
 }
 
 }
-$username_error =array();
-//Array for Username change form
+// $username_error =array();
+// //Array for Username change form
 
 
-//Check the user is Submit Username Change Form
-if(isset($_POST['submit'])){
+// //Check the user is Submit Username Change Form
+// if(isset($_POST['submit'])){
 
 
-//Validate the user input
-$required_fields = array('nic' =>'NIC','username'=>'Username');
-$username_error = array();
-foreach ($required_fields as $field => $value) {
-    if(empty(trim(($_POST[$field]))) || $_POST[$field] == ''){
-        $username_error[] = $value . ' is required';
-    }
-}
+// //Validate the user input
+// $required_fields = array('nic' =>'NIC','username'=>'Username');
+// $username_error = array();
+// foreach ($required_fields as $field => $value) {
+//     if(empty(trim(($_POST[$field]))) || $_POST[$field] == ''){
+//         $username_error[] = $value . ' is required';
+//     }
+// }
 
-}
+// }
 
 ?>
 
