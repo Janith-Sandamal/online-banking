@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon icon -->
-    <link rel="icon" href="../Images/Favicon sample.png" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon1.png" type="image/x-icon">
 
     <!-- Link Normalize CSS file -->
     <link rel="stylesheet" href="../css/Normalize.css">
@@ -77,6 +77,10 @@ if (isset($_POST['submit'])) {
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 
 
     <title>Login Here!</title>
@@ -84,33 +88,28 @@ if (isset($_POST['submit'])) {
 
 <body>
     <!-- Header Section of web page -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <ul>
-                    <li><a href="#"><img src="" alt="Logo"></a></li>
+    <header>
+    <nav>
+         <ul>
+            <li class="logo">Meridian Trust</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
                     <li><a href="../index.php" target="_self">Home</a></li>
-                    <li><a href="#">Peronal Banking</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="./Digital banking.php" target="_self" >Asia Bank Digital</a></li>
+                    <li><a href="./personal banking.php">Peronal Banking</a></li>
+                    <li><a href="./services.php">services</a></li>
+                    <li><a href="./Digital banking.php" target="_self" >MT Digital</a></li>
                     <li><a href="./about us.php" target="_self">About Us</a></li>
                     <li><a href="./contact us.php" target="_self">Contact Us</a></li>
-                    <span class="search">
-                        <li>
-                            <form action="" method="">
-                                <input type="text" name="search" placeholder="Search">
-                                <input type="submit" name="submit" value="Search">
-
-                            </form>
-                        </li>
-                    </span>
-                    <li><a href="#"><img src="" alt="login"></a></li>
-
-                </ul>
-            </nav>
-        </div>
-        </div>
-    </header>
+                    </div>
+            <li class="search-icon">
+               <input type="search" placeholder="Search">
+               <label class="icon">
+               <span class="fas fa-search"></span>
+               </label>
+            </li>
+         </ul>
+      </nav>
+     </header>
 
     <!-- Body Section -->
     <section class="home-banner">
@@ -150,7 +149,17 @@ if (isset($_POST['submit'])) {
                     </div>
                 </section>
                 <div class="content">
-                  
+                    <!-- <h1>Connect With Online Banking!</h1> -->
+                    <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam, quidem.
+                </p> -->
+                    <!-- <div>
+                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Login!</a></button>
+                    <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button>
+                </div> -->
 
 
                 </div>
@@ -171,21 +180,21 @@ if (isset($_POST['submit'])) {
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
+                        <li><a href=".contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href=".cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
                         <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
-                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
+                        <li><a href=".signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="./php/cover-deposit.php" target="_self">Deposits</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
-                        <li><a href="./php/cover-cards.php" target="_self">Cards</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Loans</a></li>
+                        <li><a href="./cover-deposit.php" target="_self">Deposits</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
+                        <li><a href="./cover-cards.php" target="_self">Cards</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Loans</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -211,12 +220,12 @@ if (isset($_POST['submit'])) {
         </div>
     </footer>
     <div class="sub-footer">
-        <p>Asia Bank of Ceylon PLC</p>
-        <p>Asia House,No 21,Sri Razik Fareed Mawatha,P.O.Box 720 Colombo 07,Sri Lanka.</p>
-
-        <br>
-        <p>Legal Notice | Accessibility | Security Measure</p>
-        <p>&copy; 2022 Aisa Bank. All Rights Reserved.</p>
+    <p>Meridian Trust Corparation PLC</p>
+                        <p>No 24,Perahara Rd,P.O.Box 720 Colombo 07,Sri Lanka.</p>
+                        
+                        <br>
+                        <p>Legal Notice | Accessibility | Security Measure</p>
+                        <p>&copy; 2022 MTC Bank. All Rights Reserved.</p>
     </div>
 </body>
 

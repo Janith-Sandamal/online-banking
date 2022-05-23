@@ -68,8 +68,8 @@
                 Our General Saving Account is designed to cater, to all your general savings requirements. Save your money with Meridian Trust Finance to reap the benefits of the highest interest rates in the market.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
-                    <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
+                    <button type="button" class="btn-1" ><a href="#">Explore !</a></button>
+                    
                 </div>
 
     
@@ -122,8 +122,9 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=savingaccount">Apply Now</a>
-            <a href="#">Download Application</a>
+            <a href="#">Apply Now</a>
+            <a href="https://drive.google.com/file/d/11xC0MW7iYuTVOenJulTA4UmRT5nSFU3t/view?usp=sharing
+" target="_blank">Download Application</a>
         </div>
     </div>
 </div>
@@ -145,8 +146,9 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=youthaccount">Apply Now</a>
-            <a href="#">Download Application</a>
+            <a href="#">Apply Now</a>
+            <a href="https://drive.google.com/file/d/11xC0MW7iYuTVOenJulTA4UmRT5nSFU3t/view?usp=sharing
+" target="_blank">Download Application</a>
         </div>
     </div>
 </div>

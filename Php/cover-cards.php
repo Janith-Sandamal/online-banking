@@ -36,12 +36,12 @@
             <li class="logo">Meridian Trust</li>
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
-                    <li><a href="services.Php" target="_self">Services</a></li>
-                    <li><a href="Digital banking.Php" target="_blank">MT Digital </a></li>
-                    <li><a href="about us.Php" target="_self">About Us</a></li>
-                    <li><a href="contact us.Php" target="_self">Contact Us</a></li>
+                    <li><a href="../index.php" class="active">Home</a></li>
+                    <li><a href="./personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="./services.Php" target="_self">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.Php" target="_self">Contact Us</a></li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
             <li class="search-icon">
@@ -68,8 +68,8 @@
                 Combining the acceptability of a credit card and the prudence of an ATM card, the BOC Debit(Visa/Master) Electron Debit card is a most convenient accessory for you
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Explore !</a></button>
-                    <!-- <button type="button" class="btn-2"><a href="../Php/signup.html">Join Now!</a></button> -->
+                    <button type="button" class="btn-1" ><a href="#">Explore !</a></button>
+                 
                 </div>
 
     
@@ -102,8 +102,9 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=debitcard">Apply Now</a>
-            <a href="#">Download Application</a>
+            <a href="#">Apply Now</a>
+            <a href="https://drive.google.com/file/d/1Ss71LR-C0278KinJPtAZ6wObm-ghIZ6o/view?usp=sharing
+" target="_blank">Download Application</a>
         </div>
     </div>
 </div>
@@ -150,8 +151,9 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=creditcard">Apply Now</a>
-            <a href="#">Download Application</a>
+            <a href="#">Apply Now</a>
+            <a href="https://drive.google.com/file/d/1cT4WBQavfmfF5kg1ohI76a8PsB5s-YUs/view?usp=sharing
+" target="_blank">Download Application</a>
         </div>
     </div>
 </div>
@@ -185,61 +187,12 @@
     <!-- Contact Form -->
     <div class="contact-form">
         <div class="form-header">
-            <h2>Inform Us</h2>
+            
         </div>
         <div class="form-description">
-            <p>If you need help or want contact us,Complte the Online enquiry form below</p>
+            
         </div>
-        <div class="form-body">
-            <form action="" method="post">
-                <table>
-                    <tr>
-                        
-                        <td><select name="" id="" placeholder="Select">
-                            <option value="Credit Cards" >Credit Cards</option>
-                            <option value="Saving Accounts">Saving Accounts</option>
-                            <option value="Digital Banking">Digital Banking</option>
-                            <option value="Home Loans">Home Loans</option>
-                            <option value="Education Loans">Education Loans</option>
-                            <option value="Personal Loans">Personal Loans</option>
-                            <option value="Complains">Complains</option>
-                            <option value="Others">Others</option>
-                        </select></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="fname" id="fname" placeholder="Enter your Frist Name" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="email" name="email" id="email" placeholder="Enter your Email " required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="number" id="number" placeholder="Enter your Phone Number" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="For security and privacy    please don't include information like your bank account numbers or passwords." required></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="submit" name="submit" value="Submit">
-                        </td>
-                    </tr>
-                </table>
-                
-            </form>
-        </div>
+        <!--  -->
     </div>
             <!-- Contact Form -->
 
@@ -252,21 +205,21 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
+                        <li><a href="./contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
-                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
+                        <li><a href="./application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
+                        <li><a href="./signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="./php/cover-deposit.php" target="_self">Deposits</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
-                        <li><a href="./php/cover-cards.php" target="_self">Cards</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Loans</a></li>    
+                        <li><a href="./cover-deposit.php" target="_self">Deposits</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
+                        <li><a href="./cover-cards.php" target="_self">Cards</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Loans</a></li>    
                     </ul>
                 </div>
                 <div class="footer-col">

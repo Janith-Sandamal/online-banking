@@ -148,8 +148,8 @@ if (isset($_POST['submit'])) {
                     <p>
                         <?php
                         if (!empty($errors)) {
-                            echo "<h2>Errors</h2>"
-                                . "<ul>";
+                            echo "<h2 style='color:red;'>Errors</h2>"
+                                . "<ul style='color:red;'>";
                             foreach ($errors as $error) {
                                 echo '<li>' . $error . '</li>';
                             }

@@ -36,12 +36,12 @@
             <li class="logo">Meridian Trust</li>
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="personal banking.Php" target="_self">Peronal Banking</a></li>
-                    <li><a href="services.Php" target="_self">Services</a></li>
-                    <li><a href="Digital banking.Php" target="_blank">MT Digital </a></li>
-                    <li><a href="about us.Php" target="_self">About Us</a></li>
-                    <li><a href="contact us.Php" target="_self">Contact Us</a></li>
+                    <li><a href="../index.php" class="active">Home</a></li>
+                    <li><a href="./personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="./services.Php" target="_self">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.Php" target="_self">Contact Us</a></li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
             <li class="search-icon">
@@ -69,7 +69,7 @@
                 Meridian Trust personal Loans have made it as easy as it can be to transcend from dreaming to sharing. And what is more exciting and fulfilling than sharing a dream with someone you love. It could be a trip abroad with your mother, or sending your child to university, or maybe to finance your perfect wedding. Whatever it may be, always remember, the best things in life were meant to be shared.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="Login.Php">Explore !</a></button>
+                    <button type="button" class="btn-1" ><a href="#">Explore !</a></button>
                 </div>
 
     
@@ -130,7 +130,7 @@
         </div>
         <div class="blog-post-read-more">
             <a href="#">Read More</a>
-            <a href="application-form.Php?reason=savingaccount">Apply Now</a>
+            <a href="#">Apply Now</a>
             <a href="#">Download Application</a>
         </div>
     </div>

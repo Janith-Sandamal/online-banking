@@ -147,7 +147,7 @@ if(empty($errors)){
         </div>
         <div class="btnall">
             <div>
-                <button type="button" class="btn-2"><a href="application-form.Php"> Apply Online</a></button>
+                <button type="button" class="btn-2"><a href="#"> Apply Online</a></button>
              </div>
             <div>
                 <button type="button" class="btn-3"><a href="#"> Download </a></button>
@@ -172,7 +172,7 @@ if(empty($errors)){
         </div>
         <div class="btnall">
             <div>
-                <button type="button" class="btn-2"><a href="application-form.Php"> Apply Online</a></button>
+                <button type="button" class="btn-2"><a href="#"> Apply Online</a></button>
              </div>
             <div>
                 <button type="button" class="btn-3"><a href="#"> Download </a></button>
@@ -294,21 +294,21 @@ if(empty($errors)){
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
+                        <li><a href="./contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
-                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
+                        <li><a href="./application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
+                        <li><a href="./signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="./php/cover-deposit.php" target="_self">Deposits</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
-                        <li><a href="./php/cover-cards.php" target="_self">Cards</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Loans</a></li>    
+                        <li><a href="./cover-deposit.php" target="_self">Deposits</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Youth Accounts</a></li>
+                        <li><a href="./cover-cards.php" target="_self">Cards</a></li>
+                        <li><a href="./cover-saving-accounts.php" target="_self">Savings Accounts</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Loans</a></li>    
                     </ul>
                 </div>
                 <div class="footer-col">

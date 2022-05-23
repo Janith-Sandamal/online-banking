@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="css/Normalize.css">
     
     <!-- Link Main CSS file -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <!-- Header CSS file -->
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
 
     <!-- Footer CSS file -->
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <!-- CSS For Banner -->
-    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="./css/banner.css">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">

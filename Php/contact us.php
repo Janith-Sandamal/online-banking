@@ -125,7 +125,7 @@ if(empty($errors)){
                     Quisquam, quidem.
                 </p>
                 <div>
-                    <button type="button" class="btn-1" ><a href="../Php/Login.html">Contact!</a></button>
+                    <button type="button" class="btn-1" ><a href="#" id="contact">Contact!</a></button>
                 </div>
 
     
@@ -137,10 +137,10 @@ if(empty($errors)){
         <!-- Contact Details Section -->
 <div class="contact-cards">
     <div class="card-1">
-        <h2>Head Office</h2>
+        <h2 id="#contact">Head Office</h2>
         <br>
-        <pre><p>Asia Bank of Ceylon PLC,
-Asia House,
+        <pre><p>Meridian Trust Corparation PLC,
+Meridian House,
 No 21,Sri Razik Fareed Mawatha,
 P.O.Box 720 Colombo 07,
 Sri Lanka.</p></pre> 
@@ -153,7 +153,7 @@ Sri Lanka.</p></pre>
             <br>
             <div class="email">
                 <!-- Send Email -->
-                <a href="mailto:info@asiabank.lk">info@asiabank.lk</a>
+                <a href="mailto:info@asiabank.lk">info@meridianbank.lk</a>
             </div>
     </div>
     <div class="card-2">
@@ -163,7 +163,7 @@ Sri Lanka.</p></pre>
         <br>
         <p>+94114569872</p>
         <br>
-        <a href="https://skype.com/asiabank">Voice Support Center</a>
+        <a href="https://skype.com/meridianbank">Voice Support Center</a>
     </div>
 </div>
         <!-- Contact Details Section -->
@@ -177,7 +177,7 @@ Sri Lanka.</p></pre>
         <p>If you need help or want contact us,Complte the Online enquiry form below</p>
     </div>
     <div class="form-body">
-        <form action="contact us.php" method="POST">
+        <form action="./contact us.php" method="POST">
             <table>
             <tr>
                     <td>

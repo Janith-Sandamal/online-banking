@@ -39,11 +39,11 @@
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="./Php/personal banking.Php" target="_self">Peronal Banking</a></li>
-                    <li><a href="./Php/services.Php" target="_self">Services</a></li>
-                    <li><a href="./Php/Digital banking.Php" target="_blank">MT Digital </a></li>
-                    <li><a href="./Php/about us.Php" target="_self">About Us</a></li>
-                    <li><a href="./Php/contact us.Php" target="_self">Contact Us</a></li>
+                    <li><a href="./personal banking.Php" target="_self">Peronal Banking</a></li>
+                    <li><a href="./services.Php" target="_self">Services</a></li>
+                    <li><a href="./Digital banking.Php" target="_blank">MT Digital </a></li>
+                    <li><a href="./about us.Php" target="_self">About Us</a></li>
+                    <li><a href="./contact us.Php" target="_self">Contact Us</a></li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </div>
             <li class="search-icon">
@@ -124,7 +124,6 @@
                         <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
                         <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
                         <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
