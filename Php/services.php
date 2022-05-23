@@ -199,7 +199,7 @@ if(empty($errors)){
                 manage your Meridian Trust personal or business accounts from anywhere at any time.</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="cover-digital-banking.Php">Read More</a>
+            <a href="./cover-digital-banking.Php">Read More</a>
         </div>
     </div>
 </div>
@@ -219,7 +219,7 @@ if(empty($errors)){
                 details in real-time, anywhere, anytime.</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="cover-epassbook.Php">Read More</a>
+            <a href="./cover-epassbook.Php">Read More</a>
         </div>
     </div>
 </div>
@@ -239,7 +239,7 @@ if(empty($errors)){
                 It is seriously secure! (End to end encryption)</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="cover-digital-banking.Php#whatsapp-banking">Read More</a>
+            <a href="./cover-digital-banking.Php#whatsapp-banking">Read More</a>
         </div>
     </div> 
 </div>
@@ -258,7 +258,7 @@ if(empty($errors)){
                 through an app for your smartphone and other mobile devices.</p>
         </div>
         <div class="blog-post-read-more">
-            <a href="cover-digital-banking.Php#explore">Read More</a>
+            <a href="./cover-digital-banking.Php#explore">Read More</a>
         </div>
     </div>
 </div>
@@ -364,21 +364,21 @@ if(empty($errors)){
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./Php/contact us.php" >Contact Us</a></li>
-                        <li><a href="./php/cover-loans.php" >Bank Loans</a></li>
+                        <li><a href="./contact us.php" >Contact Us</a></li>
+                        <li><a href="./cover-loans.php" >Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./php/application-form.php?reason=creditcard" >Credit Card Application</a></li>
-                        <li><a href="./php/signup.php" >New User Registrations</a></li>
+                        <li><a href="#" >Credit Card Application</a></li>
+                        <li><a href="./signup.php" >New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Personal Banking</h4>
                     <ul>
-                        <li><a href="./php/cover-deposit.php" >Deposits</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" >Youth Accounts</a></li>
-                        <li><a href="./php/cover-cards.php" >Cards</a></li>
-                        <li><a href="./php/cover-saving-accounts.php" >Savings Accounts</a></li>
-                        <li><a href="./php/cover-loans.php" >Loans</a></li>    
+                        <li><a href="./cover-deposit.php" >Deposits</a></li>
+                        <li><a href="./cover-saving-accounts.php" >Youth Accounts</a></li>
+                        <li><a href="./cover-cards.php" >Cards</a></li>
+                        <li><a href="./cover-saving-accounts.php" >Savings Accounts</a></li>
+                        <li><a href="./cover-loans.php" >Loans</a></li>    
                     </ul>
                 </div>
                 <div class="footer-col">

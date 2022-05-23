@@ -297,7 +297,7 @@ if(empty($errors)){
                         <li><a href="./contact us.php" target="_self">Contact Us</a></li>
                         <li><a href="./cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
+                        <li><a href="">Credit Card Application</a></li>
                         <li><a href="./signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>

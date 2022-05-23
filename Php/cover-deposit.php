@@ -183,11 +183,11 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./Php/contact us.php" target="_self">Contact Us</a></li>
-                        <li><a href="./php/cover-loans.php" target="_self">Bank Loans</a></li>
+                        <li><a href="./contact us.php" target="_self">Contact Us</a></li>
+                        <li><a href="./cover-loans.php" target="_self">Bank Loans</a></li>
                         <li><a href="#">Downloads</a></li>
-                        <li><a href="./php/application-form.php?reason=creditcard" target="_blank">Credit Card Application</a></li>
-                        <li><a href="./php/signup.php" target="_blank">New User Registrations</a></li>
+                        <li><a href="#">Credit Card Application</a></li>
+                        <li><a href="./signup.php" target="_blank">New User Registrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
